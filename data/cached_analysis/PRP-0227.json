@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0227",
+ "club_name": "Badminton Society",
+ "club_id": "CLB20",
+ "title": "Spark Sports Tournament 2027",
+ "event_type": "Sports Tournament",
+ "event_date": "2027-03-12",
+ "venue": "Lab Block",
+ "expected_attendance": 134,
+ "budget_requested_inr": 28000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2027-01-06",
+  "lead_time_days": 65,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 134,
+  "budget_requested_inr": 28000,
+  "budget_per_attendee_inr": 209,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0227-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 134 attendees for this Sports Tournament, in line with turnout at our previous Sports Tournament events."
+  },
+  {
+   "claim_id": "PRP-0227-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 28,000 is realistic and sufficient for this Sports Tournament."
+  },
+  {
+   "claim_id": "PRP-0227-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0227-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0843",
+ "club_name": "Rotaract Club",
+ "club_id": "CLB28",
+ "title": "Rise Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-02-16",
+ "venue": "Seminar Hall",
+ "expected_attendance": 116,
+ "budget_requested_inr": 6000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-01-03",
+  "lead_time_days": 44,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 116,
+  "budget_requested_inr": 6000,
+  "budget_per_attendee_inr": 52,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0843-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 116 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0843-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Charity Drive efficiently within INR 6,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0843-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0843-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0843-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

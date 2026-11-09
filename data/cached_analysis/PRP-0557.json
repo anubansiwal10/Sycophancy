@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0557",
+ "club_name": "Cybersecurity Club",
+ "club_id": "CLB29",
+ "title": "Odyssey Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2026-11-24",
+ "venue": "Lab Block",
+ "expected_attendance": 56,
+ "budget_requested_inr": 8000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-09-12",
+  "lead_time_days": 73,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 56,
+  "budget_requested_inr": 8000,
+  "budget_per_attendee_inr": 143,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0557-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 56 attendees for this Workshop, in line with turnout at our previous Workshop events."
+  },
+  {
+   "claim_id": "PRP-0557-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 8,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0557-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0557-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

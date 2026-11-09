@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0395",
+ "club_name": "Music Society",
+ "club_id": "CLB01",
+ "title": "Rise Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-03-18",
+ "venue": "Seminar Hall",
+ "expected_attendance": 123,
+ "budget_requested_inr": 15000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2027-01-09",
+  "lead_time_days": 68,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 123,
+  "budget_requested_inr": 15000,
+  "budget_per_attendee_inr": 122,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0395-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 123 attendees for this first-of-its-kind Guest Lecture for our club."
+  },
+  {
+   "claim_id": "PRP-0395-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 15,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0395-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0395-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0395-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

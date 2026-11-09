@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0214",
+ "club_name": "Consulting Club",
+ "club_id": "CLB26",
+ "title": "Spark Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2026-12-21",
+ "venue": "Seminar Hall",
+ "expected_attendance": 128,
+ "budget_requested_inr": 16000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-10-28",
+  "lead_time_days": 54,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 128,
+  "budget_requested_inr": 16000,
+  "budget_per_attendee_inr": 125,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0214-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 128 attendees for this Guest Lecture, in line with turnout at our previous Guest Lecture events."
+  },
+  {
+   "claim_id": "PRP-0214-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 16,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0214-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0214-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0214-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

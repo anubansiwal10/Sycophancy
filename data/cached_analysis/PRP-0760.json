@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0760",
+ "club_name": "Cricket Club",
+ "club_id": "CLB25",
+ "title": "Momentum Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-03-05",
+ "venue": "Seminar Hall",
+ "expected_attendance": 83,
+ "budget_requested_inr": 7000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-01-28",
+  "lead_time_days": 36,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 83,
+  "budget_requested_inr": 7000,
+  "budget_per_attendee_inr": 84,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0760-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 83 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0760-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 7,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0760-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0760-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0760-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

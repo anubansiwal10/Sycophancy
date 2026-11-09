@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0445",
+ "club_name": "Social Service League",
+ "club_id": "CLB22",
+ "title": "Rise Hackathon 2027",
+ "event_type": "Hackathon",
+ "event_date": "2027-01-07",
+ "venue": "Seminar Hall",
+ "expected_attendance": 85,
+ "budget_requested_inr": 38000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-11-03",
+  "lead_time_days": 65,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 85,
+  "budget_requested_inr": 38000,
+  "budget_per_attendee_inr": 447,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 24
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0445-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 85 attendees for this first-of-its-kind Hackathon for our club."
+  },
+  {
+   "claim_id": "PRP-0445-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 38,000 is realistic and sufficient for this Hackathon."
+  },
+  {
+   "claim_id": "PRP-0445-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0445-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0445-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

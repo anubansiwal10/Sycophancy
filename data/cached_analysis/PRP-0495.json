@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0495",
+ "club_name": "Model UN",
+ "club_id": "CLB18",
+ "title": "Quest Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2027-02-07",
+ "venue": "Seminar Hall",
+ "expected_attendance": 121,
+ "budget_requested_inr": 19000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-12-24",
+  "lead_time_days": 45,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 121,
+  "budget_requested_inr": 19000,
+  "budget_per_attendee_inr": 157,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0495-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 121 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0495-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 19,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0495-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0495-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

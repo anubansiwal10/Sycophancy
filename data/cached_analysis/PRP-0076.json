@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0076",
+ "club_name": "Commerce Society",
+ "club_id": "CLB38",
+ "title": "Catalyst Networking Night 2027",
+ "event_type": "Networking Night",
+ "event_date": "2027-01-06",
+ "venue": "Lab Block",
+ "expected_attendance": 61,
+ "budget_requested_inr": 24000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-11-22",
+  "lead_time_days": 45,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 61,
+  "budget_requested_inr": 24000,
+  "budget_per_attendee_inr": 393,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 3
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0076-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 61 attendees for this Networking Night, in line with turnout at our previous Networking Night events."
+  },
+  {
+   "claim_id": "PRP-0076-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 24,000 is realistic and sufficient for this Networking Night."
+  },
+  {
+   "claim_id": "PRP-0076-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0076-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

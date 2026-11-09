@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0443",
+ "club_name": "Health & Wellness Club",
+ "club_id": "CLB16",
+ "title": "Momentum Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-01-15",
+ "venue": "Seminar Hall",
+ "expected_attendance": 93,
+ "budget_requested_inr": 10000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-12-29",
+  "lead_time_days": 17,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 93,
+  "budget_requested_inr": 10000,
+  "budget_per_attendee_inr": 108,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0443-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 93 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0443-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 10,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0443-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0443-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0443-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

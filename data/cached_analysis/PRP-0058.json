@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0058",
+ "club_name": "Literary & Debate Club",
+ "club_id": "CLB13",
+ "title": "Zenith Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2026-11-17",
+ "venue": "Seminar Hall",
+ "expected_attendance": 136,
+ "budget_requested_inr": 14000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2026-10-19",
+  "lead_time_days": 29,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 136,
+  "budget_requested_inr": 14000,
+  "budget_per_attendee_inr": 103,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0058-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 136 attendees for this Guest Lecture, in line with turnout at our previous Guest Lecture events."
+  },
+  {
+   "claim_id": "PRP-0058-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 14,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0058-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0058-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0058-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

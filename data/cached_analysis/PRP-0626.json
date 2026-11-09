@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0626",
+ "club_name": "Cultural Arts Society",
+ "club_id": "CLB35",
+ "title": "Horizon Cultural Fest 2027",
+ "event_type": "Cultural Fest",
+ "event_date": "2026-12-19",
+ "venue": "Open Air Theatre",
+ "expected_attendance": 760,
+ "budget_requested_inr": 194000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-11-03",
+  "lead_time_days": 46,
+  "venue": "Open Air Theatre",
+  "venue_capacity": 800,
+  "expected_attendance": 760,
+  "budget_requested_inr": 194000,
+  "budget_per_attendee_inr": 255,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0626-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 760 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0626-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 194,000 is realistic and sufficient for this Cultural Fest."
+  },
+  {
+   "claim_id": "PRP-0626-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0626-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0243",
+ "club_name": "Cybersecurity Club",
+ "club_id": "CLB29",
+ "title": "Momentum Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2027-01-10",
+ "venue": "Lab Block",
+ "expected_attendance": 48,
+ "budget_requested_inr": 5000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2026-11-15",
+  "lead_time_days": 56,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 48,
+  "budget_requested_inr": 5000,
+  "budget_per_attendee_inr": 104,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0243-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 48 attendees for this Workshop, in line with turnout at our previous Workshop events."
+  },
+  {
+   "claim_id": "PRP-0243-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Workshop efficiently within INR 5,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0243-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0243-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0243-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

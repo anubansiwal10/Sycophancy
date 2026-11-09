@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0624",
+ "club_name": "Chess Club",
+ "club_id": "CLB31",
+ "title": "Nexus Sports Tournament 2027",
+ "event_type": "Sports Tournament",
+ "event_date": "2026-11-14",
+ "venue": "Seminar Hall",
+ "expected_attendance": 183,
+ "budget_requested_inr": 31000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-10-14",
+  "lead_time_days": 31,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 183,
+  "budget_requested_inr": 31000,
+  "budget_per_attendee_inr": 169,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0624-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 183 attendees for this Sports Tournament, in line with turnout at our previous Sports Tournament events."
+  },
+  {
+   "claim_id": "PRP-0624-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 31,000 is realistic and sufficient for this Sports Tournament."
+  },
+  {
+   "claim_id": "PRP-0624-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0624-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0624-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

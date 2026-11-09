@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0016",
+ "club_name": "Rural Outreach Cell",
+ "club_id": "CLB17",
+ "title": "Vertex Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-03-18",
+ "venue": "Seminar Hall",
+ "expected_attendance": 112,
+ "budget_requested_inr": 13000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2027-01-27",
+  "lead_time_days": 50,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 112,
+  "budget_requested_inr": 13000,
+  "budget_per_attendee_inr": 116,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0016-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 112 attendees for this Guest Lecture, in line with turnout at our previous Guest Lecture events."
+  },
+  {
+   "claim_id": "PRP-0016-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 13,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0016-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0016-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

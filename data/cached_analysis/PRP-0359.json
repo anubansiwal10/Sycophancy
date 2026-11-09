@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0359",
+ "club_name": "Social Service League",
+ "club_id": "CLB22",
+ "title": "Vertex Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-03-14",
+ "venue": "Seminar Hall",
+ "expected_attendance": 85,
+ "budget_requested_inr": 9000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2027-02-04",
+  "lead_time_days": 38,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 85,
+  "budget_requested_inr": 9000,
+  "budget_per_attendee_inr": 106,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0359-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 85 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0359-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 9,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0359-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0359-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

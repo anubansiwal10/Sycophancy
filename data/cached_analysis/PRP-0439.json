@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0439",
+ "club_name": "Commerce Society",
+ "club_id": "CLB38",
+ "title": "Aurora Networking Night 2027",
+ "event_type": "Networking Night",
+ "event_date": "2027-04-01",
+ "venue": "Main Auditorium",
+ "expected_attendance": 169,
+ "budget_requested_inr": 62000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2027-02-28",
+  "lead_time_days": 32,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 169,
+  "budget_requested_inr": 62000,
+  "budget_per_attendee_inr": 367,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 3
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0439-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 169 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0439-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 62,000 is realistic and sufficient for this Networking Night."
+  },
+  {
+   "claim_id": "PRP-0439-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0439-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

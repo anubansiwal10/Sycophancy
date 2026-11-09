@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0218",
+ "club_name": "Entrepreneurship Cell",
+ "club_id": "CLB19",
+ "title": "Pulse Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-03-21",
+ "venue": "Seminar Hall",
+ "expected_attendance": 84,
+ "budget_requested_inr": 7000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2027-01-28",
+  "lead_time_days": 52,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 84,
+  "budget_requested_inr": 7000,
+  "budget_per_attendee_inr": 83,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0218-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 84 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0218-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Guest Lecture efficiently within INR 7,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0218-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0218-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0218-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

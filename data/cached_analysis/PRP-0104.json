@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0104",
+ "club_name": "Social Service League",
+ "club_id": "CLB22",
+ "title": "Odyssey Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-02-23",
+ "venue": "Seminar Hall",
+ "expected_attendance": 90,
+ "budget_requested_inr": 8000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-12-22",
+  "lead_time_days": 63,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 90,
+  "budget_requested_inr": 8000,
+  "budget_per_attendee_inr": 89,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0104-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 90 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0104-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 8,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0104-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0104-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

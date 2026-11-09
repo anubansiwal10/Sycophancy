@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0084",
+ "club_name": "Aerospace Club",
+ "club_id": "CLB33",
+ "title": "Vertex Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-03-27",
+ "venue": "Main Auditorium",
+ "expected_attendance": 149,
+ "budget_requested_inr": 14000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2027-02-08",
+  "lead_time_days": 47,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 149,
+  "budget_requested_inr": 14000,
+  "budget_per_attendee_inr": 94,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0084-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 149 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0084-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Guest Lecture efficiently within INR 14,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0084-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0084-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0084-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

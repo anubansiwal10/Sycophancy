@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0860",
+ "club_name": "Design Collective",
+ "club_id": "CLB24",
+ "title": "Aurora Cultural Fest 2027",
+ "event_type": "Cultural Fest",
+ "event_date": "2027-03-11",
+ "venue": "Seminar Hall",
+ "expected_attendance": 358,
+ "budget_requested_inr": 100000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2027-02-04",
+  "lead_time_days": 35,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 358,
+  "budget_requested_inr": 100000,
+  "budget_per_attendee_inr": 279,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0860-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 358 attendees for this Cultural Fest, in line with turnout at our previous Cultural Fest events."
+  },
+  {
+   "claim_id": "PRP-0860-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 100,000 is realistic and sufficient for this Cultural Fest."
+  },
+  {
+   "claim_id": "PRP-0860-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0860-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0860-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

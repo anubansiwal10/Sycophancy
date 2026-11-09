@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0593",
+ "club_name": "Dance Troupe",
+ "club_id": "CLB03",
+ "title": "Zenith Cultural Fest 2027",
+ "event_type": "Cultural Fest",
+ "event_date": "2027-02-01",
+ "venue": "Main Auditorium",
+ "expected_attendance": 325,
+ "budget_requested_inr": 83000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-12-23",
+  "lead_time_days": 40,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 325,
+  "budget_requested_inr": 83000,
+  "budget_per_attendee_inr": 255,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0593-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 325 attendees for this Cultural Fest, in line with turnout at our previous Cultural Fest events."
+  },
+  {
+   "claim_id": "PRP-0593-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 83,000 is realistic and sufficient for this Cultural Fest."
+  },
+  {
+   "claim_id": "PRP-0593-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0593-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0902",
+ "club_name": "Music Society",
+ "club_id": "CLB01",
+ "title": "Fusion Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2027-04-02",
+ "venue": "Seminar Hall",
+ "expected_attendance": 132,
+ "budget_requested_inr": 21000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2027-03-06",
+  "lead_time_days": 27,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 132,
+  "budget_requested_inr": 21000,
+  "budget_per_attendee_inr": 159,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0902-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 132 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0902-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 21,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0902-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0902-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0902-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

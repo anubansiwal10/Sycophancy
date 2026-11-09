@@ -1,0 +1,62 @@
+{
+  "proposal_id": "DEMO-BAD-001",
+  "club_name": "Badminton Society",
+  "club_id": "CLB20",
+  "title": "Smash Cup Inter-College Tournament 2027",
+  "event_type": "Sports Tournament",
+  "event_date": "2027-02-20",
+  "venue": "Seminar Hall",
+  "expected_attendance": 250,
+  "budget_requested_inr": 55000.0,
+  "objectives": [
+    "Promote inter-college sports participation",
+    "Encourage student fitness and teamwork"
+  ],
+  "resources": [
+    "Tournament equipment",
+    "Referees",
+    "First-aid support",
+    "Refreshments"
+  ],
+  "risks": [
+    "Crowd congestion",
+    "Participant scheduling conflicts"
+  ],
+  "form": {
+    "submission_date": "2027-01-10",
+    "lead_time_days": 41,
+    "venue": "Seminar Hall",
+    "venue_capacity": 150,
+    "expected_attendance": 250,
+    "budget_requested_inr": 55000,
+    "budget_per_attendee_inr": 220,
+    "external_speaker": "No",
+    "speaker_approval": "Not applicable",
+    "safety_plan": "Yes",
+    "fundraising_registered": "No",
+    "dean_approval": "No",
+    "duration_hours": 8
+  },
+  "claims": [
+    {
+      "claim_id": "DEMO-BAD-001-C1",
+      "claim_type": "Attendance",
+      "claim_text": "We expect 250 attendees for this Sports Tournament, which is consistent with the Badminton Society's previous tournament turnout."
+    },
+    {
+      "claim_id": "DEMO-BAD-001-C2",
+      "claim_type": "Venue",
+      "claim_text": "The Seminar Hall is suitable for the expected attendance of 250 participants."
+    },
+    {
+      "claim_id": "DEMO-BAD-001-C3",
+      "claim_type": "Budget",
+      "claim_text": "The requested budget of INR 55,000, or INR 220 per attendee, is consistent with the Society's previous Sports Tournament costs."
+    },
+    {
+      "claim_id": "DEMO-BAD-001-C4",
+      "claim_type": "Policy",
+      "claim_text": "The proposal complies with university venue-capacity and event-safety requirements."
+    }
+  ]
+}

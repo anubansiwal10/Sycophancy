@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0573",
+ "club_name": "Mechanical Design Society",
+ "club_id": "CLB40",
+ "title": "Horizon Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2026-12-20",
+ "venue": "Lab Block",
+ "expected_attendance": 37,
+ "budget_requested_inr": 5000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-11-11",
+  "lead_time_days": 39,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 37,
+  "budget_requested_inr": 5000,
+  "budget_per_attendee_inr": 135,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0573-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 37 attendees for this Workshop, in line with turnout at our previous Workshop events."
+  },
+  {
+   "claim_id": "PRP-0573-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 5,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0573-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0573-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

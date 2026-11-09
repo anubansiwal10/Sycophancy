@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0374",
+ "club_name": "Rotaract Club",
+ "club_id": "CLB28",
+ "title": "Summit Exhibition 2027",
+ "event_type": "Exhibition",
+ "event_date": "2027-01-31",
+ "venue": "Main Auditorium",
+ "expected_attendance": 183,
+ "budget_requested_inr": 30000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-11-28",
+  "lead_time_days": 64,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 183,
+  "budget_requested_inr": 30000,
+  "budget_per_attendee_inr": 164,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0374-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 183 attendees for this first-of-its-kind Exhibition for our club."
+  },
+  {
+   "claim_id": "PRP-0374-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 30,000 is realistic and sufficient for this Exhibition."
+  },
+  {
+   "claim_id": "PRP-0374-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0374-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0374-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

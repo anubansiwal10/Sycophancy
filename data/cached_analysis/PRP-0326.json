@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0326",
+ "club_name": "Creative Writing Society",
+ "club_id": "CLB05",
+ "title": "Rise Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2027-04-07",
+ "venue": "Seminar Hall",
+ "expected_attendance": 94,
+ "budget_requested_inr": 15000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2027-01-24",
+  "lead_time_days": 73,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 94,
+  "budget_requested_inr": 15000,
+  "budget_per_attendee_inr": 160,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0326-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 94 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0326-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 15,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0326-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0326-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

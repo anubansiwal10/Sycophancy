@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0167",
+ "club_name": "Literary & Debate Club",
+ "club_id": "CLB13",
+ "title": "Momentum Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-04-15",
+ "venue": "Seminar Hall",
+ "expected_attendance": 139,
+ "budget_requested_inr": 12000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-03-02",
+  "lead_time_days": 44,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 139,
+  "budget_requested_inr": 12000,
+  "budget_per_attendee_inr": 86,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0167-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 139 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0167-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Guest Lecture efficiently within INR 12,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0167-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0167-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0167-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

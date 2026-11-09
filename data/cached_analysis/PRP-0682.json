@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0682",
+ "club_name": "Mechanical Design Society",
+ "club_id": "CLB40",
+ "title": "Horizon Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-02-12",
+ "venue": "Seminar Hall",
+ "expected_attendance": 98,
+ "budget_requested_inr": 8000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2027-01-07",
+  "lead_time_days": 36,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 98,
+  "budget_requested_inr": 8000,
+  "budget_per_attendee_inr": 82,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0682-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 98 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0682-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Guest Lecture efficiently within INR 8,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0682-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0682-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0682-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0178",
+ "club_name": "Yoga & Meditation Club",
+ "club_id": "CLB04",
+ "title": "Quest Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-03-15",
+ "venue": "Lab Block",
+ "expected_attendance": 116,
+ "budget_requested_inr": 11000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2027-01-30",
+  "lead_time_days": 44,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 116,
+  "budget_requested_inr": 11000,
+  "budget_per_attendee_inr": 95,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0178-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 116 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0178-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 11,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0178-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0178-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0178-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0314",
+ "club_name": "Music Society",
+ "club_id": "CLB01",
+ "title": "Zenith Networking Night 2027",
+ "event_type": "Networking Night",
+ "event_date": "2027-01-17",
+ "venue": "Lab Block",
+ "expected_attendance": 52,
+ "budget_requested_inr": 17000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-11-28",
+  "lead_time_days": 50,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 52,
+  "budget_requested_inr": 17000,
+  "budget_per_attendee_inr": 327,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 3
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0314-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 52 attendees for this first-of-its-kind Networking Night for our club."
+  },
+  {
+   "claim_id": "PRP-0314-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 17,000 is realistic and sufficient for this Networking Night."
+  },
+  {
+   "claim_id": "PRP-0314-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0314-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0314-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

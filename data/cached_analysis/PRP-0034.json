@@ -1,0 +1,58 @@
+{
+ "proposal_id": "PRP-0034",
+ "club_name": "Health & Wellness Club",
+ "club_id": "CLB16",
+ "title": "Rise Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-02-16",
+ "venue": "Main Auditorium",
+ "expected_attendance": 243,
+ "budget_requested_inr": 25000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2027-01-14",
+  "lead_time_days": 33,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 243,
+  "budget_requested_inr": 25000,
+  "budget_per_attendee_inr": 103,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0034-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 243 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0034-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 25,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0034-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0034-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

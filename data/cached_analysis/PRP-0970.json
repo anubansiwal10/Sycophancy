@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0970",
+ "club_name": "Photography Club",
+ "club_id": "CLB32",
+ "title": "Nexus Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-04-17",
+ "venue": "Seminar Hall",
+ "expected_attendance": 129,
+ "budget_requested_inr": 11000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2027-02-18",
+  "lead_time_days": 58,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 129,
+  "budget_requested_inr": 11000,
+  "budget_per_attendee_inr": 85,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0970-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 129 attendees for this first-of-its-kind Charity Drive for our club."
+  },
+  {
+   "claim_id": "PRP-0970-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 11,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0970-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0970-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

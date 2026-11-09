@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0388",
+ "club_name": "Astronomy Club",
+ "club_id": "CLB34",
+ "title": "Echo Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-03-27",
+ "venue": "Seminar Hall",
+ "expected_attendance": 102,
+ "budget_requested_inr": 5000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-01-31",
+  "lead_time_days": 55,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 102,
+  "budget_requested_inr": 5000,
+  "budget_per_attendee_inr": 49,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0388-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 102 attendees for this Guest Lecture, in line with turnout at our previous Guest Lecture events."
+  },
+  {
+   "claim_id": "PRP-0388-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Guest Lecture efficiently within INR 5,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0388-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0388-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0388-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0883",
+ "club_name": "Astronomy Club",
+ "club_id": "CLB34",
+ "title": "Summit Hackathon 2027",
+ "event_type": "Hackathon",
+ "event_date": "2027-02-23",
+ "venue": "Seminar Hall",
+ "expected_attendance": 88,
+ "budget_requested_inr": 29000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2027-01-19",
+  "lead_time_days": 35,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 88,
+  "budget_requested_inr": 29000,
+  "budget_per_attendee_inr": 330,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 24
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0883-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 88 attendees for this first-of-its-kind Hackathon for our club."
+  },
+  {
+   "claim_id": "PRP-0883-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 29,000 is realistic and sufficient for this Hackathon."
+  },
+  {
+   "claim_id": "PRP-0883-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0883-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0883-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

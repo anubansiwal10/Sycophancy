@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0161",
+ "club_name": "Aerospace Club",
+ "club_id": "CLB33",
+ "title": "Odyssey Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-01-26",
+ "venue": "Main Auditorium",
+ "expected_attendance": 151,
+ "budget_requested_inr": 18000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2026-12-19",
+  "lead_time_days": 38,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 151,
+  "budget_requested_inr": 18000,
+  "budget_per_attendee_inr": 119,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0161-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 151 attendees for this Guest Lecture, in line with turnout at our previous Guest Lecture events."
+  },
+  {
+   "claim_id": "PRP-0161-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 18,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0161-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0161-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0161-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

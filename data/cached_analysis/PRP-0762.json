@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0762",
+ "club_name": "Literary & Debate Club",
+ "club_id": "CLB13",
+ "title": "Echo Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2026-12-18",
+ "venue": "Seminar Hall",
+ "expected_attendance": 142,
+ "budget_requested_inr": 13000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-11-07",
+  "lead_time_days": 41,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 142,
+  "budget_requested_inr": 13000,
+  "budget_per_attendee_inr": 92,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0762-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 142 attendees for this first-of-its-kind Charity Drive for our club."
+  },
+  {
+   "claim_id": "PRP-0762-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 13,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0762-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0762-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0762-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0251",
+ "club_name": "Rotaract Club",
+ "club_id": "CLB28",
+ "title": "Vertex Sports Tournament 2027",
+ "event_type": "Sports Tournament",
+ "event_date": "2027-04-08",
+ "venue": "Seminar Hall",
+ "expected_attendance": 139,
+ "budget_requested_inr": 32000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2027-02-10",
+  "lead_time_days": 57,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 139,
+  "budget_requested_inr": 32000,
+  "budget_per_attendee_inr": 230,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0251-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 139 attendees for this first-of-its-kind Sports Tournament for our club."
+  },
+  {
+   "claim_id": "PRP-0251-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 32,000 is realistic and sufficient for this Sports Tournament."
+  },
+  {
+   "claim_id": "PRP-0251-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0251-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0251-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

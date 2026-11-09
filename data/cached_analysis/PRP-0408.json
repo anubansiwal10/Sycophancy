@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0408",
+ "club_name": "Electronics Society",
+ "club_id": "CLB02",
+ "title": "Pulse Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2027-04-02",
+ "venue": "Lab Block",
+ "expected_attendance": 37,
+ "budget_requested_inr": 6000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2027-03-20",
+  "lead_time_days": 13,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 37,
+  "budget_requested_inr": 6000,
+  "budget_per_attendee_inr": 162,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0408-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 37 attendees for this Workshop, in line with turnout at our previous Workshop events."
+  },
+  {
+   "claim_id": "PRP-0408-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 6,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0408-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0408-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

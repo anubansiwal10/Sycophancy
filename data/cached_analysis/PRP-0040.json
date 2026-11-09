@@ -1,0 +1,58 @@
+{
+ "proposal_id": "PRP-0040",
+ "club_name": "Yoga & Meditation Club",
+ "club_id": "CLB04",
+ "title": "Catalyst Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-02-09",
+ "venue": "Main Auditorium",
+ "expected_attendance": 343,
+ "budget_requested_inr": 32000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2026-12-26",
+  "lead_time_days": 45,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 343,
+  "budget_requested_inr": 32000,
+  "budget_per_attendee_inr": 93,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0040-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 343 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0040-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 32,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0040-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0040-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0468",
+ "club_name": "Photography Club",
+ "club_id": "CLB32",
+ "title": "Momentum Cultural Fest 2027",
+ "event_type": "Cultural Fest",
+ "event_date": "2027-01-11",
+ "venue": "Open Air Theatre",
+ "expected_attendance": 727,
+ "budget_requested_inr": 199000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2026-11-05",
+  "lead_time_days": 67,
+  "venue": "Open Air Theatre",
+  "venue_capacity": 800,
+  "expected_attendance": 727,
+  "budget_requested_inr": 199000,
+  "budget_per_attendee_inr": 274,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0468-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 727 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0468-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 199,000 is realistic and sufficient for this Cultural Fest."
+  },
+  {
+   "claim_id": "PRP-0468-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0468-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0468-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

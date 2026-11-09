@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0805",
+ "club_name": "Sports Council",
+ "club_id": "CLB14",
+ "title": "Quest Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2026-12-21",
+ "venue": "Seminar Hall",
+ "expected_attendance": 98,
+ "budget_requested_inr": 9000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-11-01",
+  "lead_time_days": 50,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 98,
+  "budget_requested_inr": 9000,
+  "budget_per_attendee_inr": 92,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0805-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 98 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0805-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 9,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0805-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0805-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0805-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

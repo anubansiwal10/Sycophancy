@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0513",
+ "club_name": "Drama Club",
+ "club_id": "CLB08",
+ "title": "Horizon Exhibition 2027",
+ "event_type": "Exhibition",
+ "event_date": "2027-01-07",
+ "venue": "Main Auditorium",
+ "expected_attendance": 208,
+ "budget_requested_inr": 36000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-11-11",
+  "lead_time_days": 57,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 208,
+  "budget_requested_inr": 36000,
+  "budget_per_attendee_inr": 173,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0513-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 208 attendees for this Exhibition, in line with turnout at our previous Exhibition events."
+  },
+  {
+   "claim_id": "PRP-0513-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 36,000 is realistic and sufficient for this Exhibition."
+  },
+  {
+   "claim_id": "PRP-0513-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0513-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0513-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0740",
+ "club_name": "Design Collective",
+ "club_id": "CLB24",
+ "title": "Catalyst Cultural Fest 2027",
+ "event_type": "Cultural Fest",
+ "event_date": "2027-03-18",
+ "venue": "Main Auditorium",
+ "expected_attendance": 368,
+ "budget_requested_inr": 97000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2027-01-06",
+  "lead_time_days": 71,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 368,
+  "budget_requested_inr": 97000,
+  "budget_per_attendee_inr": 264,
+  "external_speaker": "No",
+  "safety_plan": "No",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0740-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 368 attendees for this Cultural Fest, in line with turnout at our previous Cultural Fest events."
+  },
+  {
+   "claim_id": "PRP-0740-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 97,000 is realistic and sufficient for this Cultural Fest."
+  },
+  {
+   "claim_id": "PRP-0740-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0740-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0740-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

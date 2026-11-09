@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0229",
+ "club_name": "Marketing Society",
+ "club_id": "CLB37",
+ "title": "Vertex Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-02-01",
+ "venue": "Seminar Hall",
+ "expected_attendance": 110,
+ "budget_requested_inr": 12000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2026-11-21",
+  "lead_time_days": 72,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 110,
+  "budget_requested_inr": 12000,
+  "budget_per_attendee_inr": 109,
+  "external_speaker": "Yes",
+  "speaker_approval": "No",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0229-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 110 attendees for this Guest Lecture, in line with turnout at our previous Guest Lecture events."
+  },
+  {
+   "claim_id": "PRP-0229-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 12,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0229-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0229-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0229-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0269",
+ "club_name": "Cricket Club",
+ "club_id": "CLB25",
+ "title": "Odyssey Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-01-02",
+ "venue": "Seminar Hall",
+ "expected_attendance": 84,
+ "budget_requested_inr": 8000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-11-07",
+  "lead_time_days": 56,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 84,
+  "budget_requested_inr": 8000,
+  "budget_per_attendee_inr": 95,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0269-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 84 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0269-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 8,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0269-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0269-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0269-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

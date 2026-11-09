@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0192",
+ "club_name": "Athletics Club",
+ "club_id": "CLB11",
+ "title": "Zenith Sports Tournament 2027",
+ "event_type": "Sports Tournament",
+ "event_date": "2026-12-16",
+ "venue": "Main Auditorium",
+ "expected_attendance": 186,
+ "budget_requested_inr": 36000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-11-07",
+  "lead_time_days": 39,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 186,
+  "budget_requested_inr": 36000,
+  "budget_per_attendee_inr": 194,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0192-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 186 attendees for this Sports Tournament, in line with turnout at our previous Sports Tournament events."
+  },
+  {
+   "claim_id": "PRP-0192-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 36,000 is realistic and sufficient for this Sports Tournament."
+  },
+  {
+   "claim_id": "PRP-0192-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0192-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0576",
+ "club_name": "Rural Outreach Cell",
+ "club_id": "CLB17",
+ "title": "Rise Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2026-12-26",
+ "venue": "Seminar Hall",
+ "expected_attendance": 96,
+ "budget_requested_inr": 11000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-10-25",
+  "lead_time_days": 62,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 96,
+  "budget_requested_inr": 11000,
+  "budget_per_attendee_inr": 115,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0576-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 96 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0576-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 11,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0576-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0576-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0576-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

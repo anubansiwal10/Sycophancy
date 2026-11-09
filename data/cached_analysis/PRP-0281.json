@@ -1,0 +1,63 @@
+{
+ "proposal_id": "PRP-0281",
+ "club_name": "Model UN",
+ "club_id": "CLB18",
+ "title": "Momentum Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-03-05",
+ "venue": "Main Auditorium",
+ "expected_attendance": 328,
+ "budget_requested_inr": 38000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2027-02-07",
+  "lead_time_days": 26,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 328,
+  "budget_requested_inr": 38000,
+  "budget_per_attendee_inr": 116,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0281-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 328 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0281-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 38,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0281-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0281-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0281-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

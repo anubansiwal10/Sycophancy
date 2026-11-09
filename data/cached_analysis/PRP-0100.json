@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0100",
+ "club_name": "Mechanical Design Society",
+ "club_id": "CLB40",
+ "title": "Pulse Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-01-09",
+ "venue": "Seminar Hall",
+ "expected_attendance": 136,
+ "budget_requested_inr": 15000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-11-12",
+  "lead_time_days": 58,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 136,
+  "budget_requested_inr": 15000,
+  "budget_per_attendee_inr": 110,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0100-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 136 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0100-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 15,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0100-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0100-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

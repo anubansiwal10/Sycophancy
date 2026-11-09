@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0949",
+ "club_name": "Social Service League",
+ "club_id": "CLB22",
+ "title": "Ignite Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-04-03",
+ "venue": "Seminar Hall",
+ "expected_attendance": 78,
+ "budget_requested_inr": 7000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-03-09",
+  "lead_time_days": 25,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 78,
+  "budget_requested_inr": 7000,
+  "budget_per_attendee_inr": 90,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0949-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 78 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0949-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 7,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0949-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0949-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

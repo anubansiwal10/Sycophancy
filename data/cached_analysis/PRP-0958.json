@@ -1,0 +1,63 @@
+{
+ "proposal_id": "PRP-0958",
+ "club_name": "Aerospace Club",
+ "club_id": "CLB33",
+ "title": "Rise Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-03-15",
+ "venue": "Main Auditorium",
+ "expected_attendance": 374,
+ "budget_requested_inr": 48000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2027-01-06",
+  "lead_time_days": 68,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 374,
+  "budget_requested_inr": 48000,
+  "budget_per_attendee_inr": 128,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0958-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 374 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0958-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 48,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0958-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0958-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0958-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

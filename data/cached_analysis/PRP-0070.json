@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0070",
+ "club_name": "Athletics Club",
+ "club_id": "CLB11",
+ "title": "Rise Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-01-30",
+ "venue": "Main Auditorium",
+ "expected_attendance": 189,
+ "budget_requested_inr": 18000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-12-31",
+  "lead_time_days": 30,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 189,
+  "budget_requested_inr": 18000,
+  "budget_per_attendee_inr": 95,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0070-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 189 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0070-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 18,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0070-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0070-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0070-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

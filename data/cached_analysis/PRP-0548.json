@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0548",
+ "club_name": "Literary & Debate Club",
+ "club_id": "CLB13",
+ "title": "Echo Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2027-04-15",
+ "venue": "Lab Block",
+ "expected_attendance": 51,
+ "budget_requested_inr": 7000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2027-03-29",
+  "lead_time_days": 17,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 51,
+  "budget_requested_inr": 7000,
+  "budget_per_attendee_inr": 137,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0548-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 51 attendees for this Workshop, in line with turnout at our previous Workshop events."
+  },
+  {
+   "claim_id": "PRP-0548-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 7,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0548-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0548-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "proposal_id": "PRP-0618",
+ "club_name": "Literary & Debate Club",
+ "club_id": "CLB13",
+ "title": "Ignite Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2026-12-27",
+ "venue": "Main Auditorium",
+ "expected_attendance": 214,
+ "budget_requested_inr": 24000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2026-11-20",
+  "lead_time_days": 37,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 214,
+  "budget_requested_inr": 24000,
+  "budget_per_attendee_inr": 112,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0618-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 214 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0618-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 24,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0618-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0618-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0618-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

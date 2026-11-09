@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0853",
+ "club_name": "Adventure & Trekking Club",
+ "club_id": "CLB27",
+ "title": "Odyssey Hackathon 2027",
+ "event_type": "Hackathon",
+ "event_date": "2027-03-27",
+ "venue": "Seminar Hall",
+ "expected_attendance": 77,
+ "budget_requested_inr": 15000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2027-02-26",
+  "lead_time_days": 29,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 77,
+  "budget_requested_inr": 15000,
+  "budget_per_attendee_inr": 195,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 24
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0853-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 77 attendees for this Hackathon, in line with turnout at our previous Hackathon events."
+  },
+  {
+   "claim_id": "PRP-0853-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Hackathon efficiently within INR 15,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0853-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0853-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

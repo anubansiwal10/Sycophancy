@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0278",
+ "club_name": "Social Service League",
+ "club_id": "CLB22",
+ "title": "Nexus Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-01-19",
+ "venue": "Seminar Hall",
+ "expected_attendance": 88,
+ "budget_requested_inr": 6000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2026-12-24",
+  "lead_time_days": 26,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 88,
+  "budget_requested_inr": 6000,
+  "budget_per_attendee_inr": 68,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0278-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 88 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0278-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Charity Drive efficiently within INR 6,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0278-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0278-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0278-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

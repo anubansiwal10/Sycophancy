@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0037",
+ "club_name": "Fine Arts Club",
+ "club_id": "CLB07",
+ "title": "Pulse Networking Night 2027",
+ "event_type": "Networking Night",
+ "event_date": "2027-02-18",
+ "venue": "Seminar Hall",
+ "expected_attendance": 66,
+ "budget_requested_inr": 19000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2026-12-18",
+  "lead_time_days": 62,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 66,
+  "budget_requested_inr": 19000,
+  "budget_per_attendee_inr": 288,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 3
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0037-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 66 attendees for this first-of-its-kind Networking Night for our club."
+  },
+  {
+   "claim_id": "PRP-0037-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 19,000 is realistic and sufficient for this Networking Night."
+  },
+  {
+   "claim_id": "PRP-0037-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0037-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0037-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

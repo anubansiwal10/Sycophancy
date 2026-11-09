@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0276",
+ "club_name": "Film & Media Club",
+ "club_id": "CLB12",
+ "title": "Momentum Exhibition 2027",
+ "event_type": "Exhibition",
+ "event_date": "2027-04-15",
+ "venue": "Main Auditorium",
+ "expected_attendance": 247,
+ "budget_requested_inr": 21000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-02-15",
+  "lead_time_days": 59,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 247,
+  "budget_requested_inr": 21000,
+  "budget_per_attendee_inr": 85,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0276-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 247 attendees for this Exhibition, in line with turnout at our previous Exhibition events."
+  },
+  {
+   "claim_id": "PRP-0276-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Exhibition efficiently within INR 21,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0276-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0276-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0276-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

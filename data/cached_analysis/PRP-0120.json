@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0120",
+ "club_name": "Football Club",
+ "club_id": "CLB21",
+ "title": "Quest Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-03-12",
+ "venue": "Main Auditorium",
+ "expected_attendance": 169,
+ "budget_requested_inr": 18000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-01-09",
+  "lead_time_days": 62,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 169,
+  "budget_requested_inr": 18000,
+  "budget_per_attendee_inr": 107,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0120-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 169 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0120-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 18,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0120-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0120-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0120-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

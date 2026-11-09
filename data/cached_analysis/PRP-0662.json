@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0662",
+ "club_name": "Dance Troupe",
+ "club_id": "CLB03",
+ "title": "Zenith Exhibition 2027",
+ "event_type": "Exhibition",
+ "event_date": "2027-03-10",
+ "venue": "Main Auditorium",
+ "expected_attendance": 469,
+ "budget_requested_inr": 92000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-01-16",
+  "lead_time_days": 53,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 469,
+  "budget_requested_inr": 92000,
+  "budget_per_attendee_inr": 196,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0662-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 469 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0662-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 92,000 is realistic and sufficient for this Exhibition."
+  },
+  {
+   "claim_id": "PRP-0662-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0662-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

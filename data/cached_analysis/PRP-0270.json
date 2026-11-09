@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0270",
+ "club_name": "Web Development Guild",
+ "club_id": "CLB09",
+ "title": "Nexus Hackathon 2027",
+ "event_type": "Hackathon",
+ "event_date": "2027-03-23",
+ "venue": "Lab Block",
+ "expected_attendance": 61,
+ "budget_requested_inr": 23000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2027-02-20",
+  "lead_time_days": 31,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 61,
+  "budget_requested_inr": 23000,
+  "budget_per_attendee_inr": 377,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 24
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0270-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 61 attendees for this Hackathon, in line with turnout at our previous Hackathon events."
+  },
+  {
+   "claim_id": "PRP-0270-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 23,000 is realistic and sufficient for this Hackathon."
+  },
+  {
+   "claim_id": "PRP-0270-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0270-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

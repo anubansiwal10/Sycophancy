@@ -1,0 +1,57 @@
+{
+ "proposal_id": "PRP-0339",
+ "club_name": "Model UN",
+ "club_id": "CLB18",
+ "title": "Fusion Guest Lecture 2027",
+ "event_type": "Guest Lecture",
+ "event_date": "2027-01-29",
+ "venue": "Seminar Hall",
+ "expected_attendance": 139,
+ "budget_requested_inr": 17000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-12-01",
+  "lead_time_days": 59,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 139,
+  "budget_requested_inr": 17000,
+  "budget_per_attendee_inr": 122,
+  "external_speaker": "Yes",
+  "speaker_approval": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 2
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0339-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 139 attendees for this Guest Lecture, in line with turnout at our previous Guest Lecture events."
+  },
+  {
+   "claim_id": "PRP-0339-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 17,000 is realistic and sufficient for this Guest Lecture."
+  },
+  {
+   "claim_id": "PRP-0339-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0339-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

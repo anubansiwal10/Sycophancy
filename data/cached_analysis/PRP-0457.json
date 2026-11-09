@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0457",
+ "club_name": "Literary & Debate Club",
+ "club_id": "CLB13",
+ "title": "Zenith Networking Night 2027",
+ "event_type": "Networking Night",
+ "event_date": "2027-02-07",
+ "venue": "Seminar Hall",
+ "expected_attendance": 77,
+ "budget_requested_inr": 24000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2026-12-08",
+  "lead_time_days": 61,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 77,
+  "budget_requested_inr": 24000,
+  "budget_per_attendee_inr": 312,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 3
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0457-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 77 attendees for this first-of-its-kind Networking Night for our club."
+  },
+  {
+   "claim_id": "PRP-0457-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 24,000 is realistic and sufficient for this Networking Night."
+  },
+  {
+   "claim_id": "PRP-0457-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0457-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0457-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

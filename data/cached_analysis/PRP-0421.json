@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0421",
+ "club_name": "Aerospace Club",
+ "club_id": "CLB33",
+ "title": "Nexus Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2027-03-24",
+ "venue": "Lab Block",
+ "expected_attendance": 51,
+ "budget_requested_inr": 8000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2027-02-05",
+  "lead_time_days": 47,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 51,
+  "budget_requested_inr": 8000,
+  "budget_per_attendee_inr": 157,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0421-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 51 attendees for this Workshop, in line with turnout at our previous Workshop events."
+  },
+  {
+   "claim_id": "PRP-0421-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 8,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0421-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0421-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

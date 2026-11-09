@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0322",
+ "club_name": "Quiz Club",
+ "club_id": "CLB06",
+ "title": "Spark Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2027-01-10",
+ "venue": "Lab Block",
+ "expected_attendance": 49,
+ "budget_requested_inr": 7000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-12-13",
+  "lead_time_days": 28,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 49,
+  "budget_requested_inr": 7000,
+  "budget_per_attendee_inr": 143,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0322-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 49 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0322-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 7,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0322-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0322-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0322-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

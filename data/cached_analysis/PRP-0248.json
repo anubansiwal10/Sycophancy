@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0248",
+ "club_name": "Design Collective",
+ "club_id": "CLB24",
+ "title": "Pulse Cultural Fest 2027",
+ "event_type": "Cultural Fest",
+ "event_date": "2027-02-11",
+ "venue": "Seminar Hall",
+ "expected_attendance": 324,
+ "budget_requested_inr": 96000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2027-01-13",
+  "lead_time_days": 29,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 324,
+  "budget_requested_inr": 96000,
+  "budget_per_attendee_inr": 296,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0248-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 324 attendees for this Cultural Fest, in line with turnout at our previous Cultural Fest events."
+  },
+  {
+   "claim_id": "PRP-0248-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 96,000 is realistic and sufficient for this Cultural Fest."
+  },
+  {
+   "claim_id": "PRP-0248-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0248-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0248-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

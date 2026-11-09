@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0928",
+ "club_name": "Mechanical Design Society",
+ "club_id": "CLB40",
+ "title": "Aurora Hackathon 2027",
+ "event_type": "Hackathon",
+ "event_date": "2027-03-14",
+ "venue": "Seminar Hall",
+ "expected_attendance": 103,
+ "budget_requested_inr": 45000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2026-12-30",
+  "lead_time_days": 74,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 103,
+  "budget_requested_inr": 45000,
+  "budget_per_attendee_inr": 437,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 24
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0928-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 103 attendees for this first-of-its-kind Hackathon for our club."
+  },
+  {
+   "claim_id": "PRP-0928-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 45,000 is realistic and sufficient for this Hackathon."
+  },
+  {
+   "claim_id": "PRP-0928-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0928-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

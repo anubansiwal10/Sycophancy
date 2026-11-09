@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0779",
+ "club_name": "Athletics Club",
+ "club_id": "CLB11",
+ "title": "Horizon Sports Tournament 2027",
+ "event_type": "Sports Tournament",
+ "event_date": "2027-04-06",
+ "venue": "Main Auditorium",
+ "expected_attendance": 173,
+ "budget_requested_inr": 32000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2027-02-08",
+  "lead_time_days": 57,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 173,
+  "budget_requested_inr": 32000,
+  "budget_per_attendee_inr": 185,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0779-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 173 attendees for this Sports Tournament, in line with turnout at our previous Sports Tournament events."
+  },
+  {
+   "claim_id": "PRP-0779-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 32,000 is realistic and sufficient for this Sports Tournament."
+  },
+  {
+   "claim_id": "PRP-0779-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0779-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0779-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

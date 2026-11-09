@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0980",
+ "club_name": "Film & Media Club",
+ "club_id": "CLB12",
+ "title": "Rise Exhibition 2027",
+ "event_type": "Exhibition",
+ "event_date": "2027-04-01",
+ "venue": "Main Auditorium",
+ "expected_attendance": 240,
+ "budget_requested_inr": 40000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2027-01-24",
+  "lead_time_days": 67,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 240,
+  "budget_requested_inr": 40000,
+  "budget_per_attendee_inr": 167,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0980-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 240 attendees for this Exhibition, in line with turnout at our previous Exhibition events."
+  },
+  {
+   "claim_id": "PRP-0980-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 40,000 is realistic and sufficient for this Exhibition."
+  },
+  {
+   "claim_id": "PRP-0980-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0980-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0980-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

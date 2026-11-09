@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0460",
+ "club_name": "Cultural Arts Society",
+ "club_id": "CLB35",
+ "title": "Spark Hackathon 2027",
+ "event_type": "Hackathon",
+ "event_date": "2026-11-14",
+ "venue": "Seminar Hall",
+ "expected_attendance": 102,
+ "budget_requested_inr": 34000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-10-12",
+  "lead_time_days": 33,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 102,
+  "budget_requested_inr": 34000,
+  "budget_per_attendee_inr": 333,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 24
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0460-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 102 attendees for this first-of-its-kind Hackathon for our club."
+  },
+  {
+   "claim_id": "PRP-0460-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 34,000 is realistic and sufficient for this Hackathon."
+  },
+  {
+   "claim_id": "PRP-0460-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0460-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0460-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

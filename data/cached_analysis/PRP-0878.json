@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0878",
+ "club_name": "Chess Club",
+ "club_id": "CLB31",
+ "title": "Rise Hackathon 2027",
+ "event_type": "Hackathon",
+ "event_date": "2027-02-24",
+ "venue": "Seminar Hall",
+ "expected_attendance": 94,
+ "budget_requested_inr": 35000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2027-01-28",
+  "lead_time_days": 27,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 94,
+  "budget_requested_inr": 35000,
+  "budget_per_attendee_inr": 372,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 24
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0878-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 94 attendees for this Hackathon, in line with turnout at our previous Hackathon events."
+  },
+  {
+   "claim_id": "PRP-0878-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 35,000 is realistic and sufficient for this Hackathon."
+  },
+  {
+   "claim_id": "PRP-0878-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0878-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0878-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

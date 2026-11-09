@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0101",
+ "club_name": "Environment Club",
+ "club_id": "CLB10",
+ "title": "Aurora Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-02-01",
+ "venue": "Seminar Hall",
+ "expected_attendance": 115,
+ "budget_requested_inr": 12000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Weather or power disruption",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-12-11",
+  "lead_time_days": 52,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 115,
+  "budget_requested_inr": 12000,
+  "budget_per_attendee_inr": 104,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0101-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 115 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0101-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 12,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0101-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0101-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0101-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

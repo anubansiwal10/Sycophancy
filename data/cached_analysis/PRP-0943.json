@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0943",
+ "club_name": "Rotaract Club",
+ "club_id": "CLB28",
+ "title": "Fusion Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2026-12-20",
+ "venue": "Lab Block",
+ "expected_attendance": 53,
+ "budget_requested_inr": 8000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-11-10",
+  "lead_time_days": 40,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 53,
+  "budget_requested_inr": 8000,
+  "budget_per_attendee_inr": 151,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0943-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 53 attendees for this first-of-its-kind Workshop for our club."
+  },
+  {
+   "claim_id": "PRP-0943-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 8,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0943-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0943-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

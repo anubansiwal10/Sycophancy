@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0440",
+ "club_name": "Cricket Club",
+ "club_id": "CLB25",
+ "title": "Pulse Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-01-11",
+ "venue": "Seminar Hall",
+ "expected_attendance": 85,
+ "budget_requested_inr": 7000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-12-30",
+  "lead_time_days": 12,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 85,
+  "budget_requested_inr": 7000,
+  "budget_per_attendee_inr": 82,
+  "external_speaker": "No",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0440-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 85 attendees for this Charity Drive, in line with turnout at our previous Charity Drive events."
+  },
+  {
+   "claim_id": "PRP-0440-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 7,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0440-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0440-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0440-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

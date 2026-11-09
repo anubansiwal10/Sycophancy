@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0284",
+ "club_name": "Athletics Club",
+ "club_id": "CLB11",
+ "title": "Nexus Sports Tournament 2027",
+ "event_type": "Sports Tournament",
+ "event_date": "2027-03-07",
+ "venue": "Main Auditorium",
+ "expected_attendance": 207,
+ "budget_requested_inr": 21000.0,
+ "objectives": [
+  "Strengthen inter-department collaboration",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Venue booking, sound system and a volunteer team of 20 students"
+ ],
+ "risks": [
+  "Low turnout due to overlapping academic schedules",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2027-01-13",
+  "lead_time_days": 53,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 207,
+  "budget_requested_inr": 21000,
+  "budget_per_attendee_inr": 101,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0284-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 207 attendees for this Sports Tournament, in line with turnout at our previous Sports Tournament events."
+  },
+  {
+   "claim_id": "PRP-0284-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Sports Tournament efficiently within INR 21,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0284-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0284-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0284-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

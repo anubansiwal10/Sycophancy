@@ -1,0 +1,56 @@
+{
+ "proposal_id": "PRP-0614",
+ "club_name": "Commerce Society",
+ "club_id": "CLB38",
+ "title": "Vertex Networking Night 2027",
+ "event_type": "Networking Night",
+ "event_date": "2026-12-01",
+ "venue": "Seminar Hall",
+ "expected_attendance": 59,
+ "budget_requested_inr": 21000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Create networking opportunities with industry and alumni"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2026-10-12",
+  "lead_time_days": 50,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 59,
+  "budget_requested_inr": 21000,
+  "budget_per_attendee_inr": 356,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 3
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0614-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 59 attendees for this Networking Night, in line with turnout at our previous Networking Night events."
+  },
+  {
+   "claim_id": "PRP-0614-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 21,000 is realistic and sufficient for this Networking Night."
+  },
+  {
+   "claim_id": "PRP-0614-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0614-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  }
+ ]
+}

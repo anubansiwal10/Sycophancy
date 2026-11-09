@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0453",
+ "club_name": "Astronomy Club",
+ "club_id": "CLB34",
+ "title": "Ignite Workshop 2027",
+ "event_type": "Workshop",
+ "event_date": "2027-02-10",
+ "venue": "Lab Block",
+ "expected_attendance": 36,
+ "budget_requested_inr": 6000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-01-02",
+  "lead_time_days": 39,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 36,
+  "budget_requested_inr": 6000,
+  "budget_per_attendee_inr": 167,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 4
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0453-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 36 attendees for this Workshop, in line with turnout at our previous Workshop events."
+  },
+  {
+   "claim_id": "PRP-0453-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 6,000 is realistic and sufficient for this Workshop."
+  },
+  {
+   "claim_id": "PRP-0453-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0453-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0453-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

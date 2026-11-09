@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0369",
+ "club_name": "Commerce Society",
+ "club_id": "CLB38",
+ "title": "Vertex Networking Night 2027",
+ "event_type": "Networking Night",
+ "event_date": "2027-04-09",
+ "venue": "Lab Block",
+ "expected_attendance": 57,
+ "budget_requested_inr": 13000.0,
+ "objectives": [
+  "Showcase student talent to the wider campus",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Cost overruns on catering"
+ ],
+ "form": {
+  "submission_date": "2027-02-19",
+  "lead_time_days": 49,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 57,
+  "budget_requested_inr": 13000,
+  "budget_per_attendee_inr": 228,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 3
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0369-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 57 attendees for this Networking Night, in line with turnout at our previous Networking Night events."
+  },
+  {
+   "claim_id": "PRP-0369-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Networking Night efficiently within INR 13,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0369-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0369-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0369-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

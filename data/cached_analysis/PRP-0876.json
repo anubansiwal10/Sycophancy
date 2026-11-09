@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0876",
+ "club_name": "Athletics Club",
+ "club_id": "CLB11",
+ "title": "Rise Sports Tournament 2027",
+ "event_type": "Sports Tournament",
+ "event_date": "2026-11-25",
+ "venue": "Main Auditorium",
+ "expected_attendance": 184,
+ "budget_requested_inr": 37000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Weather or power disruption"
+ ],
+ "form": {
+  "submission_date": "2026-10-02",
+  "lead_time_days": 54,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 184,
+  "budget_requested_inr": 37000,
+  "budget_per_attendee_inr": 201,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 8
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0876-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 184 attendees for this Sports Tournament, in line with turnout at our previous Sports Tournament events."
+  },
+  {
+   "claim_id": "PRP-0876-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 37,000 is realistic and sufficient for this Sports Tournament."
+  },
+  {
+   "claim_id": "PRP-0876-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0876-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0876-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will become a flagship tradition for the university."
+  }
+ ]
+}

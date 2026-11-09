@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0195",
+ "club_name": "Badminton Society",
+ "club_id": "CLB20",
+ "title": "Echo Networking Night 2027",
+ "event_type": "Networking Night",
+ "event_date": "2026-12-16",
+ "venue": "Seminar Hall",
+ "expected_attendance": 74,
+ "budget_requested_inr": 24000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Raise awareness and community participation"
+ ],
+ "resources": [
+  "Sponsor-provided prizes, registration desk and photography team"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Crowd management at peak time"
+ ],
+ "form": {
+  "submission_date": "2026-10-23",
+  "lead_time_days": 54,
+  "venue": "Seminar Hall",
+  "venue_capacity": 150,
+  "expected_attendance": 74,
+  "budget_requested_inr": 24000,
+  "budget_per_attendee_inr": 324,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 3
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0195-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 74 attendees for this first-of-its-kind Networking Night for our club."
+  },
+  {
+   "claim_id": "PRP-0195-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 24,000 is realistic and sufficient for this Networking Night."
+  },
+  {
+   "claim_id": "PRP-0195-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0195-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0195-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

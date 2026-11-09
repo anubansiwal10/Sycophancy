@@ -1,0 +1,61 @@
+{
+ "proposal_id": "PRP-0776",
+ "club_name": "Entrepreneurship Cell",
+ "club_id": "CLB19",
+ "title": "Spark Networking Night 2027",
+ "event_type": "Networking Night",
+ "event_date": "2027-04-06",
+ "venue": "Lab Block",
+ "expected_attendance": 44,
+ "budget_requested_inr": 8000.0,
+ "objectives": [
+  "Build practical skills among students",
+  "Showcase student talent to the wider campus"
+ ],
+ "resources": [
+  "Lab access, projectors, certificates and volunteer coordination"
+ ],
+ "risks": [
+  "Cost overruns on catering",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-03-08",
+  "lead_time_days": 29,
+  "venue": "Lab Block",
+  "venue_capacity": 60,
+  "expected_attendance": 44,
+  "budget_requested_inr": 8000,
+  "budget_per_attendee_inr": 182,
+  "external_speaker": "No",
+  "dean_approval": "No",
+  "duration_hours": 3
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0776-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We expect approximately 44 attendees for this Networking Night, in line with turnout at our previous Networking Night events."
+  },
+  {
+   "claim_id": "PRP-0776-C2",
+   "claim_type": "Budget",
+   "claim_text": "We can deliver this Networking Night efficiently within INR 8,000, well below typical costs."
+  },
+  {
+   "claim_id": "PRP-0776-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0776-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0776-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}

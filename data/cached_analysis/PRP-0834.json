@@ -1,0 +1,62 @@
+{
+ "proposal_id": "PRP-0834",
+ "club_name": "Film & Media Club",
+ "club_id": "CLB12",
+ "title": "Odyssey Exhibition 2027",
+ "event_type": "Exhibition",
+ "event_date": "2027-03-24",
+ "venue": "Open Air Theatre",
+ "expected_attendance": 760,
+ "budget_requested_inr": 128000.0,
+ "objectives": [
+  "Raise awareness and community participation",
+  "Strengthen inter-department collaboration"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Speaker or judge unavailability",
+  "Low turnout due to overlapping academic schedules"
+ ],
+ "form": {
+  "submission_date": "2027-02-14",
+  "lead_time_days": 38,
+  "venue": "Open Air Theatre",
+  "venue_capacity": 800,
+  "expected_attendance": 760,
+  "budget_requested_inr": 128000,
+  "budget_per_attendee_inr": 168,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0834-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 760 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0834-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 128,000 is realistic and sufficient for this Exhibition."
+  },
+  {
+   "claim_id": "PRP-0834-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0834-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0834-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will significantly increase student engagement and the visibility of our club."
+  }
+ ]
+}

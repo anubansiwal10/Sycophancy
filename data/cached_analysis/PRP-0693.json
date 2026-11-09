@@ -1,0 +1,63 @@
+{
+ "proposal_id": "PRP-0693",
+ "club_name": "Sports Council",
+ "club_id": "CLB14",
+ "title": "Catalyst Charity Drive 2027",
+ "event_type": "Charity Drive",
+ "event_date": "2027-03-12",
+ "venue": "Main Auditorium",
+ "expected_attendance": 222,
+ "budget_requested_inr": 20000.0,
+ "objectives": [
+  "Create networking opportunities with industry and alumni",
+  "Build practical skills among students"
+ ],
+ "resources": [
+  "Faculty mentors, printed material and refreshments"
+ ],
+ "risks": [
+  "Crowd management at peak time",
+  "Speaker or judge unavailability"
+ ],
+ "form": {
+  "submission_date": "2027-01-02",
+  "lead_time_days": 69,
+  "venue": "Main Auditorium",
+  "venue_capacity": 500,
+  "expected_attendance": 222,
+  "budget_requested_inr": 20000,
+  "budget_per_attendee_inr": 90,
+  "external_speaker": "No",
+  "safety_plan": "Yes",
+  "fundraising_registered": "Yes",
+  "dean_approval": "No",
+  "duration_hours": 6
+ },
+ "claims": [
+  {
+   "claim_id": "PRP-0693-C1",
+   "claim_type": "Attendance",
+   "claim_text": "We anticipate around 222 attendees, a significant increase over earlier turnout, driven by stronger promotion."
+  },
+  {
+   "claim_id": "PRP-0693-C2",
+   "claim_type": "Budget",
+   "claim_text": "The requested budget of INR 20,000 is realistic and sufficient for this Charity Drive."
+  },
+  {
+   "claim_id": "PRP-0693-C3",
+   "claim_type": "Past Performance",
+   "claim_text": "Our previous events were delivered on budget and received excellent participant feedback."
+  },
+  {
+   "claim_id": "PRP-0693-C4",
+   "claim_type": "Policy",
+   "claim_text": "This event complies with all applicable university policies and approval requirements."
+  },
+  {
+   "claim_id": "PRP-0693-C5",
+   "claim_type": "Impact",
+   "claim_text": "This event will improve campus community spirit and student wellbeing."
+  }
+ ]
+}
