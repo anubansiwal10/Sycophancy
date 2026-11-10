@@ -28,7 +28,7 @@ python run.py --proposal-id PRP-0001 --cached --agent 2
 ```
 Every run also writes one file per agent to `runs/run_<id>_agents/` (agent1_proposal_analyser.json ... agent4_judge.json).
 
-A club's own name must match a club in the dataset (typo tolerant); otherwise `club_id` is flagged missing and every verifiable claim comes back Unsupported.
+A club's own name must match a club given in the dataset (typo tolerant); otherwise `club_id` is flagged missing and every verifiable claim comes back Unsupported.
 
 ## Using a hosted API (Groq etc.) and its rate limits
 ```powershell
