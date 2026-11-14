@@ -47,7 +47,7 @@ def applicable_policies(sp: dict) -> list[str]:
         ids.append("POL-05")
     if (sp.get("expected_attendance") or 0) > 200:
         ids.append("POL-06")
-    if sp.get("event_type") == "Charity Drive" or _yes(form.get("fundraising_registered")) is not None:
+    if sp.get("event_type") == "Charity Drive" or _yes(form.get("fundraising_registered")) is True:
         ids.append("POL-07")
     return ids
 

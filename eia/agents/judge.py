@@ -7,7 +7,7 @@ Writer -> Output Validator -> Deterministic Confidence Engine + Bias Warning Mod
   * Bias Warning Module only warns; it never changes the recommendation. The Judge is the only agent that sees the user's stance, and it
     is told that opinion is not evidence."""
 from __future__ import annotations
-
+import math
 import re
 
 from ..config import S
@@ -61,7 +61,7 @@ def confidence(c: dict, coverage: float) -> dict:
     support_share = c["n_supported_verifiable"] / nv if nv else 0.0
     raw = 100 * (cfg["W_COVERAGE"] * coverage + cfg["W_SUPPORT"] * support_share) \
         - cfg["PEN_CONTRADICTED"] * c["n_contradicted"] - cfg["PEN_UNSUPPORTED"] * c["n_unsupported"]
-    return {"confidence_pct": int(round(max(0, min(100, raw)))), "raw": round(raw, 1), "coverage": round(coverage, 3),
+    return {"confidence_pct": int(math.floor(max(0, min(100, raw)) + 0.5)), "raw": round(raw, 1), "coverage": round(coverage, 3),
             "supported_share": round(support_share, 3), "n_contradicted": c["n_contradicted"], "n_unsupported": c["n_unsupported"]}
 
 
