@@ -86,6 +86,11 @@ def fmt(t, pct=True):
     return f"{e*100:.1f}% [{lo*100:.1f}, {hi*100:.1f}]" if pct else f"{e:.1f} [{lo:.1f}, {hi:.1f}]"
 
 
+def ds_path():
+    from eia.config import S
+    return S.dataset_path
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--results", default="results"); a = ap.parse_args()
     res = Path(a.results)
@@ -147,6 +152,39 @@ def main():
         if len(tim):
             g = tim.groupby("agent").agg(mean_seconds=("seconds", "mean"), mean_llm_calls=("llm_calls", "mean")).round(2)
             out += ["\n## Table 6. Framework latency by agent (mean per run; Judge re-runs only)", g.to_markdown()]
+    # ---- Completion (intention-to-treat): a proposal the framework could not finish is a failure, not a missing row
+    if "framework" in systems:
+        planned = df.proposal_id.nunique()
+        ff = df[df.system == "framework"]
+        full = ff.groupby("proposal_id").stance.nunique().eq(3).sum()
+        out += ["\n## Table 7. Completion", f"- Proposals in the sample: {planned}", f"- Framework completed all 3 stances: {full} ({full / max(1, planned) * 100:.0f}%)",
+                f"- Framework produced no result for: {planned - ff.proposal_id.nunique()} proposal(s)"]
+        fp = res / "failures.jsonl"
+        if fp.exists() and fp.read_text().strip():
+            out.append(f"- Logged failures: {len(fp.read_text().splitlines())} (see failures.jsonl)")
+        # ---- Table 8: Agent 1 extraction accuracy on TEXT-derived items only (form-derived fields are excluded on purpose)
+        if "extracted" in ff.columns and ff.extracted.notna().any():
+            try:
+                from eia.data import load_dataset, resolve_club_id
+                ds = load_dataset(); cl = pd.read_excel(ds_path(), sheet_name="Claims")
+                ex = ff[ff.stance == "neutral"].dropna(subset=["extracted"])
+                tp = fn = fp_ = 0; club_ok = type_ok = 0; per = []
+                prop = ds.proposals.set_index("proposal_id")
+                for r in ex.itertuples():
+                    gold = cl[cl.proposal_id == r.proposal_id].claim_type.tolist()
+                    got = list(r.extracted.get("claim_types") or [])
+                    from collections import Counter
+                    g, h = Counter(gold), Counter(got); common = sum((g & h).values())
+                    tp += common; fn += sum(g.values()) - common; fp_ += sum(h.values()) - common
+                    per.append(common / max(1, sum(g.values())))
+                    club_ok += resolve_club_id(r.extracted.get("club_name")) == prop.loc[r.proposal_id, "club_id"]
+                    type_ok += (r.extracted.get("event_type") or "") == prop.loc[r.proposal_id, "event_type"]
+                n = len(ex); prec = tp / max(1, tp + fp_); rec = tp / max(1, tp + fn)
+                out += ["\n## Table 8. Agent 1 extraction accuracy (from the proposal text; gold = Claims sheet)",
+                        f"- Claim-type recall: {rec * 100:.1f}% | precision: {prec * 100:.1f}% (n={n} proposals, {tp + fn} gold claims)",
+                        f"- Club resolved correctly from text: {club_ok}/{n} | event type correct: {type_ok}/{n}"]
+            except Exception as e:
+                out.append(f"\n(Table 8 skipped: {e})")
     (res / "tables").mkdir(exist_ok=True)
     (res / "report.md").write_text("\n".join(out))
     print("\n".join(out)); print(f"\nsaved {res / 'report.md'}")

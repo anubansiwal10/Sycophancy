@@ -26,6 +26,8 @@ def main():
     ap.add_argument("--llm", help="override EIA_LLM_PROVIDER (ollama|fake)")
     ap.add_argument("--model", help="override EIA_LLM_MODEL")
     ap.add_argument("--embed", help="override EIA_EMBED_PROVIDER (ollama|hash)")
+    ap.add_argument("--stop-after-agent1", metavar="OUT.json", help="run Agent 1 only and save the structured proposal for review / editing")
+    ap.add_argument("--from-structured", metavar="IN.json", help="start at Agent 2 from a (reviewed / edited) structured proposal saved by --stop-after-agent1")
     ap.add_argument("--json", action="store_true", help="print the full final state as JSON")
     a = ap.parse_args()
     if a.llm: S.llm_provider = a.llm
@@ -36,8 +38,13 @@ def main():
     from eia.data import benchmark_proposal
     from eia.graph import agent_timings, run_pipeline
 
+    entry = "analyze" if a.stop_after_agent1 else "start"
     inputs = {"user_prompt": a.user_prompt}
-    if a.analysis_json:
+    if a.from_structured:
+        from eia.agents.proposal_analyzer import rebuild_structured
+        entry = "retrieval"
+        inputs.update(structured_proposal=rebuild_structured(json.loads(Path(a.from_structured).read_text(encoding="utf8"))), analysis_source="edited")
+    elif a.analysis_json:
         inputs["analysis_json_path"] = a.analysis_json
         inputs["proposal_text"] = ""
     elif a.proposal_id:
@@ -50,7 +57,21 @@ def main():
     if a.form:
         inputs["proposal_form"] = {**inputs.get("proposal_form", {}), **json.loads(Path(a.form).read_text())}
 
-    st = run_pipeline(inputs)
+    st = run_pipeline(inputs, entry=entry)
+    if entry == "analyze":
+        sp = st.get("structured_proposal")
+        if not sp:
+            print("AGENT 1 FAILED:", st.get("errors"), "| feedback:", st.get("analysis_feedback"))
+            return
+        Path(a.stop_after_agent1).write_text(json.dumps(sp, indent=1, default=str), encoding="utf8")
+        print(f"\nAgent 1 done in {st['total_seconds']}s -> saved {a.stop_after_agent1}")
+        print(f"  club: {sp.get('club_name')} ({sp.get('club_id')})   event type: {sp.get('event_type')}   date: {sp.get('event_date')}")
+        print(f"  venue: {sp.get('venue')}   attendance: {sp.get('expected_attendance')}   budget: {sp.get('budget_requested_inr')}")
+        for c in sp["claims"]:
+            print(f"  [{c['claim_type']}] {c['claim_text'][:100]}")
+        print("  missing fields:", sp.get("missing_fields") or "none")
+        print(f"Edit the file if anything is wrong, then run:  python run.py --from-structured {a.stop_after_agent1}")
+        return
     S.runs_dir.mkdir(parents=True, exist_ok=True)
     out = S.runs_dir / f"run_{st['run_id']}.json"
     out.write_text(json.dumps({k: v for k, v in st.items() if k not in {"raw_hits", "ranked", "parsed_text"}}, indent=1, default=str))
