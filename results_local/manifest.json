@@ -1,0 +1,65 @@
+{
+ "merged_from": [
+  "results_anu",
+  "results_teammate"
+ ],
+ "manifests": [
+  {
+   "host": "Anu10Laptop",
+   "platform": "Windows-11-10.0.26300-SP0",
+   "python": "3.12.9",
+   "started": "2026-11-15T20:39:14",
+   "resumed": false,
+   "git_commit": "c5c53e7",
+   "git_dirty": true,
+   "llm_provider": "ollama",
+   "model": "qwen2.5:7b",
+   "embed_provider": "ollama",
+   "shard": "1/2",
+   "n_proposals": 30,
+   "n_this_shard": 15,
+   "seed": 7,
+   "systems": "framework,baseline,baseline_rubric",
+   "cached_analysis": false,
+   "split": "test",
+   "settings": {
+    "EIA_EMBED_PROVIDER": "ollama",
+    "EIA_LLM_MODEL": "qwen2.5:7b",
+    "EIA_LLM_PROVIDER": "ollama",
+    "EIA_LLM_TIMEOUT": "1800",
+    "EIA_PROMPT_DOCS_PER_CLAIM": "2",
+    "EIA_SNIPPET_CHARS": "120"
+   }
+  },
+  {
+   "host": "LAPTOP-LBK43NFK",
+   "platform": "Windows-10-10.0.26200-SP0",
+   "python": "3.11.9",
+   "started": "2026-11-15T22:45:59",
+   "resumed": true,
+   "git_commit": "c5c53e7",
+   "git_dirty": true,
+   "llm_provider": "ollama",
+   "model": "qwen2.5:7b",
+   "embed_provider": "ollama",
+   "shard": "2/2",
+   "n_proposals": 30,
+   "n_this_shard": 16,
+   "seed": 7,
+   "systems": "framework,baseline,baseline_rubric",
+   "cached_analysis": false,
+   "split": "test",
+   "settings": {
+    "EIA_EMBED_PROVIDER": "ollama",
+    "EIA_LLM_MODEL": "qwen2.5:7b",
+    "EIA_LLM_PROVIDER": "ollama",
+    "EIA_LLM_TIMEOUT": "1800",
+    "EIA_PROMPT_DOCS_PER_CLAIM": "2",
+    "EIA_SNIPPET_CHARS": "120"
+   }
+  }
+ ],
+ "check": [
+  "PRP-0864"
+ ]
+}

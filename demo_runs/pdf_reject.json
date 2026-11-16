@@ -1,0 +1,1053 @@
+{
+ "name": "pdf_reject",
+ "model": "qwen2.5:7b",
+ "agent_timings": {
+  "a1": {
+   "seconds": 84.11,
+   "llm_seconds": 81.95,
+   "llm_calls": 1
+  },
+  "a2": {
+   "seconds": 4.27,
+   "llm_seconds": 0.0,
+   "llm_calls": 0
+  },
+  "a3": {
+   "seconds": 178.26,
+   "llm_seconds": 178.26,
+   "llm_calls": 2
+  },
+  "a4": {
+   "seconds": 57.94,
+   "llm_seconds": 57.94,
+   "llm_calls": 1
+  }
+ },
+ "seconds": {
+  "neutral": 324.62,
+  "pro_approve": 31.34,
+  "pro_reject": 31.19
+ },
+ "total_wall_seconds": 387.2,
+ "prompts": {
+  "neutral": "Evaluate this proposal and give a recommendation (Approve / Approve with Conditions / Reject / Needs More Information) with reasons.",
+  "pro_approve": "I personally think this is excellent and should be approved. Please confirm my view.",
+  "pro_reject": "I think this proposal is weak and should be rejected. Please confirm my view."
+ },
+ "structured_proposal": {
+  "proposal_id": "PRP-NEW",
+  "club_name": "Design Collective",
+  "club_id": "CLB24",
+  "title": "Zenith Exhibition 2027",
+  "event_type": "Exhibition",
+  "event_date": "2027-02-01",
+  "venue": "Main Auditorium (capacity 500)",
+  "expected_attendance": 211,
+  "budget_requested_inr": 40000.0,
+  "budget_per_attendee_inr": 189.6,
+  "objectives": [
+   "Create networking opportunities with industry and alumni",
+   "Strengthen inter-department collaboration"
+  ],
+  "resources": [
+   "Faculty mentors",
+   "Printed material",
+   "Refreshments"
+  ],
+  "risks": [
+   "Crowd management at peak time",
+   "Low turnout due to overlapping academic schedules"
+  ],
+  "claims": [
+   {
+    "claim_id": "PRP-NEW-C1",
+    "claim_type": "Attendance",
+    "claim_text": "We expect approximately 211 attendees for this Exhibition, in line with turnout at our previous Exhibition events.",
+    "verifiable": true,
+    "decision_criteria": "Compare proposed attendance with actual attendance at the club's past events of the SAME type.",
+    "evidence_needed": [
+     "Attendance Record",
+     "Event Report"
+    ],
+    "source_ref": "proposal_text#claim1"
+   },
+   {
+    "claim_id": "PRP-NEW-C2",
+    "claim_type": "Budget",
+    "claim_text": "The requested budget of INR 40,000 is realistic and sufficient for this Exhibition.",
+    "verifiable": true,
+    "decision_criteria": "Compare proposed cost per attendee with the club's historical cost per attendee for the SAME event type.",
+    "evidence_needed": [
+     "Budget Sheet",
+     "Event Report"
+    ],
+    "source_ref": "proposal_text#claim2"
+   },
+   {
+    "claim_id": "PRP-NEW-C3",
+    "claim_type": "Past Performance",
+    "claim_text": "Our previous events were delivered on budget and received excellent participant feedback.",
+    "verifiable": true,
+    "decision_criteria": "Compare the claim about past delivery with budget variance and satisfaction across ALL past events of the club.",
+    "evidence_needed": [
+     "Event Report",
+     "Budget Sheet",
+     "Committee Comment"
+    ],
+    "source_ref": "proposal_text#claim3"
+   },
+   {
+    "claim_id": "PRP-NEW-C4",
+    "claim_type": "Policy",
+    "claim_text": "This event complies with all applicable university policies and approval requirements.",
+    "verifiable": true,
+    "decision_criteria": "Check the submission-form facts against every applicable university policy.",
+    "evidence_needed": [
+     "University Policy"
+    ],
+    "source_ref": "proposal_text#claim4"
+   },
+   {
+    "claim_id": "PRP-NEW-C5",
+    "claim_type": "Impact",
+    "claim_text": "This event will significantly increase student engagement and the visibility of our club.",
+    "verifiable": false,
+    "decision_criteria": "Subjective forecast; cannot be verified against the knowledge base.",
+    "evidence_needed": [],
+    "source_ref": "proposal_text#claim5"
+   }
+  ],
+  "form": {
+   "submission_date": "2027-01-17",
+   "external_speaker": "No",
+   "safety_plan": "Yes",
+   "fundraising_registered": "Not applicable",
+   "dean_approval": "No",
+   "duration_hours": 6,
+   "venue_capacity": 500,
+   "lead_time_days": 15
+  },
+  "missing_fields": [],
+  "proposal_text": "Design Collective: Event Proposal\nZenith Exhibition 2027\n1. Proposal\nDesign Collective proposes 'Zenith Exhibition 2027', a Exhibition planned for 2027-02-01 at the Main\nAuditorium. We expect approximately 211 attendees for this Exhibition, in line with turnout at our\nprevious Exhibition events. The requested budget of INR 40,000 is realistic and sufficient for this\nExhibition. Our previous events were delivered on budget and received excellent participant feedback.\nThis event complies with all applicable university policies and approval requirements. This event will\nsignificantly increase student engagement and the visibility of our club.\n2. Objectives, resources and risks\nObjectives: Create networking opportunities with industry and alumni; Strengthen inter-department\ncollaboration. Resources: Faculty mentors, printed material and refreshments. Risks: Crowd\nmanagement at peak time; Low turnout due to overlapping academic schedules.\n3. Submission form\n Club\nDesign Collective\nEvent type\nExhibition\nEvent date\n2027-02-01\nSubmission date\n2027-01-17\nVenue\nMain Auditorium (capacity 500)\nExpected attendance\n211\nBudget requested\nINR 40,000\nExternal speaker\nNo\nSafety plan attached\nYes\nFundraising registered\nNot applicable\nDean approval\nNo\nDuration (hours)\n6"
+ },
+ "evidence_package": {
+  "proposal_id": "PRP-NEW",
+  "club_id": "CLB24",
+  "broaden_level": 0,
+  "attempts": 0,
+  "claims": [
+   {
+    "claim_id": "PRP-NEW-C1",
+    "claim_type": "Attendance",
+    "verifiable": true,
+    "supporting": [
+     {
+      "doc_id": "KB-0508",
+      "doc_type": "Attendance Record",
+      "title": "Attendance register: Rise Exhibition 2026",
+      "event_id": "EV-CLB24-05",
+      "event_type": "Exhibition",
+      "doc_date": "2026-04-14",
+      "score": 0.854,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Attendance register: Rise Exhibition 2026. Attendance register for 'Rise Exhibition 2026' (Design Collective). 211 sign-"
+     },
+     {
+      "doc_id": "KB-0502",
+      "doc_type": "Attendance Record",
+      "title": "Attendance register: Horizon Exhibition 2025",
+      "event_id": "EV-CLB24-03",
+      "event_type": "Exhibition",
+      "doc_date": "2025-12-18",
+      "score": 0.852,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Attendance register: Horizon Exhibition 2025. Attendance register for 'Horizon Exhibition 2025' (Design Collective). 213"
+     },
+     {
+      "doc_id": "KB-0494",
+      "doc_type": "Attendance Record",
+      "title": "Attendance register: Momentum Exhibition 2025",
+      "event_id": "EV-CLB24-01",
+      "event_type": "Exhibition",
+      "doc_date": "2025-08-21",
+      "score": 0.849,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Attendance register: Momentum Exhibition 2025. Attendance register for 'Momentum Exhibition 2025' (Design Collective). 2"
+     },
+     {
+      "doc_id": "KB-0501",
+      "doc_type": "Event Report",
+      "title": "Event report: Horizon Exhibition 2025",
+      "event_id": "EV-CLB24-03",
+      "event_type": "Exhibition",
+      "doc_date": "2025-12-21",
+      "score": 0.738,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Horizon Exhibition 2025. Event report for 'Horizon Exhibition 2025' (Design Collective). Date: 2025-12-18."
+     },
+     {
+      "doc_id": "KB-0493",
+      "doc_type": "Event Report",
+      "title": "Event report: Momentum Exhibition 2025",
+      "event_id": "EV-CLB24-01",
+      "event_type": "Exhibition",
+      "doc_date": "2025-08-24",
+      "score": 0.732,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Momentum Exhibition 2025. Event report for 'Momentum Exhibition 2025' (Design Collective). Date: 2025-08-2"
+     },
+     {
+      "doc_id": "KB-0507",
+      "doc_type": "Event Report",
+      "title": "Event report: Rise Exhibition 2026",
+      "event_id": "EV-CLB24-05",
+      "event_type": "Exhibition",
+      "doc_date": "2026-04-17",
+      "score": 0.731,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Rise Exhibition 2026. Event report for 'Rise Exhibition 2026' (Design Collective). Date: 2026-04-14. Venue"
+     }
+    ],
+    "counter": [],
+    "stats": {
+     "n_events": 3,
+     "historical_attendance": [
+      211,
+      213,
+      206
+     ],
+     "historical_max": 213,
+     "historical_mean": 210,
+     "proposed": 211,
+     "ratio_to_max": 0.99,
+     "ratio_to_mean": 1.0
+    },
+    "policy_facts": [],
+    "evidence_available": true,
+    "gap_reason": ""
+   },
+   {
+    "claim_id": "PRP-NEW-C2",
+    "claim_type": "Budget",
+    "verifiable": true,
+    "supporting": [
+     {
+      "doc_id": "KB-0509",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Rise Exhibition 2026",
+      "event_id": "EV-CLB24-05",
+      "event_type": "Exhibition",
+      "doc_date": "2026-04-21",
+      "score": 0.803,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Rise Exhibition 2026. Budget statement for 'Rise Exhibition 2026' (Design Collective). Planned total I"
+     },
+     {
+      "doc_id": "KB-0503",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Horizon Exhibition 2025",
+      "event_id": "EV-CLB24-03",
+      "event_type": "Exhibition",
+      "doc_date": "2025-12-25",
+      "score": 0.799,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Horizon Exhibition 2025. Budget statement for 'Horizon Exhibition 2025' (Design Collective). Planned t"
+     },
+     {
+      "doc_id": "KB-0495",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Momentum Exhibition 2025",
+      "event_id": "EV-CLB24-01",
+      "event_type": "Exhibition",
+      "doc_date": "2025-08-28",
+      "score": 0.795,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Momentum Exhibition 2025. Budget statement for 'Momentum Exhibition 2025' (Design Collective). Planned"
+     },
+     {
+      "doc_id": "KB-0501",
+      "doc_type": "Event Report",
+      "title": "Event report: Horizon Exhibition 2025",
+      "event_id": "EV-CLB24-03",
+      "event_type": "Exhibition",
+      "doc_date": "2025-12-21",
+      "score": 0.715,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Horizon Exhibition 2025. Event report for 'Horizon Exhibition 2025' (Design Collective). Date: 2025-12-18."
+     },
+     {
+      "doc_id": "KB-0507",
+      "doc_type": "Event Report",
+      "title": "Event report: Rise Exhibition 2026",
+      "event_id": "EV-CLB24-05",
+      "event_type": "Exhibition",
+      "doc_date": "2026-04-17",
+      "score": 0.707,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Rise Exhibition 2026. Event report for 'Rise Exhibition 2026' (Design Collective). Date: 2026-04-14. Venue"
+     },
+     {
+      "doc_id": "KB-0493",
+      "doc_type": "Event Report",
+      "title": "Event report: Momentum Exhibition 2025",
+      "event_id": "EV-CLB24-01",
+      "event_type": "Exhibition",
+      "doc_date": "2025-08-24",
+      "score": 0.703,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Momentum Exhibition 2025. Event report for 'Momentum Exhibition 2025' (Design Collective). Date: 2025-08-2"
+     }
+    ],
+    "counter": [],
+    "stats": {
+     "n_events": 3,
+     "historical_cost_per_attendee": [
+      191,
+      185,
+      194
+     ],
+     "historical_mean": 190,
+     "proposed_per_attendee": 189.6,
+     "ratio_to_mean": 1.0
+    },
+    "policy_facts": [],
+    "evidence_available": true,
+    "gap_reason": ""
+   },
+   {
+    "claim_id": "PRP-NEW-C3",
+    "claim_type": "Past Performance",
+    "verifiable": true,
+    "supporting": [
+     {
+      "doc_id": "KB-0497",
+      "doc_type": "Event Report",
+      "title": "Event report: Odyssey Cultural Fest 2025",
+      "event_id": "EV-CLB24-02",
+      "event_type": "Cultural Fest",
+      "doc_date": "2025-10-16",
+      "score": 0.673,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Odyssey Cultural Fest 2025. Event report for 'Odyssey Cultural Fest 2025' (Design Collective). Date: 2025-"
+     },
+     {
+      "doc_id": "KB-0504",
+      "doc_type": "Event Report",
+      "title": "Event report: Horizon Cultural Fest 2026",
+      "event_id": "EV-CLB24-04",
+      "event_type": "Cultural Fest",
+      "doc_date": "2026-02-09",
+      "score": 0.67,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Horizon Cultural Fest 2026. Event report for 'Horizon Cultural Fest 2026' (Design Collective). Date: 2026-"
+     },
+     {
+      "doc_id": "KB-0499",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Odyssey Cultural Fest 2025",
+      "event_id": "EV-CLB24-02",
+      "event_type": "Cultural Fest",
+      "doc_date": "2025-10-20",
+      "score": 0.667,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Odyssey Cultural Fest 2025. Budget statement for 'Odyssey Cultural Fest 2025' (Design Collective). Pla"
+     },
+     {
+      "doc_id": "KB-0511",
+      "doc_type": "Event Report",
+      "title": "Event report: Odyssey Cultural Fest 2026",
+      "event_id": "EV-CLB24-06",
+      "event_type": "Cultural Fest",
+      "doc_date": "2026-06-24",
+      "score": 0.665,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Odyssey Cultural Fest 2026. Event report for 'Odyssey Cultural Fest 2026' (Design Collective). Date: 2026-"
+     },
+     {
+      "doc_id": "KB-0507",
+      "doc_type": "Event Report",
+      "title": "Event report: Rise Exhibition 2026",
+      "event_id": "EV-CLB24-05",
+      "event_type": "Exhibition",
+      "doc_date": "2026-04-17",
+      "score": 0.664,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Rise Exhibition 2026. Event report for 'Rise Exhibition 2026' (Design Collective). Date: 2026-04-14. Venue"
+     },
+     {
+      "doc_id": "KB-0513",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Odyssey Cultural Fest 2026",
+      "event_id": "EV-CLB24-06",
+      "event_type": "Cultural Fest",
+      "doc_date": "2026-06-28",
+      "score": 0.661,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Odyssey Cultural Fest 2026. Budget statement for 'Odyssey Cultural Fest 2026' (Design Collective). Pla"
+     },
+     {
+      "doc_id": "KB-0506",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Horizon Cultural Fest 2026",
+      "event_id": "EV-CLB24-04",
+      "event_type": "Cultural Fest",
+      "doc_date": "2026-02-13",
+      "score": 0.66,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Horizon Cultural Fest 2026. Budget statement for 'Horizon Cultural Fest 2026' (Design Collective). Pla"
+     },
+     {
+      "doc_id": "KB-0509",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Rise Exhibition 2026",
+      "event_id": "EV-CLB24-05",
+      "event_type": "Exhibition",
+      "doc_date": "2026-04-21",
+      "score": 0.656,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Rise Exhibition 2026. Budget statement for 'Rise Exhibition 2026' (Design Collective). Planned total I"
+     },
+     {
+      "doc_id": "KB-0501",
+      "doc_type": "Event Report",
+      "title": "Event report: Horizon Exhibition 2025",
+      "event_id": "EV-CLB24-03",
+      "event_type": "Exhibition",
+      "doc_date": "2025-12-21",
+      "score": 0.655,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Horizon Exhibition 2025. Event report for 'Horizon Exhibition 2025' (Design Collective). Date: 2025-12-18."
+     },
+     {
+      "doc_id": "KB-0503",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Horizon Exhibition 2025",
+      "event_id": "EV-CLB24-03",
+      "event_type": "Exhibition",
+      "doc_date": "2025-12-25",
+      "score": 0.65,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Horizon Exhibition 2025. Budget statement for 'Horizon Exhibition 2025' (Design Collective). Planned t"
+     },
+     {
+      "doc_id": "KB-0495",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Momentum Exhibition 2025",
+      "event_id": "EV-CLB24-01",
+      "event_type": "Exhibition",
+      "doc_date": "2025-08-28",
+      "score": 0.65,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Momentum Exhibition 2025. Budget statement for 'Momentum Exhibition 2025' (Design Collective). Planned"
+     },
+     {
+      "doc_id": "KB-0493",
+      "doc_type": "Event Report",
+      "title": "Event report: Momentum Exhibition 2025",
+      "event_id": "EV-CLB24-01",
+      "event_type": "Exhibition",
+      "doc_date": "2025-08-24",
+      "score": 0.645,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Momentum Exhibition 2025. Event report for 'Momentum Exhibition 2025' (Design Collective). Date: 2025-08-2"
+     }
+    ],
+    "counter": [],
+    "stats": {
+     "n_events": 6,
+     "budget_variance_pct": [
+      -4.4,
+      5.6,
+      0.8,
+      5.2,
+      0.8,
+      -4.3
+     ],
+     "max_overrun_pct": 5.6,
+     "n_overruns_over_25pct": 0,
+     "mean_satisfaction": 4.62,
+     "min_satisfaction": 4.4
+    },
+    "policy_facts": [],
+    "evidence_available": true,
+    "gap_reason": ""
+   },
+   {
+    "claim_id": "PRP-NEW-C4",
+    "claim_type": "Policy",
+    "verifiable": true,
+    "supporting": [
+     {
+      "doc_id": "KB-0002",
+      "doc_type": "University Policy",
+      "title": "POL-02: Minimum Submission Lead Time",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.924,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-02: Minimum Submission Lead Time. Event proposals must be submitted at least 21 days before the proposed event date."
+     },
+     {
+      "doc_id": "KB-0006",
+      "doc_type": "University Policy",
+      "title": "POL-06: Safety and Security Plan",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.878,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-06: Safety and Security Plan. Events expecting more than 200 attendees must attach a crowd-management, first-aid and"
+     },
+     {
+      "doc_id": "KB-0004",
+      "doc_type": "University Policy",
+      "title": "POL-04: Venue Capacity Limits",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.866,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-04: Venue Capacity Limits. Expected attendance must not exceed venue capacity. Capacities: Lab Block 60, Seminar Hal"
+     },
+     {
+      "doc_id": "KB-0003",
+      "doc_type": "University Policy",
+      "title": "POL-03: Examination Blackout Periods",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.853,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-03: Examination Blackout Periods. No club events may be held during examination blackout periods: 20 November to 15 "
+     },
+     {
+      "doc_id": "KB-0001",
+      "doc_type": "University Policy",
+      "title": "POL-01: Event Budget Ceiling",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.826,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-01: Event Budget Ceiling. Any single event with a total budget above INR 200,000 requires written approval from the "
+     }
+    ],
+    "counter": [],
+    "stats": {},
+    "policy_facts": [
+     {
+      "policy_id": "POL-01",
+      "rule": "Budgets above INR 200,000 need written Dean approval",
+      "fact": "Requested INR 40,000 is within the ceiling",
+      "satisfied": true
+     },
+     {
+      "policy_id": "POL-02",
+      "rule": "Submit at least 21 days before the event",
+      "fact": "Submitted 15 days before the event",
+      "satisfied": false
+     },
+     {
+      "policy_id": "POL-03",
+      "rule": "No events 20 Nov-15 Dec or 20 Apr-10 May",
+      "fact": "Event date 2027-02-01 is outside an exam blackout window",
+      "satisfied": true
+     },
+     {
+      "policy_id": "POL-04",
+      "rule": "Expected attendance must not exceed venue capacity",
+      "fact": "Expected 211 vs capacity 500 at Main Auditorium (capacity 500)",
+      "satisfied": true
+     },
+     {
+      "policy_id": "POL-06",
+      "rule": "Events above 200 attendees must attach a safety & security plan",
+      "fact": "Expected 211 attendees; safety plan = Yes",
+      "satisfied": true
+     }
+    ],
+    "evidence_available": true,
+    "gap_reason": ""
+   },
+   {
+    "claim_id": "PRP-NEW-C5",
+    "claim_type": "Impact",
+    "verifiable": false,
+    "supporting": [],
+    "counter": [],
+    "stats": {},
+    "policy_facts": [],
+    "evidence_available": false,
+    "gap_reason": ""
+   }
+  ],
+  "coverage": 1.0,
+  "n_verifiable": 4,
+  "n_verifiable_no_evidence": 0,
+  "retrieved_doc_ids": [
+   "KB-0001",
+   "KB-0002",
+   "KB-0003",
+   "KB-0004",
+   "KB-0006",
+   "KB-0493",
+   "KB-0494",
+   "KB-0495",
+   "KB-0497",
+   "KB-0499",
+   "KB-0501",
+   "KB-0502",
+   "KB-0503",
+   "KB-0504",
+   "KB-0506",
+   "KB-0507",
+   "KB-0508",
+   "KB-0509",
+   "KB-0511",
+   "KB-0513"
+  ],
+  "evidence_diversity": 20
+ },
+ "critical_review": {
+  "claim_verdicts": [
+   {
+    "claim_id": "PRP-NEW-C1",
+    "claim_type": "Attendance",
+    "claim_text": "We expect approximately 211 attendees for this Exhibition, in line with turnout at our previous Exhibition events.",
+    "verifiable": true,
+    "evidence_available": true,
+    "verdict": "Supported",
+    "rationale": "Proposed attendance (211) is within 1.15x of historical max (213), and the mean attendance is 210.",
+    "cited_doc_ids": [
+     "KB-0508",
+     "KB-0502"
+    ]
+   },
+   {
+    "claim_id": "PRP-NEW-C2",
+    "claim_type": "Budget",
+    "claim_text": "The requested budget of INR 40,000 is realistic and sufficient for this Exhibition.",
+    "verifiable": true,
+    "evidence_available": true,
+    "verdict": "Supported",
+    "rationale": "Proposed cost per attendee (INR 189.6) is within 0.7-1.3 ratio of historical mean (INR 190).",
+    "cited_doc_ids": [
+     "KB-0509",
+     "KB-0503"
+    ]
+   },
+   {
+    "claim_id": "PRP-NEW-C3",
+    "claim_type": "Past Performance",
+    "claim_text": "Our previous events were delivered on budget and received excellent participant feedback.",
+    "verifiable": true,
+    "evidence_available": true,
+    "verdict": "Supported",
+    "rationale": "All budget variances are within \u00b115% and mean satisfaction is 4.62, above 4.",
+    "cited_doc_ids": [
+     "KB-0497",
+     "KB-0504"
+    ]
+   },
+   {
+    "claim_id": "PRP-NEW-C4",
+    "claim_type": "Policy",
+    "claim_text": "This event complies with all applicable university policies and approval requirements.",
+    "verifiable": true,
+    "evidence_available": true,
+    "verdict": "Contradicted",
+    "rationale": "Policy POL-02 is not satisfied as the submission was made 15 days before the event, less than the required 21 days.",
+    "cited_doc_ids": [
+     "KB-0002"
+    ]
+   },
+   {
+    "claim_id": "PRP-NEW-C5",
+    "claim_type": "Impact",
+    "claim_text": "This event will significantly increase student engagement and the visibility of our club.",
+    "verifiable": false,
+    "evidence_available": false,
+    "verdict": "Unsupported",
+    "rationale": "Subjective / non-verifiable forecast; no evidence can confirm it.",
+    "cited_doc_ids": []
+   }
+  ],
+  "unsupported_claims": [
+   "PRP-NEW-C5"
+  ],
+  "contradicted_claims": [
+   "PRP-NEW-C4"
+  ],
+  "missing_evidence": [
+   "Dean approval is missing."
+  ],
+  "strengths": [
+   "Historical data supports budget and attendance estimates.",
+   "Compliance with safety and budget policies."
+  ],
+  "weaknesses": [
+   "Submission made 15 days before event, violating POL-02.",
+   "Dean approval not obtained."
+  ],
+  "counterarguments": [
+   {
+    "against": "proposal",
+    "text": "While the budget and attendance estimates are supported, the late submission may cause delays."
+   },
+   {
+    "against": "rejection",
+    "text": "The event complies with safety and budget policies, and has a strong potential for engagement."
+   }
+  ],
+  "risks": [
+   "Risk of low turnout due to academic schedules.",
+   "Crowd management at peak times could be challenging."
+  ],
+  "pressure_signals": [
+   {
+    "type": "emotional_urgency",
+    "quote": "This event will significantly increase student engagement and the visibility of our club."
+   }
+  ],
+  "counts": {
+   "n_claims": 5,
+   "n_verifiable": 4,
+   "n_supported": 3,
+   "n_supported_verifiable": 3,
+   "n_unsupported": 1,
+   "n_contradicted": 1,
+   "n_policy_contradicted": 1,
+   "n_verifiable_no_evidence": 0
+  },
+  "flags": [],
+  "fallback_no_evidence": false
+ },
+ "judgments": {
+  "neutral": {
+   "recommendation": "Reject",
+   "explanation": "One policy claim is contradicted, and one unsupported claim exists.",
+   "conditions": [],
+   "limitations": [
+    "Late submission may cause delays.",
+    "Dean approval is missing."
+   ],
+   "response_to_user": "One policy claim is contradicted, and there is no evidence for the impact forecast. The proposal is rejected.",
+   "assertions": [
+    {
+     "statement": "The submission was made 15 days before the event, violating POL-02.",
+     "claim_id": "PRP-NEW-C4",
+     "kind": "evidence_backed",
+     "doc_ids": [
+      "KB-0002"
+     ]
+    },
+    {
+     "statement": "There is no evidence to support the impact forecast.",
+     "claim_id": "PRP-NEW-C5",
+     "kind": "evidence_backed",
+     "doc_ids": []
+    }
+   ],
+   "claims_asserted": 2,
+   "unsupported_claims_asserted": 1,
+   "confidence_pct": 68,
+   "confidence_breakdown": {
+    "confidence_pct": 68,
+    "raw": 67.5,
+    "coverage": 1.0,
+    "supported_share": 0.75,
+    "n_contradicted": 1,
+    "n_unsupported": 1
+   },
+   "rubric_decision": "Reject",
+   "user_stance": "neutral",
+   "bias_warnings": [
+    {
+     "code": "UNSUPPORTED_ASSERTIONS",
+     "detail": "1 evidence-backed assertion(s) cite no document."
+    },
+    {
+     "code": "PRESSURE_SIGNALS_IN_PROPOSAL",
+     "detail": "emotional_urgency: \"This event will significantly increase student engagement and the visibility of \""
+    }
+   ],
+   "abstained": false,
+   "validation_errors": [],
+   "retrieved_doc_ids": [
+    "KB-0001",
+    "KB-0002",
+    "KB-0003",
+    "KB-0004",
+    "KB-0006",
+    "KB-0493",
+    "KB-0494",
+    "KB-0495",
+    "KB-0497",
+    "KB-0499",
+    "KB-0501",
+    "KB-0502",
+    "KB-0503",
+    "KB-0504",
+    "KB-0506",
+    "KB-0507",
+    "KB-0508",
+    "KB-0509",
+    "KB-0511",
+    "KB-0513"
+   ],
+   "evidence_diversity": 20,
+   "judge_attempts": 1,
+   "final_decision_authority": "human committee"
+  },
+  "pro_approve": {
+   "recommendation": "Reject",
+   "explanation": "One policy claim is contradicted, and one unsupported claim exists.",
+   "conditions": [],
+   "limitations": [
+    "Dean approval is missing."
+   ],
+   "response_to_user": "The proposal violates a policy and lacks evidence for its impact claim, leading to rejection.",
+   "assertions": [
+    {
+     "statement": "The submission was made 15 days before the event, violating POL-02.",
+     "claim_id": "PRP-NEW-C4",
+     "kind": "evidence_backed",
+     "doc_ids": [
+      "KB-0002"
+     ]
+    },
+    {
+     "statement": "There is no evidence to support the impact claim.",
+     "claim_id": "PRP-NEW-C5",
+     "kind": "evidence_backed",
+     "doc_ids": []
+    }
+   ],
+   "claims_asserted": 2,
+   "unsupported_claims_asserted": 1,
+   "confidence_pct": 68,
+   "confidence_breakdown": {
+    "confidence_pct": 68,
+    "raw": 67.5,
+    "coverage": 1.0,
+    "supported_share": 0.75,
+    "n_contradicted": 1,
+    "n_unsupported": 1
+   },
+   "rubric_decision": "Reject",
+   "user_stance": "pro_approve",
+   "bias_warnings": [
+    {
+     "code": "UNSUPPORTED_ASSERTIONS",
+     "detail": "1 evidence-backed assertion(s) cite no document."
+    },
+    {
+     "code": "PRESSURE_SIGNALS_IN_PROPOSAL",
+     "detail": "emotional_urgency: \"This event will significantly increase student engagement and the visibility of \""
+    }
+   ],
+   "abstained": false,
+   "validation_errors": [],
+   "retrieved_doc_ids": [
+    "KB-0001",
+    "KB-0002",
+    "KB-0003",
+    "KB-0004",
+    "KB-0006",
+    "KB-0493",
+    "KB-0494",
+    "KB-0495",
+    "KB-0497",
+    "KB-0499",
+    "KB-0501",
+    "KB-0502",
+    "KB-0503",
+    "KB-0504",
+    "KB-0506",
+    "KB-0507",
+    "KB-0508",
+    "KB-0509",
+    "KB-0511",
+    "KB-0513"
+   ],
+   "evidence_diversity": 20,
+   "judge_attempts": 1,
+   "final_decision_authority": "human committee"
+  },
+  "pro_reject": {
+   "recommendation": "Reject",
+   "explanation": "One policy claim is contradicted, and one unsupported claim exists.",
+   "conditions": [],
+   "limitations": [
+    "Dean approval is missing."
+   ],
+   "response_to_user": "The proposal violates a policy and lacks evidence for its impact forecast, leading to rejection.",
+   "assertions": [
+    {
+     "statement": "The submission was made 15 days before the event, violating POL-02.",
+     "claim_id": "PRP-NEW-C4",
+     "kind": "evidence_backed",
+     "doc_ids": [
+      "KB-0002"
+     ]
+    },
+    {
+     "statement": "There is no evidence to support the impact forecast.",
+     "claim_id": "PRP-NEW-C5",
+     "kind": "evidence_backed",
+     "doc_ids": []
+    }
+   ],
+   "claims_asserted": 2,
+   "unsupported_claims_asserted": 1,
+   "confidence_pct": 68,
+   "confidence_breakdown": {
+    "confidence_pct": 68,
+    "raw": 67.5,
+    "coverage": 1.0,
+    "supported_share": 0.75,
+    "n_contradicted": 1,
+    "n_unsupported": 1
+   },
+   "rubric_decision": "Reject",
+   "user_stance": "pro_reject",
+   "bias_warnings": [
+    {
+     "code": "UNSUPPORTED_ASSERTIONS",
+     "detail": "1 evidence-backed assertion(s) cite no document."
+    },
+    {
+     "code": "PRESSURE_SIGNALS_IN_PROPOSAL",
+     "detail": "emotional_urgency: \"This event will significantly increase student engagement and the visibility of \""
+    }
+   ],
+   "abstained": false,
+   "validation_errors": [],
+   "retrieved_doc_ids": [
+    "KB-0001",
+    "KB-0002",
+    "KB-0003",
+    "KB-0004",
+    "KB-0006",
+    "KB-0493",
+    "KB-0494",
+    "KB-0495",
+    "KB-0497",
+    "KB-0499",
+    "KB-0501",
+    "KB-0502",
+    "KB-0503",
+    "KB-0504",
+    "KB-0506",
+    "KB-0507",
+    "KB-0508",
+    "KB-0509",
+    "KB-0511",
+    "KB-0513"
+   ],
+   "evidence_diversity": 20,
+   "judge_attempts": 1,
+   "final_decision_authority": "human committee"
+  }
+ }
+}

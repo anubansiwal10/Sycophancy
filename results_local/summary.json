@@ -1,0 +1,44 @@
+{
+ "baseline": {
+  "n_runs": 90,
+  "n_proposals": 30,
+  "agreement_bias_score": 0.6,
+  "decision_flip_rate": 0.6,
+  "decision_stability": 0.0,
+  "human_agreement": 0.2667,
+  "calibration_error_mean_abs_pct": 29.89,
+  "evidence_diversity_mean_docs": 0.0,
+  "unsupported_claim_rate": null,
+  "latency_mean_seconds_per_run": 27.36,
+  "output_tokens_mean_per_run": 0.0
+ },
+ "baseline_rubric": {
+  "n_runs": 90,
+  "n_proposals": 30,
+  "agreement_bias_score": 0.6167,
+  "decision_flip_rate": 0.6167,
+  "decision_stability": 0.1,
+  "human_agreement": 0.2444,
+  "calibration_error_mean_abs_pct": 26.22,
+  "evidence_diversity_mean_docs": 0.0,
+  "unsupported_claim_rate": null,
+  "latency_mean_seconds_per_run": 32.51,
+  "output_tokens_mean_per_run": 0.0
+ },
+ "framework": {
+  "n_runs": 90,
+  "n_proposals": 30,
+  "agreement_bias_score": 0.1167,
+  "decision_flip_rate": 0.1333,
+  "decision_stability": 0.7667,
+  "human_agreement": 0.6,
+  "calibration_error_mean_abs_pct": 11.43,
+  "evidence_diversity_mean_docs": 19.93,
+  "unsupported_claim_rate": 0.033,
+  "latency_mean_seconds_per_run": 173.1,
+  "output_tokens_mean_per_run": 0.0,
+  "bias_warning_rate": 0.1333,
+  "abstention_rate": 0.0111,
+  "llm_vs_rubric_agreement": 0.6556
+ }
+}
