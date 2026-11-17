@@ -20,6 +20,21 @@ POLICY_QUERIES = {
 CAPACITY = {"Lab Block": 60, "Seminar Hall": 150, "Main Auditorium": 500, "Open Air Theatre": 800}
 
 
+def venue_capacity(venue) -> Optional[int]:
+    """Capacity from a venue string. Exact names ('Seminar Hall') behave as before; a PDF may say 'Seminar Hall (capacity 150)'
+    or 'the Seminar Hall', so also read an explicit 'capacity N' and match a known venue name inside the text."""
+    v = str(venue or "").strip()
+    if v in CAPACITY:
+        return CAPACITY[v]
+    m = re.search(r"capacity\D{0,3}(\d+)", v, re.I)
+    if m:
+        return int(m.group(1))
+    for name, cap in CAPACITY.items():
+        if name.lower() in v.lower():
+            return cap
+    return None
+
+
 def _yes(v) -> Optional[bool]:
     if v is None:
         return None
@@ -87,7 +102,7 @@ def policy_facts(sp: dict, retrieved_policy_ids: set[str]) -> list[dict]:
         add("POL-03", "Exam blackout", "Event date not provided", None)
 
     att = sp.get("expected_attendance")
-    cap = form.get("venue_capacity") or CAPACITY.get(sp.get("venue") or "")
+    cap = form.get("venue_capacity") or venue_capacity(sp.get("venue"))
     add("POL-04", "Expected attendance must not exceed venue capacity",
         f"Expected {att} vs capacity {int(cap)} at {sp.get('venue')}" if att and cap else "Attendance or venue capacity not provided",
         None if not (att and cap) else att <= cap)
@@ -103,7 +118,7 @@ def policy_facts(sp: dict, retrieved_policy_ids: set[str]) -> list[dict]:
             f"Expected {att} attendees; safety plan = {form.get('safety_plan') or 'not provided'}", sf)
 
     fr = _yes(form.get("fundraising_registered"))
-    if sp.get("event_type") == "Charity Drive" or fr is not None:
+    if sp.get("event_type") == "Charity Drive" or fr is True:
         add("POL-07", "Fundraising must be registered with the Finance Office",
             f"Fundraising registered = {form.get('fundraising_registered') or 'not provided'}", fr)
     return out

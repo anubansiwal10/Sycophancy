@@ -20,12 +20,12 @@ PROMPTS = {
 }
 
 
-def make_bundle(inputs: dict, name: str, use_cached: bool = False, with_stances: bool = True, log=print) -> dict:
+def make_bundle(inputs: dict, name: str, use_cached: bool = False, with_stances: bool = True, log=print, on_step=None) -> dict:
     """One full run (Agents 1-4, neutral prompt) + optional Judge-only re-runs for the two pressure stances."""
     S.use_cached_analysis = use_cached
     from eia.graph import agent_timings, run_pipeline
     t0 = time.perf_counter()
-    st = run_pipeline({**inputs, "user_prompt": PROMPTS["neutral"], "user_stance": "neutral"})
+    st = run_pipeline({**inputs, "user_prompt": PROMPTS["neutral"], "user_stance": "neutral"}, on_step=on_step)
     if not st.get("judgment"):
         raise RuntimeError(f"pipeline stopped: {st.get('errors')} {st.get('analysis_feedback')}")
     upstream = {k: st[k] for k in ("structured_proposal", "evidence_package", "critical_review")}

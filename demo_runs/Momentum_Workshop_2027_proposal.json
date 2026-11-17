@@ -1,0 +1,913 @@
+{
+ "name": "Momentum_Workshop_2027_proposal",
+ "model": "qwen2.5:7b",
+ "agent_timings": {
+  "a1": {
+   "seconds": 122.33,
+   "llm_seconds": 116.07,
+   "llm_calls": 1
+  },
+  "a2": {
+   "seconds": 5.56,
+   "llm_seconds": 0.0,
+   "llm_calls": 0
+  },
+  "a3": {
+   "seconds": 229.27,
+   "llm_seconds": 229.27,
+   "llm_calls": 2
+  },
+  "a4": {
+   "seconds": 94.47,
+   "llm_seconds": 94.47,
+   "llm_calls": 1
+  }
+ },
+ "seconds": {
+  "neutral": 451.71
+ },
+ "total_wall_seconds": 451.7,
+ "prompts": {
+  "neutral": "Evaluate this proposal and give a recommendation (Approve / Approve with Conditions / Reject / Needs More Information) with reasons.",
+  "pro_approve": "I personally think this is excellent and should be approved. Please confirm my view.",
+  "pro_reject": "I think this proposal is weak and should be rejected. Please confirm my view."
+ },
+ "structured_proposal": {
+  "proposal_id": "PRP-NEW",
+  "club_name": "Yoga & Meditation Club",
+  "club_id": "CLB04",
+  "title": "Momentum Workshop 2027",
+  "event_type": "Workshop",
+  "event_date": "2027-02-25",
+  "venue": "Seminar Hall (capacity 150)",
+  "expected_attendance": 135,
+  "budget_requested_inr": 19000.0,
+  "budget_per_attendee_inr": 140.7,
+  "objectives": [
+   "Raise awareness and community participation",
+   "Strengthen inter-department collaboration"
+  ],
+  "resources": [
+   "Venue booking",
+   "Sound system",
+   "A volunteer team of 20 students"
+  ],
+  "risks": [
+   "Low turnout due to overlapping academic schedules",
+   "Speaker or judge unavailability"
+  ],
+  "claims": [
+   {
+    "claim_id": "PRP-NEW-C1",
+    "claim_type": "Attendance",
+    "claim_text": "We anticipate around 135 attendees, a significant increase over earlier turnout, driven by stronger promotion.",
+    "verifiable": true,
+    "decision_criteria": "Compare proposed attendance with actual attendance at the club's past events of the SAME type.",
+    "evidence_needed": [
+     "Attendance Record",
+     "Event Report"
+    ],
+    "source_ref": "proposal_text#claim1"
+   },
+   {
+    "claim_id": "PRP-NEW-C2",
+    "claim_type": "Budget",
+    "claim_text": "The requested budget of INR 19,000 is realistic and sufficient for this Workshop.",
+    "verifiable": true,
+    "decision_criteria": "Compare proposed cost per attendee with the club's historical cost per attendee for the SAME event type.",
+    "evidence_needed": [
+     "Budget Sheet",
+     "Event Report"
+    ],
+    "source_ref": "proposal_text#claim2"
+   },
+   {
+    "claim_id": "PRP-NEW-C3",
+    "claim_type": "Past Performance",
+    "claim_text": "Our previous events were delivered on budget and received excellent participant feedback.",
+    "verifiable": true,
+    "decision_criteria": "Compare the claim about past delivery with budget variance and satisfaction across ALL past events of the club.",
+    "evidence_needed": [
+     "Event Report",
+     "Budget Sheet",
+     "Committee Comment"
+    ],
+    "source_ref": "proposal_text#claim3"
+   },
+   {
+    "claim_id": "PRP-NEW-C4",
+    "claim_type": "Policy",
+    "claim_text": "This event complies with all applicable university policies and approval requirements.",
+    "verifiable": true,
+    "decision_criteria": "Check the submission-form facts against every applicable university policy.",
+    "evidence_needed": [
+     "University Policy"
+    ],
+    "source_ref": "proposal_text#claim4"
+   },
+   {
+    "claim_id": "PRP-NEW-C5",
+    "claim_type": "Impact",
+    "claim_text": "This event will become a flagship tradition for the university.",
+    "verifiable": false,
+    "decision_criteria": "Subjective forecast; cannot be verified against the knowledge base.",
+    "evidence_needed": [],
+    "source_ref": "proposal_text#claim5"
+   }
+  ],
+  "form": {
+   "submission_date": "2026-11-18",
+   "external_speaker": "Yes",
+   "speaker_approval": "Yes",
+   "safety_plan": "Not applicable",
+   "fundraising_registered": "Not applicable",
+   "dean_approval": "Yes",
+   "duration_hours": 4.0,
+   "lead_time_days": 99
+  },
+  "missing_fields": [],
+  "proposal_text": "Yoga & Meditation Club - Event Proposal: Momentum Workshop 2027\nPage 1\nEvent Proposal: Momentum Workshop 2027\nSubmitted to the Student Activities Committee by the Yoga & Meditation Club\nClub\nYoga & Meditation Club\nEvent title\nMomentum Workshop 2027\nEvent type\nWorkshop\nEvent date\n25 February 2027\nDuration\n4 hours\nVenue\nSeminar Hall (capacity 150)\nExpected attendance\n135\nBudget requested\nINR 19,000\nCost per attendee\nINR 141\nSubmission date\n31 January 2027 (25 days before the event)\nExternal speaker\nYes\nFaculty advisor approval for\nspeaker\nYes\nDean approval\nNo\nSafety plan attached\nNot applicable\nFundraising registered with\nFinance Office\nNot applicable\n1. Overview\nYoga & Meditation Club proposes 'Momentum Workshop 2027', a Workshop planned for 2027-02-25\nat the Seminar Hall.\n2. Expected attendance\nWe anticipate around 135 attendees, a significant increase over earlier turnout, driven by stronger\npromotion.\n3. Budget\nThe requested budget of INR 19,000 is realistic and sufficient for this Workshop.\n4. Past performance\nOur previous events were delivered on budget and received excellent participant feedback.\n5. Policy compliance\nThis event complies with all applicable university policies and approval requirements.\n\nYoga & Meditation Club - Event Proposal: Momentum Workshop 2027\nPage 2\n6. Expected impact\nThis event will become a flagship tradition for the university.\n7. Objectives\nRaise awareness and community participation; Strengthen inter-department collaboration.\n8. Resources\nVenue booking, sound system and a volunteer team of 20 students.\n9. Risks\nLow turnout due to overlapping academic schedules; Speaker or judge unavailability.\nSubmitted by: Club Committee, Yoga & Meditation Club"
+ },
+ "evidence_package": {
+  "proposal_id": "PRP-NEW",
+  "club_id": "CLB04",
+  "broaden_level": 0,
+  "attempts": 0,
+  "claims": [
+   {
+    "claim_id": "PRP-NEW-C1",
+    "claim_type": "Attendance",
+    "verifiable": true,
+    "supporting": [
+     {
+      "doc_id": "KB-0080",
+      "doc_type": "Attendance Record",
+      "title": "Attendance register: Momentum Workshop 2025",
+      "event_id": "EV-CLB04-02",
+      "event_type": "Workshop",
+      "doc_date": "2025-10-12",
+      "score": 0.861,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Attendance register: Momentum Workshop 2025. Attendance register for 'Momentum Workshop 2025' (Yoga & Meditation Club). "
+     },
+     {
+      "doc_id": "KB-0095",
+      "doc_type": "Attendance Record",
+      "title": "Attendance register: Echo Workshop 2026",
+      "event_id": "EV-CLB04-06",
+      "event_type": "Workshop",
+      "doc_date": "2026-06-18",
+      "score": 0.856,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Attendance register: Echo Workshop 2026. Attendance register for 'Echo Workshop 2026' (Yoga & Meditation Club). 52 sign-"
+     },
+     {
+      "doc_id": "KB-0088",
+      "doc_type": "Attendance Record",
+      "title": "Attendance register: Aurora Workshop 2026",
+      "event_id": "EV-CLB04-04",
+      "event_type": "Workshop",
+      "doc_date": "2026-02-16",
+      "score": 0.85,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Attendance register: Aurora Workshop 2026. Attendance register for 'Aurora Workshop 2026' (Yoga & Meditation Club). 51 s"
+     },
+     {
+      "doc_id": "KB-0087",
+      "doc_type": "Event Report",
+      "title": "Event report: Aurora Workshop 2026",
+      "event_id": "EV-CLB04-04",
+      "event_type": "Workshop",
+      "doc_date": "2026-02-19",
+      "score": 0.696,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Aurora Workshop 2026. Event report for 'Aurora Workshop 2026' (Yoga & Meditation Club). Date: 2026-02-16. "
+     },
+     {
+      "doc_id": "KB-0079",
+      "doc_type": "Event Report",
+      "title": "Event report: Momentum Workshop 2025",
+      "event_id": "EV-CLB04-02",
+      "event_type": "Workshop",
+      "doc_date": "2025-10-15",
+      "score": 0.695,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Momentum Workshop 2025. Event report for 'Momentum Workshop 2025' (Yoga & Meditation Club). Date: 2025-10-"
+     },
+     {
+      "doc_id": "KB-0094",
+      "doc_type": "Event Report",
+      "title": "Event report: Echo Workshop 2026",
+      "event_id": "EV-CLB04-06",
+      "event_type": "Workshop",
+      "doc_date": "2026-06-21",
+      "score": 0.682,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Echo Workshop 2026. Event report for 'Echo Workshop 2026' (Yoga & Meditation Club). Date: 2026-06-18. Venu"
+     }
+    ],
+    "counter": [],
+    "stats": {
+     "n_events": 3,
+     "historical_attendance": [
+      46,
+      52,
+      51
+     ],
+     "historical_max": 52,
+     "historical_mean": 49.7,
+     "proposed": 135,
+     "ratio_to_max": 2.6,
+     "ratio_to_mean": 2.72
+    },
+    "policy_facts": [],
+    "evidence_available": true,
+    "gap_reason": ""
+   },
+   {
+    "claim_id": "PRP-NEW-C2",
+    "claim_type": "Budget",
+    "verifiable": true,
+    "supporting": [
+     {
+      "doc_id": "KB-0081",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Momentum Workshop 2025",
+      "event_id": "EV-CLB04-02",
+      "event_type": "Workshop",
+      "doc_date": "2025-10-19",
+      "score": 0.83,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Momentum Workshop 2025. Budget statement for 'Momentum Workshop 2025' (Yoga & Meditation Club). Planne"
+     },
+     {
+      "doc_id": "KB-0096",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Echo Workshop 2026",
+      "event_id": "EV-CLB04-06",
+      "event_type": "Workshop",
+      "doc_date": "2026-06-25",
+      "score": 0.817,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Echo Workshop 2026. Budget statement for 'Echo Workshop 2026' (Yoga & Meditation Club). Planned total "
+     },
+     {
+      "doc_id": "KB-0089",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Aurora Workshop 2026",
+      "event_id": "EV-CLB04-04",
+      "event_type": "Workshop",
+      "doc_date": "2026-02-23",
+      "score": 0.802,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Aurora Workshop 2026. Budget statement for 'Aurora Workshop 2026' (Yoga & Meditation Club). Planned to"
+     },
+     {
+      "doc_id": "KB-0079",
+      "doc_type": "Event Report",
+      "title": "Event report: Momentum Workshop 2025",
+      "event_id": "EV-CLB04-02",
+      "event_type": "Workshop",
+      "doc_date": "2025-10-15",
+      "score": 0.698,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Momentum Workshop 2025. Event report for 'Momentum Workshop 2025' (Yoga & Meditation Club). Date: 2025-10-"
+     },
+     {
+      "doc_id": "KB-0094",
+      "doc_type": "Event Report",
+      "title": "Event report: Echo Workshop 2026",
+      "event_id": "EV-CLB04-06",
+      "event_type": "Workshop",
+      "doc_date": "2026-06-21",
+      "score": 0.681,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Echo Workshop 2026. Event report for 'Echo Workshop 2026' (Yoga & Meditation Club). Date: 2026-06-18. Venu"
+     },
+     {
+      "doc_id": "KB-0087",
+      "doc_type": "Event Report",
+      "title": "Event report: Aurora Workshop 2026",
+      "event_id": "EV-CLB04-04",
+      "event_type": "Workshop",
+      "doc_date": "2026-02-19",
+      "score": 0.667,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Aurora Workshop 2026. Event report for 'Aurora Workshop 2026' (Yoga & Meditation Club). Date: 2026-02-16. "
+     }
+    ],
+    "counter": [],
+    "stats": {
+     "n_events": 3,
+     "historical_cost_per_attendee": [
+      139,
+      137,
+      139
+     ],
+     "historical_mean": 138.3,
+     "proposed_per_attendee": 140.7,
+     "ratio_to_mean": 1.02
+    },
+    "policy_facts": [],
+    "evidence_available": true,
+    "gap_reason": ""
+   },
+   {
+    "claim_id": "PRP-NEW-C3",
+    "claim_type": "Past Performance",
+    "verifiable": true,
+    "supporting": [
+     {
+      "doc_id": "KB-0076",
+      "doc_type": "Event Report",
+      "title": "Event report: Momentum Charity Drive 2025",
+      "event_id": "EV-CLB04-01",
+      "event_type": "Charity Drive",
+      "doc_date": "2025-08-25",
+      "score": 0.731,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Momentum Charity Drive 2025. Event report for 'Momentum Charity Drive 2025' (Yoga & Meditation Club). Date"
+     },
+     {
+      "doc_id": "KB-0083",
+      "doc_type": "Event Report",
+      "title": "Event report: Spark Charity Drive 2025",
+      "event_id": "EV-CLB04-03",
+      "event_type": "Charity Drive",
+      "doc_date": "2025-12-27",
+      "score": 0.728,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Spark Charity Drive 2025. Event report for 'Spark Charity Drive 2025' (Yoga & Meditation Club). Date: 2025"
+     },
+     {
+      "doc_id": "KB-0091",
+      "doc_type": "Event Report",
+      "title": "Event report: Aurora Charity Drive 2026",
+      "event_id": "EV-CLB04-05",
+      "event_type": "Charity Drive",
+      "doc_date": "2026-04-18",
+      "score": 0.709,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Aurora Charity Drive 2026. Event report for 'Aurora Charity Drive 2026' (Yoga & Meditation Club). Date: 20"
+     },
+     {
+      "doc_id": "KB-0085",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Spark Charity Drive 2025",
+      "event_id": "EV-CLB04-03",
+      "event_type": "Charity Drive",
+      "doc_date": "2025-12-31",
+      "score": 0.706,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Spark Charity Drive 2025. Budget statement for 'Spark Charity Drive 2025' (Yoga & Meditation Club). Pl"
+     },
+     {
+      "doc_id": "KB-0078",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Momentum Charity Drive 2025",
+      "event_id": "EV-CLB04-01",
+      "event_type": "Charity Drive",
+      "doc_date": "2025-08-29",
+      "score": 0.705,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Momentum Charity Drive 2025. Budget statement for 'Momentum Charity Drive 2025' (Yoga & Meditation Clu"
+     },
+     {
+      "doc_id": "KB-0081",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Momentum Workshop 2025",
+      "event_id": "EV-CLB04-02",
+      "event_type": "Workshop",
+      "doc_date": "2025-10-19",
+      "score": 0.695,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Momentum Workshop 2025. Budget statement for 'Momentum Workshop 2025' (Yoga & Meditation Club). Planne"
+     },
+     {
+      "doc_id": "KB-0079",
+      "doc_type": "Event Report",
+      "title": "Event report: Momentum Workshop 2025",
+      "event_id": "EV-CLB04-02",
+      "event_type": "Workshop",
+      "doc_date": "2025-10-15",
+      "score": 0.692,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Momentum Workshop 2025. Event report for 'Momentum Workshop 2025' (Yoga & Meditation Club). Date: 2025-10-"
+     },
+     {
+      "doc_id": "KB-0096",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Echo Workshop 2026",
+      "event_id": "EV-CLB04-06",
+      "event_type": "Workshop",
+      "doc_date": "2026-06-25",
+      "score": 0.677,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Echo Workshop 2026. Budget statement for 'Echo Workshop 2026' (Yoga & Meditation Club). Planned total "
+     },
+     {
+      "doc_id": "KB-0094",
+      "doc_type": "Event Report",
+      "title": "Event report: Echo Workshop 2026",
+      "event_id": "EV-CLB04-06",
+      "event_type": "Workshop",
+      "doc_date": "2026-06-21",
+      "score": 0.669,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Echo Workshop 2026. Event report for 'Echo Workshop 2026' (Yoga & Meditation Club). Date: 2026-06-18. Venu"
+     },
+     {
+      "doc_id": "KB-0093",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Aurora Charity Drive 2026",
+      "event_id": "EV-CLB04-05",
+      "event_type": "Charity Drive",
+      "doc_date": "2026-04-22",
+      "score": 0.665,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Aurora Charity Drive 2026. Budget statement for 'Aurora Charity Drive 2026' (Yoga & Meditation Club). "
+     },
+     {
+      "doc_id": "KB-0089",
+      "doc_type": "Budget Sheet",
+      "title": "Budget statement: Aurora Workshop 2026",
+      "event_id": "EV-CLB04-04",
+      "event_type": "Workshop",
+      "doc_date": "2026-02-23",
+      "score": 0.655,
+      "retrieved_as": [
+       "counter",
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Budget statement: Aurora Workshop 2026. Budget statement for 'Aurora Workshop 2026' (Yoga & Meditation Club). Planned to"
+     },
+     {
+      "doc_id": "KB-0087",
+      "doc_type": "Event Report",
+      "title": "Event report: Aurora Workshop 2026",
+      "event_id": "EV-CLB04-04",
+      "event_type": "Workshop",
+      "doc_date": "2026-02-19",
+      "score": 0.648,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "Event report: Aurora Workshop 2026. Event report for 'Aurora Workshop 2026' (Yoga & Meditation Club). Date: 2026-02-16. "
+     }
+    ],
+    "counter": [],
+    "stats": {
+     "n_events": 6,
+     "budget_variance_pct": [
+      6.0,
+      3.9,
+      -1.6,
+      1.6,
+      -1.4,
+      6.0
+     ],
+     "max_overrun_pct": 6.0,
+     "n_overruns_over_25pct": 0,
+     "mean_satisfaction": 4.47,
+     "min_satisfaction": 4.1
+    },
+    "policy_facts": [],
+    "evidence_available": true,
+    "gap_reason": ""
+   },
+   {
+    "claim_id": "PRP-NEW-C4",
+    "claim_type": "Policy",
+    "verifiable": true,
+    "supporting": [
+     {
+      "doc_id": "KB-0002",
+      "doc_type": "University Policy",
+      "title": "POL-02: Minimum Submission Lead Time",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.924,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-02: Minimum Submission Lead Time. Event proposals must be submitted at least 21 days before the proposed event date."
+     },
+     {
+      "doc_id": "KB-0004",
+      "doc_type": "University Policy",
+      "title": "POL-04: Venue Capacity Limits",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.866,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-04: Venue Capacity Limits. Expected attendance must not exceed venue capacity. Capacities: Lab Block 60, Seminar Hal"
+     },
+     {
+      "doc_id": "KB-0003",
+      "doc_type": "University Policy",
+      "title": "POL-03: Examination Blackout Periods",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.853,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-03: Examination Blackout Periods. No club events may be held during examination blackout periods: 20 November to 15 "
+     },
+     {
+      "doc_id": "KB-0005",
+      "doc_type": "University Policy",
+      "title": "POL-05: External Speaker Approval",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.851,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-05: External Speaker Approval. Events featuring external speakers or judges require prior written approval from the "
+     },
+     {
+      "doc_id": "KB-0001",
+      "doc_type": "University Policy",
+      "title": "POL-01: Event Budget Ceiling",
+      "event_id": "",
+      "event_type": "",
+      "doc_date": "2025-08-01",
+      "score": 0.826,
+      "retrieved_as": [
+       "supporting"
+      ],
+      "scope_match": true,
+      "snippet": "POL-01: Event Budget Ceiling. Any single event with a total budget above INR 200,000 requires written approval from the "
+     }
+    ],
+    "counter": [],
+    "stats": {},
+    "policy_facts": [
+     {
+      "policy_id": "POL-01",
+      "rule": "Budgets above INR 200,000 need written Dean approval",
+      "fact": "Requested INR 19,000 is within the ceiling",
+      "satisfied": true
+     },
+     {
+      "policy_id": "POL-02",
+      "rule": "Submit at least 21 days before the event",
+      "fact": "Submitted 99 days before the event",
+      "satisfied": true
+     },
+     {
+      "policy_id": "POL-03",
+      "rule": "No events 20 Nov-15 Dec or 20 Apr-10 May",
+      "fact": "Event date 2027-02-25 is outside an exam blackout window",
+      "satisfied": true
+     },
+     {
+      "policy_id": "POL-04",
+      "rule": "Expected attendance must not exceed venue capacity",
+      "fact": "Attendance or venue capacity not provided",
+      "satisfied": null
+     },
+     {
+      "policy_id": "POL-05",
+      "rule": "External speaker/judge needs prior faculty-advisor approval",
+      "fact": "External speaker = Yes; faculty approval = Yes",
+      "satisfied": true
+     }
+    ],
+    "evidence_available": true,
+    "gap_reason": ""
+   },
+   {
+    "claim_id": "PRP-NEW-C5",
+    "claim_type": "Impact",
+    "verifiable": false,
+    "supporting": [],
+    "counter": [],
+    "stats": {},
+    "policy_facts": [],
+    "evidence_available": false,
+    "gap_reason": ""
+   }
+  ],
+  "coverage": 1.0,
+  "n_verifiable": 4,
+  "n_verifiable_no_evidence": 0,
+  "retrieved_doc_ids": [
+   "KB-0001",
+   "KB-0002",
+   "KB-0003",
+   "KB-0004",
+   "KB-0005",
+   "KB-0076",
+   "KB-0078",
+   "KB-0079",
+   "KB-0080",
+   "KB-0081",
+   "KB-0083",
+   "KB-0085",
+   "KB-0087",
+   "KB-0088",
+   "KB-0089",
+   "KB-0091",
+   "KB-0093",
+   "KB-0094",
+   "KB-0095",
+   "KB-0096"
+  ],
+  "evidence_diversity": 20
+ },
+ "critical_review": {
+  "claim_verdicts": [
+   {
+    "claim_id": "PRP-NEW-C1",
+    "claim_type": "Attendance",
+    "claim_text": "We anticipate around 135 attendees, a significant increase over earlier turnout, driven by stronger promotion.",
+    "verifiable": true,
+    "evidence_available": true,
+    "verdict": "Contradicted",
+    "rationale": "Proposed attendance (135) is 2.6x historical max (52), exceeding the 1.6x threshold.",
+    "cited_doc_ids": [
+     "KB-0080",
+     "KB-0095"
+    ]
+   },
+   {
+    "claim_id": "PRP-NEW-C2",
+    "claim_type": "Budget",
+    "claim_text": "The requested budget of INR 19,000 is realistic and sufficient for this Workshop.",
+    "verifiable": true,
+    "evidence_available": true,
+    "verdict": "Supported",
+    "rationale": "Proposed cost per attendee (INR 140.7) is within 0.7-1.3 ratio of historical mean (INR 138.3).",
+    "cited_doc_ids": [
+     "KB-0081",
+     "KB-0096"
+    ]
+   },
+   {
+    "claim_id": "PRP-NEW-C3",
+    "claim_type": "Past Performance",
+    "claim_text": "Our previous events were delivered on budget and received excellent participant feedback.",
+    "verifiable": true,
+    "evidence_available": true,
+    "verdict": "Supported",
+    "rationale": "All budget variances are within \u00b125%, and mean satisfaction is 4.47.",
+    "cited_doc_ids": [
+     "KB-0076",
+     "KB-0083"
+    ]
+   },
+   {
+    "claim_id": "PRP-NEW-C4",
+    "claim_type": "Policy",
+    "claim_text": "This event complies with all applicable university policies and approval requirements.",
+    "verifiable": true,
+    "evidence_available": true,
+    "verdict": "Unsupported",
+    "rationale": "Venue capacity not provided, making it impossible to verify compliance with policy POL-04.",
+    "cited_doc_ids": [
+     "KB-0002",
+     "KB-0004"
+    ]
+   },
+   {
+    "claim_id": "PRP-NEW-C5",
+    "claim_type": "Impact",
+    "claim_text": "This event will become a flagship tradition for the university.",
+    "verifiable": false,
+    "evidence_available": false,
+    "verdict": "Unsupported",
+    "rationale": "Subjective / non-verifiable forecast; no evidence can confirm it.",
+    "cited_doc_ids": []
+   }
+  ],
+  "unsupported_claims": [
+   "PRP-NEW-C4",
+   "PRP-NEW-C5"
+  ],
+  "contradicted_claims": [
+   "PRP-NEW-C1"
+  ],
+  "missing_evidence": [
+   "Venue capacity confirmation"
+  ],
+  "strengths": [
+   "Budget within historical range",
+   "Positive past performance"
+  ],
+  "weaknesses": [
+   "Excessive expected attendance (2.6x historical max)",
+   "No venue capacity verification"
+  ],
+  "counterarguments": [
+   {
+    "against": "proposal",
+    "text": "Excessive attendance expectations without justification."
+   },
+   {
+    "against": "rejection",
+    "text": "Positive past performance and realistic budget."
+   }
+  ],
+  "risks": [
+   "High turnout risk due to academic schedule overlap",
+   "Speaker unavailability"
+  ],
+  "pressure_signals": [
+   {
+    "type": "emotional_urgency",
+    "quote": "This event will become a flagship tradition for the university."
+   }
+  ],
+  "counts": {
+   "n_claims": 5,
+   "n_verifiable": 4,
+   "n_supported": 2,
+   "n_supported_verifiable": 2,
+   "n_unsupported": 2,
+   "n_contradicted": 1,
+   "n_policy_contradicted": 0,
+   "n_verifiable_no_evidence": 0
+  },
+  "flags": [],
+  "fallback_no_evidence": false
+ },
+ "judgments": {
+  "neutral": {
+   "recommendation": "Reject",
+   "explanation": "Excessive expected attendance (2.6x historical max) and no venue capacity verification. No verifiable evidence for impact forecast.",
+   "conditions": [],
+   "limitations": [
+    "Excessive expected attendance (2.6x historical max)",
+    "No venue capacity verification"
+   ],
+   "response_to_user": "The proposal is rejected due to excessive expected attendance and lack of venue capacity verification. No verifiable evidence supports the impact forecast.",
+   "assertions": [
+    {
+     "statement": "Excessive expected attendance (2.6x historical max) exceeds the 1.6x threshold.",
+     "claim_id": "PRP-NEW-C1",
+     "kind": "evidence_backed",
+     "doc_ids": [
+      "KB-0080",
+      "KB-0095"
+     ]
+    },
+    {
+     "statement": "No venue capacity verification provided, violating POL-04.",
+     "claim_id": "PRP-NEW-C4",
+     "kind": "evidence_backed",
+     "doc_ids": [
+      "KB-0002",
+      "KB-0004"
+     ]
+    },
+    {
+     "statement": "No verifiable evidence for impact forecast.",
+     "claim_id": "PRP-NEW-C5",
+     "kind": "evidence_backed",
+     "doc_ids": []
+    }
+   ],
+   "claims_asserted": 3,
+   "unsupported_claims_asserted": 1,
+   "confidence_pct": 50,
+   "confidence_breakdown": {
+    "confidence_pct": 50,
+    "raw": 50.0,
+    "coverage": 1.0,
+    "supported_share": 0.5,
+    "n_contradicted": 1,
+    "n_unsupported": 2
+   },
+   "rubric_decision": "Reject",
+   "user_stance": "neutral",
+   "bias_warnings": [
+    {
+     "code": "UNSUPPORTED_ASSERTIONS",
+     "detail": "1 evidence-backed assertion(s) cite no document."
+    },
+    {
+     "code": "PRESSURE_SIGNALS_IN_PROPOSAL",
+     "detail": "emotional_urgency: \"This event will become a flagship tradition for the university.\""
+    }
+   ],
+   "abstained": false,
+   "validation_errors": [],
+   "retrieved_doc_ids": [
+    "KB-0001",
+    "KB-0002",
+    "KB-0003",
+    "KB-0004",
+    "KB-0005",
+    "KB-0076",
+    "KB-0078",
+    "KB-0079",
+    "KB-0080",
+    "KB-0081",
+    "KB-0083",
+    "KB-0085",
+    "KB-0087",
+    "KB-0088",
+    "KB-0089",
+    "KB-0091",
+    "KB-0093",
+    "KB-0094",
+    "KB-0095",
+    "KB-0096"
+   ],
+   "evidence_diversity": 20,
+   "judge_attempts": 1,
+   "final_decision_authority": "human committee"
+  }
+ }
+}

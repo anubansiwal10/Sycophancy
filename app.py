@@ -1,16 +1,30 @@
-"""Streamlit dashboard for the Anti-Sycophancy Decision-Support Agent.
+"""Spectrum: dashboard for the Anti-Sycophancy Decision-Support Agent.
 
-  streamlit run app.py
+  python -m streamlit run app.py
 
-Two modes (sidebar):
-  * Saved demo runs  - loads demo_runs/<name>.json made by prerun_demo.py (instant, nothing depends on the model)
-  * Run a new proposal - upload a PDF; Agent 1 (Qwen) reads it, Agents 2-4 evaluate it (a few minutes on a CPU)
-and an Evaluation tab that shows the experiment results from results/ (summary.json, report.md, eval_runs.csv)."""
+Three pages (top navigation):
+  * Saved runs          - loads demo_runs/<name>.json made by prerun_demo.py (instant, nothing depends on the model)
+  * Evaluate a proposal - upload a PDF; Agent 1 (local Qwen) reads it, Agents 2-4 evaluate it. Runs in the background with live progress.
+  * Results             - the experiment results from results_local/ (summary.json, report.md, eval_runs.csv)
+
+Environment: EIA_DEMO_DIR (default demo_runs), EIA_RESULTS_DIR (default results). The model settings below default to the ones the
+experiment used; set the environment variables yourself to override them."""
+import hashlib
+import html
 import json
 import os
+import re
 import sys
 import tempfile
+import threading
+import time
 from pathlib import Path
+
+# Settings used for the experiment. They must be set BEFORE anything from eia/ is imported (eia.config reads them once).
+# Without them the pipeline falls back to larger prompts and a 15 minute timeout and a CPU run takes about 30 minutes.
+os.environ.setdefault("EIA_PROMPT_DOCS_PER_CLAIM", "2")
+os.environ.setdefault("EIA_SNIPPET_CHARS", "120")
+os.environ.setdefault("EIA_LLM_TIMEOUT", "1800")
 
 import pandas as pd
 import streamlit as st
@@ -20,14 +34,61 @@ sys.path.insert(0, str(ROOT))
 DEMO_DIR = Path(os.getenv("EIA_DEMO_DIR", ROOT / "demo_runs"))
 RESULTS_DIR = Path(os.getenv("EIA_RESULTS_DIR", ROOT / "results"))
 
-st.set_page_config(page_title="Anti-Sycophancy Decision Support", page_icon="⚖️", layout="wide")
+st.set_page_config(page_title="Spectrum", layout="wide", initial_sidebar_state="collapsed")
 
-DEC_BOX = {"Approve": st.success, "Approve with Conditions": st.info, "Needs More Information": st.warning, "Reject": st.error}
-ICON = {"Supported": "✅", "Unsupported": "⚠️", "Contradicted": "❌"}
+PAGES = ["Saved runs", "Evaluate a proposal", "Results"]
 STANCE_LABEL = {"neutral": "Neutral", "pro_approve": "User pushes: approve", "pro_reject": "User pushes: reject"}
+DEC_KIND = {"Approve": "good", "Approve with Conditions": "info", "Needs More Information": "warn", "Reject": "bad"}
+VERDICT_KIND = {"Supported": "good", "Unsupported": "warn", "Contradicted": "bad"}
+
+CSS = """
+<style>
+html, body, [class*="st-"], button, input, textarea { font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif; }
+[data-testid="stSidebar"], [data-testid="stSidebarCollapsedControl"], [data-testid="collapsedControl"] { display: none !important; }
+header[data-testid="stHeader"] { display: none !important; }
+[data-testid="stToolbar"] { display: none !important; }
+.block-container { max-width: 1180px; padding-top: 1.4rem; padding-bottom: 4rem; }
+.sp-brand { font-size: 1.75rem; font-weight: 750; letter-spacing: 0.01em; line-height: 1.1; margin: 0; }
+.sp-brand span { display: block; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.6; margin-top: 0.15rem; }
+.sp-rule { border: 0; border-top: 1px solid rgba(128,128,128,0.28); margin: 0.6rem 0 1.4rem 0; }
+.sp-page-title { font-size: 1.5rem; font-weight: 650; margin: 0 0 0.2rem 0; }
+.sp-page-sub { opacity: 0.7; margin: 0 0 1.2rem 0; }
+.sp-decision { border-left: 5px solid var(--c); background: color-mix(in srgb, var(--c) 11%, transparent); border-radius: 8px; padding: 0.9rem 1.1rem; margin-bottom: 0.9rem; }
+.sp-decision .l { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.65; }
+.sp-decision .v { font-size: 1.55rem; font-weight: 700; line-height: 1.25; }
+.sp-decision.small .v { font-size: 1.15rem; }
+.sp-good { --c: #1b9e6b; } .sp-info { --c: #3b6fd4; } .sp-warn { --c: #d28a0c; } .sp-bad { --c: #cf3b3b; }
+.sp-badge { display: inline-block; padding: 0.08rem 0.55rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); border: 1px solid color-mix(in srgb, var(--c) 40%, transparent); }
+.sp-step { display: flex; align-items: baseline; gap: 0.8rem; padding: 0.55rem 0; border-bottom: 1px solid rgba(128,128,128,0.2); }
+.sp-step .n { font-weight: 650; min-width: 11.5rem; }
+.sp-step .d { flex: 1; opacity: 0.75; }
+.sp-step .s { min-width: 8.5rem; text-align: right; font-variant-numeric: tabular-nums; }
+.sp-step.wait { opacity: 0.45; }
+[data-testid="stMetricValue"] { font-size: 1.6rem; }
+div[data-baseweb="tab-list"] { gap: 0.4rem; }
+</style>
+"""
+st.markdown(CSS, unsafe_allow_html=True)
 
 
-# ------------------------------------------------------------------ helpers
+# ------------------------------------------------------------------ small helpers
+def esc(x) -> str:
+    return html.escape(str(x if x is not None else ""))
+
+
+def badge(text: str, kind: str) -> str:
+    return f'<span class="sp-badge sp-{kind}">{esc(text)}</span>'
+
+
+def decision_card(label: str, value: str, small: bool = False):
+    st.markdown(f'<div class="sp-decision sp-{DEC_KIND.get(value, "info")}{" small" if small else ""}"><div class="l">{esc(label)}</div><div class="v">{esc(value)}</div></div>',
+                unsafe_allow_html=True)
+
+
+def page_header(title: str, sub: str):
+    st.markdown(f'<div class="sp-page-title">{esc(title)}</div><div class="sp-page-sub">{esc(sub)}</div>', unsafe_allow_html=True)
+
+
 def money(v):
     try:
         return f"INR {float(v):,.0f}"
@@ -53,26 +114,22 @@ def rubric_path(c: dict) -> tuple[str, int]:
     return f"No policy violation and enough evidence, so the issue score decides: {issue} gives **{band}** (up to 1 Approve, up to 3 Approve with Conditions, above 3 Reject).", issue
 
 
-def decision_banner(j: dict):
-    DEC_BOX.get(j["recommendation"], st.info)(f"### {j['recommendation']}")
-
-
 # ------------------------------------------------------------------ one run, rendered
 def render_bundle(b: dict):
     sp, pkg, rev, js = b["structured_proposal"], b["evidence_package"], b["critical_review"], b["judgments"]
     j = js["neutral"]
-    st.subheader(sp.get("title") or "Untitled proposal")
-    st.caption(f"{sp.get('club_name')} ({sp.get('club_id')}) · {sp.get('event_type')} · {sp.get('event_date')} · {sp.get('venue')} · "
-               f"{sp.get('expected_attendance')} attendees · {money(sp.get('budget_requested_inr'))}")
+    st.markdown(f"### {esc(sp.get('title') or 'Untitled proposal')}")
+    st.caption(f"{sp.get('club_name')} ({sp.get('club_id')})  |  {sp.get('event_type')}  |  {sp.get('event_date')}  |  {sp.get('venue')}  |  "
+               f"{sp.get('expected_attendance')} attendees  |  {money(sp.get('budget_requested_inr'))}")
     if sp.get("missing_fields"):
         st.warning("Information missing from the proposal: " + ", ".join(sp["missing_fields"]))
 
     t1, t2, t3, t4, t5 = st.tabs(["Decision", "Pressure test", "Evidence and claims", "How the numbers were computed", "Timing"])
 
     with t1:
-        c1, c2 = st.columns([2, 3])
+        c1, c2 = st.columns([2, 3], gap="large")
         with c1:
-            decision_banner(j)
+            decision_card("Recommendation", j["recommendation"])
             st.metric("Confidence (computed by formula)", f"{j['confidence_pct']}%")
             st.progress(min(max(j["confidence_pct"], 0), 100) / 100)
             st.metric("Rubric check (from claim counts)", j["rubric_decision"], delta="matches" if j["rubric_decision"] == j["recommendation"] else "differs",
@@ -95,15 +152,15 @@ def render_bundle(b: dict):
 
     with t2:
         st.markdown("The same proposal is evaluated three times. Agents 1 to 3 never see what the user says. Only the Judge does, and it is told that opinion is not evidence.")
-        cols = st.columns(len(js))
+        cols = st.columns(len(js), gap="large")
         for col, (stance, jj) in zip(cols, js.items()):
             with col:
                 st.markdown(f"**{STANCE_LABEL.get(stance, stance)}**")
                 st.caption(f"“{b['prompts'].get(stance, '')}”")
-                DEC_BOX.get(jj["recommendation"], st.info)(f"**{jj['recommendation']}**")
+                decision_card("Recommendation", jj["recommendation"], small=True)
                 st.metric("Confidence", f"{jj['confidence_pct']}%")
                 for w in jj.get("bias_warnings", []):
-                    st.caption(f"⚠ {w['code']}")
+                    st.caption(f"Warning: {w['code']}")
         decs = {(v["recommendation"], v["confidence_pct"]) for v in js.values()}
         if len(js) == 1:
             st.caption("Only the neutral run was computed for this case.")
@@ -122,9 +179,9 @@ def render_bundle(b: dict):
         rows = []
         for v in rev["claim_verdicts"]:
             e = ev.get(v["claim_id"], {})
-            rows.append({"Type": v["claim_type"], "Verdict": f"{ICON.get(v['verdict'], '')} {v['verdict']}", "Key figures": key_figures(e),
+            rows.append({"Type": v["claim_type"], "Verdict": v["verdict"], "Key figures": key_figures(e),
                          "Claim": v["claim_text"], "Reasoning": v["rationale"], "Docs cited": len(v["cited_doc_ids"])})
-        st.dataframe(pd.DataFrame(rows), hide_index=True)
+        st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
         st.markdown("**Evidence behind each claim**")
         for v in rev["claim_verdicts"]:
             e = ev.get(v["claim_id"], {})
@@ -133,14 +190,14 @@ def render_bundle(b: dict):
             for d in docs:
                 if d["doc_id"] not in seen:
                     seen.add(d["doc_id"]); uniq.append(d)
-            with st.expander(f"{ICON.get(v['verdict'], '')} {v['claim_type']}: {v['claim_text'][:90]}"):
+            with st.expander(f"[{v['verdict']}] {v['claim_type']}: {v['claim_text'][:90]}"):
                 if not uniq:
                     st.caption(e.get("gap_reason") or "No evidence retrieved for this claim.")
                 for d in uniq[:6]:
-                    st.markdown(f"**{d['doc_id']}** · {d.get('doc_type')} · {d.get('doc_date')} · {'in scope' if d.get('scope_match') else 'out of scope'}")
+                    st.markdown(f"**{d['doc_id']}**  |  {d.get('doc_type')}  |  {d.get('doc_date')}  |  {'in scope' if d.get('scope_match') else 'out of scope'}")
                     st.caption(d.get("snippet", "")[:300])
         st.markdown("**The critical review**")
-        a, bb = st.columns(2)
+        a, bb = st.columns(2, gap="large")
         with a:
             st.markdown("Strengths")
             for x in rev.get("strengths", []) or ["none noted"]:
@@ -166,13 +223,15 @@ def render_bundle(b: dict):
         st.latex(rf"\text{{issue score}} = 2\cdot{c['n_contradicted']} + {c['n_unsupported']} = {issue}")
         st.table(pd.DataFrame([c]).T.rename(columns={0: "count"}))
         st.markdown("**3. Policy checks** (date and threshold arithmetic in code)")
-        pol = [(p["policy_id"], p["fact"], p["satisfied"]) for e in pkg["claims"] for p in e.get("policy_facts", [])]
         seen = set()
-        for pid, fact, ok in pol:
-            if pid in seen:
-                continue
-            seen.add(pid)
-            st.markdown(f"- {'✅' if ok else ('❌' if ok is False else '❓')} **{pid}**: {fact}")
+        for e in pkg["claims"]:
+            for p in e.get("policy_facts", []):
+                if p["policy_id"] in seen:
+                    continue
+                seen.add(p["policy_id"])
+                ok = p["satisfied"]
+                st.markdown(f"- {badge('Satisfied', 'good') if ok else (badge('Violated', 'bad') if ok is False else badge('Unknown', 'warn'))} **{esc(p['policy_id'])}**: {esc(p['fact'])}",
+                            unsafe_allow_html=True)
         if not seen:
             st.caption("No policy facts were evaluated.")
         st.markdown("**4. Statistics from the club's history** (parsed from retrieved documents, computed in code)")
@@ -182,96 +241,310 @@ def render_bundle(b: dict):
 
     with t5:
         tm = b.get("agent_timings", {})
-        st.caption(f"Model: {b.get('model')} · total {b.get('total_wall_seconds')} s (includes the pressure re-runs).")
+        st.caption(f"Model: {b.get('model')}  |  total {b.get('total_wall_seconds')} s (includes the pressure re-runs).")
         names = {"a1": "1 Proposal Analyser", "a2": "2 Evidence Retrieval", "a3": "3 Critical Reviewer", "a4": "4 Judge"}
         df = pd.DataFrame({"seconds": {names.get(k, k): v["seconds"] for k, v in tm.items()}})
         st.bar_chart(df)
         st.caption("Agent 1 is skipped for saved structured proposals. Times include waiting on the model.")
 
 
-# ------------------------------------------------------------------ evaluation tab
-def render_evaluation():
+# ------------------------------------------------------------------ background job for "Evaluate a proposal"
+STAGES = [  # (agent key, name, what it does, typical seconds on the 16 GB CPU laptop)
+    ("a1", "Agent 1  Proposal Analyser", "reads the PDF and extracts the claims", 65),
+    ("a2", "Agent 2  Evidence Retrieval", "searches the knowledge base", 5),
+    ("a3", "Agent 3  Critical Reviewer", "checks each claim against the evidence", 155),
+    ("a4", "Agent 4  Judge", "writes the recommendation", 55),
+]
+LAST_NODE = {"a1_load_cached": 1, "a1_requirements_generator": 1, "a2_evidence_packager": 2, "a3_review_formatter": 3, "a4_bias_warning": 4}
+
+
+class Job:
+    """One pipeline run in a background thread. Survives page switches and reruns because it is kept in a process-wide registry."""
+
+    def __init__(self, name: str, inputs: dict, stances: bool, source: dict | None = None):
+        self.name, self.inputs, self.stances, self.source = name, inputs, stances, source or {}
+        self.t0, self.t1 = time.time(), None
+        self.status, self.error, self.result = "running", None, None
+        self.agents_done, self.ends, self.node, self.lines = 0, {}, "starting", []
+
+    def on_step(self, state: dict):
+        tr = state.get("trace") or []
+        if not tr:
+            return
+        self.node = tr[-1]["node"]
+        n = LAST_NODE.get(self.node)
+        if n and n > self.agents_done:
+            self.agents_done = n
+            self.ends[n] = time.time() - self.t0
+
+    def run(self):
+        try:
+            from prerun_demo import make_bundle
+            b = make_bundle(self.inputs, self.name, use_cached=False, with_stances=self.stances, log=self.lines.append, on_step=self.on_step)
+            b["source"] = self.source
+            DEMO_DIR.mkdir(exist_ok=True)
+            (DEMO_DIR / f"{self.name}.json").write_text(json.dumps(b, indent=1, default=str), encoding="utf8")
+            self.result, self.status = b, "done"
+        except Exception as e:  # show the reason, not a stack trace
+            self.error, self.status = str(e)[:700], "error"
+        finally:
+            self.t1 = time.time()
+
+
+@st.cache_resource
+def job_registry() -> dict:
+    return {}
+
+
+def preflight() -> str | None:
+    """Return a message if the local model server is not ready, so the run fails fast instead of looking stuck."""
+    from eia.config import S
+    if S.llm_provider != "ollama":
+        return None
+    import requests
+    try:
+        names = [m["name"] for m in requests.get(S.ollama_base_url + "/api/tags", timeout=4).json().get("models", [])]
+    except Exception:
+        return f"Ollama is not reachable at {S.ollama_base_url}. Start the Ollama app, then try again."
+    for need in (S.llm_model, S.embed_model):
+        if need not in names and f"{need}:latest" not in names:
+            return f"The model '{need}' is not installed. Run: ollama pull {need}"
+    return None
+
+
+@st.cache_resource
+def warm_up_once() -> bool:
+    """Load the models into memory in the background and keep them there, so the first agent does not pay the load time."""
+    from eia.config import S
+    if S.llm_provider != "ollama":
+        return False
+
+    def go():
+        try:
+            import requests
+            requests.post(S.ollama_base_url + "/api/generate", json={"model": S.llm_model, "prompt": "", "keep_alive": "30m"}, timeout=600)
+            requests.post(S.ollama_base_url + "/api/embed", json={"model": S.embed_model, "input": "warm up", "keep_alive": "30m"}, timeout=600)
+        except Exception:
+            pass
+    threading.Thread(target=go, daemon=True).start()
+    return True
+
+
+def safe_name(filename: str) -> str:
+    return re.sub(r"[^A-Za-z0-9_-]+", "_", Path(filename).stem)[:40] or "run"
+
+
+def find_saved(filename: str, sha: str):
+    """A saved run of this same file (matched by content hash; older saves without a hash are matched by file name)."""
+    if not DEMO_DIR.exists():
+        return None
+    for p in sorted(DEMO_DIR.glob("*.json"), key=lambda q: q.stat().st_mtime, reverse=True):
+        try:
+            d = json.loads(p.read_text(encoding="utf8"))
+        except Exception:
+            continue
+        src = d.get("source") or {}
+        if src.get("sha256") == sha or (not src and p.stem == safe_name(filename)):
+            return p, d
+    return None
+
+
+def fmt_s(x: float) -> str:
+    return f"{int(x // 60)}:{int(x % 60):02d}"
+
+
+@st.fragment(run_every=1.5)
+def progress_panel(key: str):
+    job = job_registry().get(key)
+    if job is None:
+        return
+    if job.status != "running":
+        st.rerun()  # full rerun: shows the result or the error
+    elapsed = time.time() - job.t0
+    st.markdown(f"**Running with the local model.** Elapsed {fmt_s(elapsed)}. Typical total on this laptop: about 5 to 6 minutes"
+                + (" plus about 2 minutes for the pressure tests." if job.stances else "."))
+    rows, prev = [], 0.0
+    for i, (_, name, desc, typ) in enumerate(STAGES, start=1):
+        if i <= job.agents_done:
+            state, cls, tm = "Done", "", fmt_s(job.ends[i] - prev)
+            prev = job.ends[i]
+        elif i == job.agents_done + 1:
+            state, cls, tm = "Running", "", f"{fmt_s(max(0.0, elapsed - prev))} (usually ~{typ} s)"
+        else:
+            state, cls, tm = "Waiting", " wait", ""
+        rows.append(f'<div class="sp-step{cls}"><div class="n">{esc(name)}</div><div class="d">{esc(desc)}</div><div class="s"><b>{state}</b>  {esc(tm)}</div></div>')
+    if job.stances:
+        state = "Running" if job.agents_done == 4 else "Waiting"
+        rows.append(f'<div class="sp-step{"" if state == "Running" else " wait"}"><div class="n">Pressure tests</div><div class="d">Judge re-run for the approve and reject pushes</div><div class="s"><b>{state}</b></div></div>')
+    st.markdown("".join(rows), unsafe_allow_html=True)
+    st.caption("A single model call can take one to three minutes, so this list only changes when an agent finishes. You can switch pages and come back; the run continues.")
+
+
+# ------------------------------------------------------------------ pages
+def page_saved():
+    page_header("Saved runs", "Cases that were already evaluated with the local model. They open instantly.")
+    files = sorted(DEMO_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True) if DEMO_DIR.exists() else []
+    if not files:
+        st.info(f"No saved runs in {DEMO_DIR}. Create them with prerun_demo.py or the Evaluate a proposal page.")
+        return
+    pick = st.selectbox("Case", files, format_func=lambda p: p.stem)
+    render_bundle(json.loads(pick.read_text(encoding="utf8")))
+
+
+def page_evaluate():
+    from eia.config import S
+    page_header("Evaluate a proposal", "Upload a club proposal. Agent 1 extracts the claims, then Agents 2 to 4 check them against the knowledge base.")
+    warm_up_once()
+    reg = job_registry()
+    sv = st.session_state.get("saved_view")
+    if sv:
+        d = json.loads(Path(sv).read_text(encoding="utf8"))
+        st.info(f"Showing the saved result of an earlier run on this laptop ({d.get('model')}, {fmt_s(d.get('total_wall_seconds') or 0)}). Nothing is recomputed here.")
+        if st.button("Back to the upload form"):
+            st.session_state.pop("saved_view", None)
+            st.rerun()
+        render_bundle(d)
+        return
+    key = st.session_state.get("job_key")
+    job = reg.get(key) if key else None
+
+    if job is not None and job.status == "running":
+        progress_panel(key)
+        return
+    if job is not None and job.status == "error":
+        st.error(f"The run failed after {fmt_s((job.t1 or time.time()) - job.t0)}: {job.error}")
+        if st.button("Try again"):
+            st.session_state.pop("job_key", None)
+            st.rerun()
+        return
+    if job is not None and job.status == "done":
+        st.success(f"Finished in {fmt_s(job.t1 - job.t0)}. Saved as {job.name}.json in {DEMO_DIR.name}/ so it also appears under Saved runs.")
+        if st.button("Evaluate another proposal"):
+            st.session_state.pop("job_key", None)
+            st.rerun()
+        render_bundle(job.result)
+        return
+
+    with st.container(border=True):
+        f = st.file_uploader("Proposal file", type=["pdf", "docx", "txt", "md"], help="PDF, DOCX or plain text")
+        c1, c2, c3 = st.columns(3, gap="medium")
+        st.caption("These three fields are optional. Anything you fill in here overrides what the document says, so leave them as they are to use the document.")
+        sub = c1.date_input("Submission date", value=None, help="Leave empty to use the date in the document")
+        cap = c2.number_input("Venue capacity", min_value=0, value=0, step=10, help="0 means not given")
+        dean = c3.selectbox("Dean approval", ["Use the document", "Yes", "No"])
+        stances = st.checkbox("Also run the two pressure tests (about 2 more minutes)", value=False)
+        sha = hashlib.sha256(f.getvalue()).hexdigest() if f is not None else None
+        hit = find_saved(f.name, sha) if f is not None else None
+        if hit:
+            st.info(f"This file was already evaluated on this laptop ({hit[1].get('model')}, {fmt_s(hit[1].get('total_wall_seconds') or 0)}). You can open that saved result now, or run it again.")
+            if st.button("Open the saved result"):
+                st.session_state["saved_view"] = str(hit[0])
+                st.rerun()
+        go = st.button("Run it again" if hit else "Evaluate", type="primary", disabled=f is None or any(j.status == "running" for j in reg.values()))
+    st.caption(f"Model: {S.llm_provider} / {S.llm_model}  |  {S.prompt_docs_per_claim} documents per claim  |  {S.snippet_chars}-character snippets  |  timeout {S.llm_timeout} s")
+    if go and f is not None:
+        problem = preflight()
+        if problem:
+            st.error(problem)
+            return
+        tmp = Path(tempfile.mkdtemp()) / f.name
+        tmp.write_bytes(f.getvalue())
+        form = {k: v for k, v in {"submission_date": str(sub) if sub else None, "venue_capacity": int(cap) or None, "dean_approval": None if dean == "Use the document" else dean}.items() if v is not None}
+        name = safe_name(f.name)
+        if (DEMO_DIR / f"{name}.json").exists():
+            name += time.strftime("_%H%M%S")
+        job = Job(name, {"proposal_path": str(tmp), "proposal_form": form}, stances, source={"name": f.name, "sha256": sha})
+        key = f"{name}-{int(job.t0)}"
+        reg[key] = job
+        st.session_state["job_key"] = key
+        threading.Thread(target=job.run, daemon=True).start()
+        st.rerun()
+
+
+def page_results():
+    page_header("Results", "The experiment: baseline, baseline with the rubric, and the framework, each asked three ways (neutral, push to approve, push to reject).")
     sj = RESULTS_DIR / "summary.json"
     if not sj.exists():
-        st.info(f"No evaluation results found in {RESULTS_DIR}. Run evaluate.py and analyze.py first.")
+        st.info(f"No evaluation results found in {RESULTS_DIR}. Run evaluate.py, then analyze.py, or point EIA_RESULTS_DIR at the results folder.")
         return
     res = json.loads(sj.read_text(encoding="utf8"))
     n = max(v.get("n_proposals", 0) for v in res.values())
-    st.markdown(f"**Experiment:** baseline vs baseline with the rubric vs the framework, on **{n} test proposals**, each asked three ways (neutral, push to approve, push to reject).")
+    model = None
+    mf = RESULTS_DIR / "manifest.json"
+    if mf.exists():
+        try:
+            m = json.loads(mf.read_text(encoding="utf8"))
+            model = m.get("model") or (m.get("manifests") or [{}])[0].get("model")
+        except Exception:
+            pass
+    st.caption(f"{n} test proposals" + (f"  |  model {model}" if model else "") + f"  |  folder {RESULTS_DIR}")
+
+    fw, base = res.get("framework"), res.get("baseline")
+    if fw and base:
+        cols = st.columns(4, gap="medium")
+        pts = lambda k: (fw[k] - base[k]) * 100
+        cols[0].metric("Human agreement", f"{fw['human_agreement'] * 100:.1f}%", f"{pts('human_agreement'):+.1f} pts vs baseline")
+        cols[1].metric("Agreement bias score", f"{fw['agreement_bias_score'] * 100:.1f}%", f"{pts('agreement_bias_score'):+.1f} pts vs baseline", delta_color="inverse")
+        cols[2].metric("Decision stability", f"{fw['decision_stability'] * 100:.1f}%", f"{pts('decision_stability'):+.1f} pts vs baseline")
+        cols[3].metric("Calibration error", f"{fw['calibration_error_mean_abs_pct']:.1f} pts", f"{fw['calibration_error_mean_abs_pct'] - base['calibration_error_mean_abs_pct']:+.1f} vs baseline", delta_color="inverse")
+        st.caption("Framework compared with the plain baseline. Agreement bias is how often the answer moved toward what the user pushed for (lower is better).")
+
     df = pd.DataFrame(res).T
-    show = {"human_agreement": "Human agreement", "agreement_bias_score": "Agreement bias score", "decision_flip_rate": "Decision flip rate",
-            "decision_stability": "Decision stability", "calibration_error_mean_abs_pct": "Calibration error (points)",
-            "evidence_diversity_mean_docs": "Evidence diversity (docs/run)", "latency_mean_seconds_per_run": "Latency (s/run)", "n_runs": "Runs completed", "n_proposals": "Proposals completed"}
-    st.dataframe(df[[c for c in show if c in df.columns]].rename(columns=show))
-    c1, c2 = st.columns(2)
-    if "calibration_error_mean_abs_pct" in df:
-        c1.markdown("**Calibration error** (lower is better)")
-        c1.bar_chart(df["calibration_error_mean_abs_pct"])
+    pct = ["human_agreement", "agreement_bias_score", "decision_flip_rate", "decision_stability"]
+    show = {"human_agreement": "Human agreement %", "agreement_bias_score": "Agreement bias %", "decision_flip_rate": "Flip rate %",
+            "decision_stability": "Stability %", "calibration_error_mean_abs_pct": "Calibration error", "evidence_diversity_mean_docs": "Evidence docs/run",
+            "latency_mean_seconds_per_run": "Latency s/run", "n_runs": "Runs", "n_proposals": "Proposals"}
+    tab = df[[c for c in show if c in df.columns]].copy()
+    for c in pct:
+        if c in tab:
+            tab[c] = (tab[c].astype(float) * 100).round(1)
+    st.dataframe(tab.rename(columns=show), width="stretch")
+
+    import altair as alt
+    sysorder = [x for x in ("baseline", "baseline_rubric", "framework") if x in df.index]
+    c1, c2 = st.columns(2, gap="large")
+    long = pd.DataFrame({"system": sysorder * 2, "metric": ["Human agreement"] * len(sysorder) + ["Agreement bias score"] * len(sysorder),
+                         "value": [df.loc[x, "human_agreement"] * 100 for x in sysorder] + [df.loc[x, "agreement_bias_score"] * 100 for x in sysorder]})
+    c1.markdown("**Agreement and agreement bias** (%)")
+    c1.altair_chart(alt.Chart(long).mark_bar().encode(
+        x=alt.X("system:N", sort=sysorder, title=None, axis=alt.Axis(labelAngle=0)), xOffset="metric:N", y=alt.Y("value:Q", title="%", scale=alt.Scale(domain=[0, 100])),
+        color=alt.Color("metric:N", title=None, scale=alt.Scale(domain=["Human agreement", "Agreement bias score"], range=["#1b9e6b", "#cf3b3b"]), legend=alt.Legend(orient="bottom")),
+        tooltip=["system", "metric", alt.Tooltip("value:Q", format=".1f")]).properties(height=300), width="stretch")
     ec = RESULTS_DIR / "eval_runs.csv"
     if ec.exists():
         runs = pd.read_csv(ec)
+        cnt = runs.groupby(["system", "decision"]).size().reset_index(name="runs")
+        order = ["Approve", "Approve with Conditions", "Needs More Information", "Reject"]
         c2.markdown("**Decisions given** (runs per system)")
-        c2.bar_chart(runs.groupby(["system", "decision"]).size().unstack(fill_value=0))
-    st.warning("Read with care: with this few proposals the confidence intervals are wide (see the report), no system showed sycophancy (so the "
-               "agreement-bias metric cannot separate them yet), accuracy is low and not significantly different between systems, and the framework "
-               "completed fewer proposals than the baselines. The clear difference is calibration.")
+        c2.altair_chart(alt.Chart(cnt).mark_bar().encode(
+            x=alt.X("system:N", sort=sysorder, title=None, axis=alt.Axis(labelAngle=0)), y=alt.Y("runs:Q", title="runs"),
+            color=alt.Color("decision:N", title=None, sort=order, scale=alt.Scale(domain=order, range=["#1b9e6b", "#3b6fd4", "#d28a0c", "#cf3b3b"]), legend=alt.Legend(orient="bottom", columns=2)),
+            order=alt.Order("decision:N", sort="ascending"),
+            tooltip=["system", "decision", "runs"]).properties(height=300), width="stretch")
+    st.info("Read with care: the confidence intervals and significance tests are in the full report below, and the per-scenario breakdowns have only a few proposals in each cell.")
     rp = RESULTS_DIR / "report.md"
     if rp.exists():
         with st.expander("Full report (tables, confidence intervals, significance tests)"):
             st.markdown(rp.read_text(encoding="utf8"))
 
 
-# ------------------------------------------------------------------ run a new proposal
-def run_new():
-    from eia.config import S
-    st.markdown("Upload a club proposal. Agent 1 (Qwen) extracts the claims, then Agents 2 to 4 check them against the knowledge base. This can take several minutes on a CPU.")
-    f = st.file_uploader("Proposal (PDF, DOCX, TXT)", type=["pdf", "docx", "txt", "md"])
-    c1, c2, c3 = st.columns(3)
-    sub = c1.date_input("Submission date (if not in the document)", value=None)
-    cap = c2.number_input("Venue capacity (0 = not given)", min_value=0, value=0, step=10)
-    dean = c3.selectbox("Dean approval", ["No", "Yes"])
-    stances = st.checkbox("Also run the two pressure tests (about 2 more minutes)", value=False)
-    name = st.text_input("Save as", value="my_run")
-    if st.button("Evaluate", type="primary", disabled=f is None):
-        from prerun_demo import make_bundle
-        tmp = Path(tempfile.mkdtemp()) / f.name
-        tmp.write_bytes(f.getvalue())
-        form = {k: v for k, v in {"submission_date": str(sub) if sub else None, "venue_capacity": int(cap) or None, "dean_approval": dean}.items() if v is not None}
-        with st.status(f"Running Agents 1 to 4 with {S.llm_model} ...", expanded=True) as status:
-            try:
-                b = make_bundle({"proposal_path": str(tmp), "proposal_form": form}, name, use_cached=False, with_stances=stances, log=st.write)
-            except Exception as e:  # show the reason instead of a stack trace
-                status.update(label="Run failed", state="error")
-                st.error(str(e)[:600])
-                return
-            DEMO_DIR.mkdir(exist_ok=True)
-            (DEMO_DIR / f"{name}.json").write_text(json.dumps(b, indent=1, default=str), encoding="utf8")
-            status.update(label=f"Done in {b['total_wall_seconds']} s", state="complete")
-        st.session_state["just_ran"] = b
-    if "just_ran" in st.session_state:
-        render_bundle(st.session_state["just_ran"])
+# ------------------------------------------------------------------ shell: brand top left, navigation on top
+st.session_state.setdefault("page", PAGES[0])
+st.session_state.setdefault("nav", st.session_state["page"])
 
 
-# ------------------------------------------------------------------ page
-st.title("⚖️ Anti-Sycophancy Decision Support for Club Proposals")
-st.caption("Four agents check a proposal against a club's real history and university policy. The decision follows the evidence, not the user's opinion.")
+def _on_nav():
+    v = st.session_state.get("nav")
+    if v:
+        st.session_state["page"] = v
+    else:  # clicking the selected item would clear it; keep the current page selected
+        st.session_state["nav"] = st.session_state["page"]
 
-with st.sidebar:
-    mode = st.radio("Mode", ["Saved demo runs", "Run a new proposal", "Evaluation results"])
-    try:
-        from eia.config import S
-        st.caption(f"LLM: {S.llm_provider} / {S.llm_model}")
-    except Exception:
-        pass
 
-if mode == "Saved demo runs":
-    files = sorted(DEMO_DIR.glob("*.json")) if DEMO_DIR.exists() else []
-    if not files:
-        st.info(f"No saved runs in {DEMO_DIR}. Create them with prerun_demo.py.")
-    else:
-        pick = st.selectbox("Demo case", files, format_func=lambda p: p.stem)
-        render_bundle(json.loads(pick.read_text(encoding="utf8")))
-elif mode == "Run a new proposal":
-    run_new()
-else:
-    render_evaluation()
+brand, nav = st.columns([1.1, 2.4], vertical_alignment="center", gap="large")
+brand.markdown('<div class="sp-brand">Spectrum<span>Anti-sycophancy decision support</span></div>', unsafe_allow_html=True)
+with nav:
+    st.segmented_control("Navigation", PAGES, key="nav", on_change=_on_nav, label_visibility="collapsed")
+st.markdown('<hr class="sp-rule">', unsafe_allow_html=True)
+
+{"Saved runs": page_saved, "Evaluate a proposal": page_evaluate, "Results": page_results}[st.session_state["page"]]()

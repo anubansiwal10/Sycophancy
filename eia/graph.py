@@ -19,7 +19,10 @@ from .state import GraphState
 
 def build_graph(entry: str = "start"):
     """entry='start' runs all agents; entry='judge' re-runs only Agent 4 on stored upstream outputs
-    (used by evaluate.py: Agents 1-3 are stance-blind, so one upstream run serves all three prompt variants)."""
+    (used by evaluate.py: Agents 1-3 are stance-blind, so one upstream run serves all three prompt variants);
+    entry='analyze' runs Agent 1 only and stops (the dashboard then lets a human confirm / edit the extraction);
+    entry='retrieval' starts at Agent 2 from a given state['structured_proposal'] (Agents 2-4 run)."""
+    after_a1 = END if entry == "analyze" else "a2_retrieval_planner"
     g = StateGraph(GraphState)
     nodes = {
         # agent 1
@@ -43,16 +46,18 @@ def build_graph(entry: str = "start"):
 
     if entry == "judge":
         g.add_edge(START, "a4_evidence_aggregator")
+    elif entry == "retrieval":
+        g.add_edge(START, "a2_retrieval_planner")
     else:
         g.add_conditional_edges(START, a1.route_start, {"a1_load_cached": "a1_load_cached", "a1_input_validator": "a1_input_validator"})
     # --- agent 1
-    g.add_edge("a1_load_cached", "a2_retrieval_planner")
+    g.add_edge("a1_load_cached", after_a1)
     g.add_conditional_edges("a1_input_validator", a1.after_validator, {"a1_document_parser": "a1_document_parser", "end": END})
     g.add_edge("a1_document_parser", "a1_prompt_builder")
     g.add_edge("a1_prompt_builder", "a1_llm_claim_extractor")
     g.add_edge("a1_llm_claim_extractor", "a1_schema_validator")
     g.add_conditional_edges("a1_schema_validator", a1.after_schema, {"a1_requirements_generator": "a1_requirements_generator", "a1_prompt_builder": "a1_prompt_builder", "end": END})
-    g.add_edge("a1_requirements_generator", "a2_retrieval_planner")
+    g.add_edge("a1_requirements_generator", after_a1)
     # --- agent 2
     g.add_edge("a2_retrieval_planner", "a2_semantic_search")
     g.add_edge("a2_semantic_search", "a2_ranker")
@@ -85,9 +90,16 @@ def get_graph(entry: str = "start"):
     return _GRAPHS[entry]
 
 
-def run_pipeline(inputs: dict, entry: str = "start") -> dict:
+def run_pipeline(inputs: dict, entry: str = "start", on_step=None) -> dict:
+    """Run the graph. If on_step is given it is called with the full state after every node (used by the dashboard for live progress)."""
     t = time.perf_counter()
-    state = get_graph(entry).invoke({"trace": [], "errors": [], **inputs}, {"recursion_limit": 60})
+    init, cfg = {"trace": [], "errors": [], **inputs}, {"recursion_limit": 60}
+    if on_step is None:
+        state = get_graph(entry).invoke(init, cfg)
+    else:
+        state = init
+        for state in get_graph(entry).stream(init, cfg, stream_mode="values"):
+            on_step(state)
     state["total_seconds"] = round(time.perf_counter() - t, 2)
     state.setdefault("run_id", uuid.uuid4().hex[:8])
     return state

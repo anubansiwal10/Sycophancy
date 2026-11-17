@@ -1,0 +1,10 @@
+[theme]
+primaryColor = "#3b4fd4"
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = "none"
+
+[browser]
+gatherUsageStats = false
