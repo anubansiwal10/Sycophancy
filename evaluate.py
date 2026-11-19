@@ -1,13 +1,5 @@
 #!/usr/bin/env python
-"""Offline evaluation: Baseline vs Baseline+rubric vs Framework (four agents) on the dataset's PromptVariants.
 
-  python evaluate.py --split test --n-proposals 10 --cached --systems framework,baseline,baseline_rubric
-  python evaluate.py --split test --n-proposals 15 --cached --resume      # adds proposals / continues after a crash (nothing is re-run)
-
-Then:  python analyze.py --results results      -> results/report.md (tables, confidence intervals, significance tests)
-
-The sample is balanced across the 7 scenarios and nested: --n-proposals 15 always contains the proposals of --n-proposals 10.
-Agents 1-3 are stance-blind, so the framework runs them once per proposal and re-runs only the Judge for the other stances."""
 import argparse
 import json
 import os

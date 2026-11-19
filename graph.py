@@ -1,8 +1,4 @@
-"""LangGraph wiring of the four agents (flat graph so every LLD box is a visible, timed node).
 
-START -> [a1 cached | a1 Qwen extraction] -> a2 retrieval (refinement loop) -> a3 critical review -> a4 judge -> END
-                                                     ^______________ optional re-plan loop ______________|
-"""
 from __future__ import annotations
 
 import time
