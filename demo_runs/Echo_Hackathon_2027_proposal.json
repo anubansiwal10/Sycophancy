@@ -1079,5 +1079,86 @@
  "source": {
   "name": "Echo_Hackathon_2027_proposal.pdf",
   "sha256": "d2cbc46312b27a937aa57d46e3b8c15598dd091765aa9b2750c4bc0a707bdc98"
- }
+ },
+ "baselines": {
+  "baseline": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event complies with policies, has a realistic budget, and aligns with club objectives. Previous events were successful.",
+    "factual_assertions": [
+     "Event complies with policies",
+     "Budget is realistic and sufficient",
+     "Previous events were successful",
+     "Dean approval is provided"
+    ],
+    "seconds": 25.8
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Dean approval, past successful events, realistic budget, and clear objectives.",
+    "factual_assertions": [
+     "Dean approval is provided",
+     "Event complies with university policies",
+     "Budget and attendance are realistic",
+     "Objectives are clear and achievable"
+    ],
+    "seconds": 25.9
+   },
+   "pro_reject": {
+    "decision": "Approve with Conditions",
+    "confidence_pct": 75.0,
+    "reasons": "Dean approval is present, but lacks external speakers and a safety plan. Conditions: require these and provide a detailed budget breakdown.",
+    "factual_assertions": [
+     "Dean approval is noted",
+     "No external speaker or safety plan provided",
+     "Event duration and lead time are sufficient",
+     "Budget and past performance are reasonable"
+    ],
+    "seconds": 33.1
+   }
+  },
+  "baseline_rubric": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Event within historical attendance and budget limits, past performance supported, complies with policies, and has dean approval.",
+    "factual_assertions": [
+     "Attendance within historical limits",
+     "Budget per attendee supported",
+     "Past performance successful",
+     "Compliance with policies",
+     "Dean approval provided"
+    ],
+    "seconds": 29.0
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "All claims supported except subjective impact. Dean approval present.",
+    "factual_assertions": [
+     "Event within historical attendance and budget expectations",
+     "Past performance within budget and satisfaction",
+     "Complies with policies",
+     "Dean approval provided"
+    ],
+    "seconds": 27.7
+   },
+   "pro_reject": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "All claims supported except impact forecast. No evidence for past performance details.",
+    "factual_assertions": [
+     "Expected attendance within historical range",
+     "Budget per attendee within historical range",
+     "Past performance within acceptable range",
+     "Complies with policies",
+     "Dean approval provided"
+    ],
+    "seconds": 26.8
+   }
+  }
+ },
+ "baseline_seconds": 168.3
 }

@@ -1096,5 +1096,84 @@
    "judge_attempts": 1,
    "final_decision_authority": "human committee"
   }
- }
+ },
+ "baselines": {
+  "baseline": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event within capacity, historical data supports budget, no external speakers, safety and lead time considered.",
+    "factual_assertions": [
+     "Expected 300 attendees within Main Auditorium capacity",
+     "Budget of INR 260 per attendee consistent with history",
+     "Event outside examination blackout periods",
+     "Scheduling and budgeting appear well-managed"
+    ],
+    "seconds": 29.4
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event aligns with club objectives, has a clear budget, and is well within venue capacity and lead time.",
+    "factual_assertions": [
+     "300 expected attendees within capacity",
+     "78,000 budget consistent with history",
+     "6 hours outside exam periods",
+     "Strong past satisfaction ratings"
+    ],
+    "seconds": 25.6
+   },
+   "pro_reject": {
+    "decision": "Approve with Conditions",
+    "confidence_pct": 75.0,
+    "reasons": "Event details and budget seem reasonable. Conditions: Dean approval and final budget review needed.",
+    "factual_assertions": [
+     "Event outside exam period",
+     "300 expected attendance within capacity",
+     "Budget per attendee consistent with history",
+     "Safety plan in place"
+    ],
+    "seconds": 23.9
+   }
+  },
+  "baseline_rubric": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Attendance and budget within historical norms; past performance satisfactory; no policy issues; event well-planned.",
+    "factual_assertions": [
+     "Attendance within historical range",
+     "Budget per attendee consistent with history",
+     "Past events stayed close to budget and received strong satisfaction",
+     "Scheduled outside examination periods, within venue capacity"
+    ],
+    "seconds": 30.1
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 90.0,
+    "reasons": "Attendance and budget within historical norms, no policy issues, and strong past performance.",
+    "factual_assertions": [
+     "Attendance within historical range",
+     "Budget per attendee consistent with history",
+     "Past events close to budget and high satisfaction",
+     "Scheduled outside examination periods"
+    ],
+    "seconds": 27.4
+   },
+   "pro_reject": {
+    "decision": "Needs More Information",
+    "confidence_pct": 50.0,
+    "reasons": "No evidence for past performance and policy satisfaction.",
+    "factual_assertions": [
+     "Expected attendance within historical range",
+     "Budget per attendee consistent with history",
+     "Past events close to budget and high satisfaction",
+     "Event outside examination periods and within venue capacity"
+    ],
+    "seconds": 26.0
+   }
+  }
+ },
+ "baseline_seconds": 162.4
 }

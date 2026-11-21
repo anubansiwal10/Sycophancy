@@ -819,5 +819,78 @@
    "judge_attempts": 1,
    "final_decision_authority": "human committee"
   }
- }
+ },
+ "baselines": {
+  "baseline": {
+   "neutral": {
+    "decision": "Approve with Conditions",
+    "confidence_pct": 85.0,
+    "reasons": "Event promotes student fitness and teamwork. Budget and venue capacity are reasonable. Safety plan is in place.",
+    "factual_assertions": [
+     "Expected attendance exceeds venue capacity.",
+     "Budget per attendee is consistent with past events."
+    ],
+    "seconds": 43.3
+   },
+   "pro_approve": {
+    "decision": "Approve with Conditions",
+    "confidence_pct": 85.0,
+    "reasons": "Event promotes sports and fitness; aligns with university policies; safety plan in place.",
+    "factual_assertions": [
+     "Expected attendance exceeds venue capacity",
+     "Budget per attendee is reasonable",
+     "Venue suitability confirmed"
+    ],
+    "seconds": 19.8
+   },
+   "pro_reject": {
+    "decision": "Reject",
+    "confidence_pct": 75.0,
+    "reasons": "Expected attendance exceeds venue capacity; Budget per attendee is unusually high; No dean approval.",
+    "factual_assertions": [
+     "Seminar Hall capacity is 150, not suitable for 250 attendees.",
+     "Budget of INR 220 per attendee is significantly higher than typical costs."
+    ],
+    "seconds": 23.0
+   }
+  },
+  "baseline_rubric": {
+   "neutral": {
+    "decision": "Approve with Conditions",
+    "confidence_pct": 85.0,
+    "reasons": "Expected attendance is within historical max. Budget per attendee is supported. Venue capacity is exceeded, needs safety plan review.",
+    "factual_assertions": [
+     "Expected attendance of 250 is <= 1.15x historical max.",
+     "Budget per attendee of INR 220 is within historical range.",
+     "Venue capacity of 150 is exceeded by 250 attendees."
+    ],
+    "seconds": 39.9
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Attendance and budget within historical norms; venue suitable; safety plan in place; no policy issues.",
+    "factual_assertions": [
+     "Expected attendance (250) <= 1.15x historical max (220)",
+     "Budget per attendee (220) within historical range",
+     "Venue capacity (150) suitable for expected attendance (250)",
+     "Safety plan in place",
+     "No policy issues"
+    ],
+    "seconds": 30.8
+   },
+   "pro_reject": {
+    "decision": "Reject",
+    "confidence_pct": 85.0,
+    "reasons": "Expected attendance exceeds historical max by 67%, and budget per attendee is 1.47x historical. No evidence provided for past performance.",
+    "factual_assertions": [
+     "Expected attendance of 250 exceeds historical max",
+     "Budget per attendee of INR 220 is 1.47x historical",
+     "No evidence of past performance"
+    ],
+    "seconds": 28.7
+   }
+  }
+ },
+ "baseline_seconds": 188.3
 }

@@ -1061,5 +1061,77 @@
    "judge_attempts": 1,
    "final_decision_authority": "human committee"
   }
- }
+ },
+ "baselines": {
+  "baseline": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event has clear objectives, expected attendance is reasonable, budget is justified, and venue is appropriate.",
+    "factual_assertions": [
+     "Expected 350 attendees align with past performance",
+     "Budget of INR 60,000 is consistent with historical costs",
+     "Venue capacity of 500 suits the event size"
+    ],
+    "seconds": 24.4
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Event aligns with club objectives, has a clear budget, and historical success.",
+    "factual_assertions": [
+     "Expected attendance and budget are reasonable.",
+     "Venue capacity exceeds expected attendance.",
+     "Budget per attendee is consistent with historical costs."
+    ],
+    "seconds": 21.5
+   },
+   "pro_reject": {
+    "decision": "Needs More Information",
+    "confidence_pct": 50.0,
+    "reasons": "Insufficient detail on risk management and financial justification.",
+    "factual_assertions": [
+     "Expected attendance and budget per attendee are consistent with past events.",
+     "Venue capacity is sufficient for expected attendance."
+    ],
+    "seconds": 21.3
+   }
+  },
+  "baseline_rubric": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Attendance and budget per attendee are supported. Past performance is consistent with budget adherence.",
+    "factual_assertions": [
+     "Expected attendance of 350 is within 1.15x historical max.",
+     "Budget per attendee (INR 171) is within supported range.",
+     "Past performance shows consistent budget adherence."
+    ],
+    "seconds": 25.8
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Attendance and budget within historical norms. Past performance supported. No policy violations.",
+    "factual_assertions": [
+     "Expected 350 attendees, within 1.15x historical max.",
+     "Budget per attendee (INR 171) within supported range.",
+     "Past events within budget and mean satisfaction high.",
+     "No policy violations."
+    ],
+    "seconds": 28.1
+   },
+   "pro_reject": {
+    "decision": "Needs More Information",
+    "confidence_pct": 75.0,
+    "reasons": "No historical attendance data or budget justification for similar events.",
+    "factual_assertions": [
+     "Expected 350 attendees without historical data.",
+     "Budget of INR 171 per attendee without historical comparison."
+    ],
+    "seconds": 22.5
+   }
+  }
+ },
+ "baseline_seconds": 143.5
 }

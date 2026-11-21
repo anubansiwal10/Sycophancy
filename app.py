@@ -3,11 +3,13 @@
   python -m streamlit run app.py
 
 Three pages (top navigation):
-  * Saved runs          - loads demo_runs/<name>.json made by prerun_demo.py (instant, nothing depends on the model)
+  * Saved runs          - loads demo_runs/<name>.json made by prerun_demo.py (instant, nothing depends on the model).
+                          The "Baselines vs Spectrum" tab shows what a plain Qwen call and a Qwen call with the rubric answered
+                          (added by prerun_demo.py --baselines, python baselines.py, or the button in that tab)
   * Evaluate a proposal - upload a PDF; Agent 1 (local Qwen) reads it, Agents 2-4 evaluate it. Runs in the background with live progress.
   * Results             - the experiment results from results_local/ (summary.json, report.md, eval_runs.csv)
 
-Environment: EIA_DEMO_DIR (default demo_runs), EIA_RESULTS_DIR (default results). The model settings below default to the ones the
+Environment: EIA_DEMO_DIR (default demo_runs), EIA_RESULTS_DIR (default results_local). The model settings below default to the ones the
 experiment used; set the environment variables yourself to override them."""
 import hashlib
 import html
@@ -32,7 +34,7 @@ import streamlit as st
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT))
 DEMO_DIR = Path(os.getenv("EIA_DEMO_DIR", ROOT / "demo_runs"))
-RESULTS_DIR = Path(os.getenv("EIA_RESULTS_DIR", ROOT / "results"))
+RESULTS_DIR = Path(os.getenv("EIA_RESULTS_DIR", ROOT / "results_local"))   # the full 30-proposal experiment ("results" is an older 5-proposal test run)
 
 st.set_page_config(page_title="Spectrum", layout="wide", initial_sidebar_state="collapsed")
 
@@ -44,6 +46,8 @@ VERDICT_KIND = {"Supported": "good", "Unsupported": "warn", "Contradicted": "bad
 CSS = """
 <style>
 html, body, [class*="st-"], button, input, textarea { font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif; }
+/* The rule above also matched Streamlit's icon elements and replaced their icon font, so dropdown arrows showed as the words "arrow_drop_down". Give the icons their font back. */
+[data-testid="stIconMaterial"], [data-testid*="Icon"], [translate="no"][aria-hidden="true"] { font-family: "Material Symbols Rounded", "Material Icons" !important; }
 [data-testid="stSidebar"], [data-testid="stSidebarCollapsedControl"], [data-testid="collapsedControl"] { display: none !important; }
 header[data-testid="stHeader"] { display: none !important; }
 [data-testid="stToolbar"] { display: none !important; }
@@ -114,8 +118,91 @@ def rubric_path(c: dict) -> tuple[str, int]:
     return f"No policy violation and enough evidence, so the issue score decides: {issue} gives **{band}** (up to 1 Approve, up to 3 Approve with Conditions, above 3 Reject).", issue
 
 
+# ------------------------------------------------------------------ baselines next to Spectrum
+def render_baselines(b: dict, path: Path | None):
+    from baselines import STANCES, compute_baselines, decisions_moved, proposal_text_for, system_rows, write_json_atomic
+    js, sp = b["judgments"], b["structured_proposal"]
+    st.markdown("The same proposal and the same three user messages as the Pressure test, given to a plain Qwen call (**Baseline**), "
+                "to the same call with the committee rubric in its prompt (**Baseline + rubric**), and to **Spectrum**.")
+    if not b.get("baselines"):
+        st.info("The baseline answers have not been computed for this saved run.")
+        st.caption("Ahead of a demo, run  python baselines.py --all  in a terminal. Or run them here: 6 short model calls, about 3 to 6 minutes on a CPU, then they are saved with the run.")
+        if st.button("Run the baselines now", type="primary", key="run_baselines"):
+            problem = preflight()
+            if problem:
+                st.error(problem)
+                return
+            t0 = time.time()
+            with st.spinner("Running Baseline and Baseline + rubric on the three user messages (6 model calls)..."):
+                b["baselines"] = compute_baselines(sp, b.get("prompts"), log=lambda m: None)
+            b["baseline_seconds"] = round(time.time() - t0, 1)
+            if path is not None:
+                write_json_atomic(Path(path), b)
+            st.rerun()
+        return
+
+    rows = system_rows(b)
+    ref = (js.get("neutral") or {}).get("rubric_decision")
+    if ref:
+        st.caption(f"What the rubric gives from the evidence for this proposal: **{ref}**. Spectrum's decision is checked against it.")
+
+    def cell(a):
+        if not a:
+            return "not run"
+        if a.get("error"):
+            return "failed"
+        return f"{a['decision']} ({a['confidence_pct']:g}%)"
+
+    table = pd.DataFrame([{"System": label, **{STANCE_LABEL[s]: cell(r[s]) for s in STANCES}} for label, r in rows.items()])
+    st.dataframe(table, hide_index=True, width="stretch")
+
+    cols = st.columns(len(rows), gap="large")
+    for col, (label, r) in zip(cols, rows.items()):
+        moved, n_moved, n_cmp = decisions_moved(r)
+        with col:
+            st.markdown(f"**{label}**")
+            if n_cmp == 0:
+                st.caption("Nothing to compare for this system.")
+            elif moved:
+                st.error(f"The decision moved with the user's push in {n_moved} of {n_cmp} cases.")
+            else:
+                st.success("The decision did not move when the user pushed either way.")
+
+    st.markdown("**What each system answered**")
+    for stance in STANCES:
+        with st.expander(STANCE_LABEL[stance], expanded=(stance == "pro_approve")):
+            st.caption(f"“{(b.get('prompts') or {}).get(stance, '')}”")
+            cols = st.columns(len(rows), gap="large")
+            for col, (label, r) in zip(cols, rows.items()):
+                a = r.get(stance)
+                with col:
+                    st.markdown(f"**{label}**")
+                    if not a:
+                        st.caption("Not run for this case.")
+                        continue
+                    if a.get("error"):
+                        st.error("The model call failed: " + a["error"])
+                        continue
+                    decision_card("Decision", a["decision"], small=True)
+                    st.metric("Confidence reported", f"{a['confidence_pct']:g}%")
+                    if label == "Spectrum":
+                        jj = js[stance]
+                        st.write(jj["explanation"])
+                        if jj.get("response_to_user"):
+                            st.info(jj["response_to_user"])
+                    else:
+                        if a.get("reasons"):
+                            st.write(a["reasons"])
+                        for x in a.get("factual_assertions") or []:
+                            st.markdown(f"- {x}")
+    note = "Confidence for Baseline and Baseline + rubric is whatever number the model wrote. Spectrum's is computed by formula from the evidence."
+    if not (sp.get("proposal_text") or "").strip():
+        note += " This case was loaded from structured data, so the two baselines read the proposal written out from the same fields and claims."
+    st.caption(note)
+
+
 # ------------------------------------------------------------------ one run, rendered
-def render_bundle(b: dict):
+def render_bundle(b: dict, path: Path | None = None):
     sp, pkg, rev, js = b["structured_proposal"], b["evidence_package"], b["critical_review"], b["judgments"]
     j = js["neutral"]
     st.markdown(f"### {esc(sp.get('title') or 'Untitled proposal')}")
@@ -124,7 +211,7 @@ def render_bundle(b: dict):
     if sp.get("missing_fields"):
         st.warning("Information missing from the proposal: " + ", ".join(sp["missing_fields"]))
 
-    t1, t2, t3, t4, t5 = st.tabs(["Decision", "Pressure test", "Evidence and claims", "How the numbers were computed", "Timing"])
+    t1, t2, tb, t3, t4, t5 = st.tabs(["Decision", "Pressure test", "Baselines vs Spectrum", "Evidence and claims", "How the numbers were computed", "Timing"])
 
     with t1:
         c1, c2 = st.columns([2, 3], gap="large")
@@ -168,6 +255,9 @@ def render_bundle(b: dict):
             st.success("Decision and confidence did not move when the user pushed either way. No agreement bias on this proposal.")
         else:
             st.error("The output changed with the user's stance on this proposal: " + "; ".join(f"{STANCE_LABEL.get(k, k)}: {v['recommendation']} ({v['confidence_pct']}%)" for k, v in js.items()))
+
+    with tb:
+        render_baselines(b, path)
 
     with t3:
         m1, m2, m3, m4 = st.columns(4)
@@ -241,7 +331,7 @@ def render_bundle(b: dict):
 
     with t5:
         tm = b.get("agent_timings", {})
-        st.caption(f"Model: {b.get('model')}  |  total {b.get('total_wall_seconds')} s (includes the pressure re-runs).")
+        st.caption(f"Model: {b.get('model')}  |  total {b.get('total_wall_seconds')} s (includes the pressure re-runs)." + (f" The baselines took {b['baseline_seconds']} s more." if b.get("baseline_seconds") else ""))
         names = {"a1": "1 Proposal Analyser", "a2": "2 Evidence Retrieval", "a3": "3 Critical Reviewer", "a4": "4 Judge"}
         df = pd.DataFrame({"seconds": {names.get(k, k): v["seconds"] for k, v in tm.items()}})
         st.bar_chart(df)
@@ -261,8 +351,8 @@ LAST_NODE = {"a1_load_cached": 1, "a1_requirements_generator": 1, "a2_evidence_p
 class Job:
     """One pipeline run in a background thread. Survives page switches and reruns because it is kept in a process-wide registry."""
 
-    def __init__(self, name: str, inputs: dict, stances: bool, source: dict | None = None):
-        self.name, self.inputs, self.stances, self.source = name, inputs, stances, source or {}
+    def __init__(self, name: str, inputs: dict, stances: bool, source: dict | None = None, baselines: bool = False):
+        self.name, self.inputs, self.stances, self.source, self.baselines = name, inputs, stances, source or {}, baselines
         self.t0, self.t1 = time.time(), None
         self.status, self.error, self.result = "running", None, None
         self.agents_done, self.ends, self.node, self.lines = 0, {}, "starting", []
@@ -280,7 +370,8 @@ class Job:
     def run(self):
         try:
             from prerun_demo import make_bundle
-            b = make_bundle(self.inputs, self.name, use_cached=False, with_stances=self.stances, log=self.lines.append, on_step=self.on_step)
+            b = make_bundle(self.inputs, self.name, use_cached=False, with_stances=self.stances, log=self.lines.append, on_step=self.on_step,
+                            with_baselines=self.baselines)
             b["source"] = self.source
             DEMO_DIR.mkdir(exist_ok=True)
             (DEMO_DIR / f"{self.name}.json").write_text(json.dumps(b, indent=1, default=str), encoding="utf8")
@@ -362,7 +453,8 @@ def progress_panel(key: str):
         st.rerun()  # full rerun: shows the result or the error
     elapsed = time.time() - job.t0
     st.markdown(f"**Running with the local model.** Elapsed {fmt_s(elapsed)}. Typical total on this laptop: about 5 to 6 minutes"
-                + (" plus about 2 minutes for the pressure tests." if job.stances else "."))
+                + (" plus about 2 minutes for the pressure tests" if job.stances else "")
+                + (" plus about 3 minutes for the baselines." if job.baselines else "."))
     rows, prev = [], 0.0
     for i, (_, name, desc, typ) in enumerate(STAGES, start=1):
         if i <= job.agents_done:
@@ -376,6 +468,10 @@ def progress_panel(key: str):
     if job.stances:
         state = "Running" if job.agents_done == 4 else "Waiting"
         rows.append(f'<div class="sp-step{"" if state == "Running" else " wait"}"><div class="n">Pressure tests</div><div class="d">Judge re-run for the approve and reject pushes</div><div class="s"><b>{state}</b></div></div>')
+    if job.baselines:
+        started = any(str(x).strip().startswith("baselines:") for x in list(job.lines))
+        rows.append(f'<div class="sp-step{"" if started else " wait"}"><div class="n">Baselines</div><div class="d">Baseline and Baseline + rubric answer the same three user messages</div>'
+                    f'<div class="s"><b>{"Running" if started else "Waiting"}</b></div></div>')
     st.markdown("".join(rows), unsafe_allow_html=True)
     st.caption("A single model call can take one to three minutes, so this list only changes when an agent finishes. You can switch pages and come back; the run continues.")
 
@@ -388,7 +484,7 @@ def page_saved():
         st.info(f"No saved runs in {DEMO_DIR}. Create them with prerun_demo.py or the Evaluate a proposal page.")
         return
     pick = st.selectbox("Case", files, format_func=lambda p: p.stem)
-    render_bundle(json.loads(pick.read_text(encoding="utf8")))
+    render_bundle(json.loads(pick.read_text(encoding="utf8")), pick)
 
 
 def page_evaluate():
@@ -403,7 +499,7 @@ def page_evaluate():
         if st.button("Back to the upload form"):
             st.session_state.pop("saved_view", None)
             st.rerun()
-        render_bundle(d)
+        render_bundle(d, Path(sv))
         return
     key = st.session_state.get("job_key")
     job = reg.get(key) if key else None
@@ -422,7 +518,7 @@ def page_evaluate():
         if st.button("Evaluate another proposal"):
             st.session_state.pop("job_key", None)
             st.rerun()
-        render_bundle(job.result)
+        render_bundle(job.result, DEMO_DIR / f"{job.name}.json")
         return
 
     with st.container(border=True):
@@ -433,6 +529,7 @@ def page_evaluate():
         cap = c2.number_input("Venue capacity", min_value=0, value=0, step=10, help="0 means not given")
         dean = c3.selectbox("Dean approval", ["Use the document", "Yes", "No"])
         stances = st.checkbox("Also run the two pressure tests (about 2 more minutes)", value=False)
+        baselines = st.checkbox("Also run the baseline and baseline + rubric for comparison (about 3 more minutes)", value=False)
         sha = hashlib.sha256(f.getvalue()).hexdigest() if f is not None else None
         hit = find_saved(f.name, sha) if f is not None else None
         if hit:
@@ -453,7 +550,7 @@ def page_evaluate():
         name = safe_name(f.name)
         if (DEMO_DIR / f"{name}.json").exists():
             name += time.strftime("_%H%M%S")
-        job = Job(name, {"proposal_path": str(tmp), "proposal_form": form}, stances, source={"name": f.name, "sha256": sha})
+        job = Job(name, {"proposal_path": str(tmp), "proposal_form": form}, stances, source={"name": f.name, "sha256": sha}, baselines=baselines)
         key = f"{name}-{int(job.t0)}"
         reg[key] = job
         st.session_state["job_key"] = key

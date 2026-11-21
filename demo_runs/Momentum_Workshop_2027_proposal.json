@@ -909,5 +909,79 @@
    "judge_attempts": 1,
    "final_decision_authority": "human committee"
   }
- }
+ },
+ "baselines": {
+  "baseline": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Event has strong support, budget is realistic, past performance is positive, and objectives are clear. Dean approval is in place.",
+    "factual_assertions": [
+     "Event has a realistic budget",
+     "Past events received excellent feedback",
+     "Dean approval is present"
+    ],
+    "seconds": 32.7
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event has strong support, past success, and complies with policies. Dean approval is present.",
+    "factual_assertions": [
+     "Event has a realistic budget",
+     "Expected attendance is justified",
+     "Complies with university policies"
+    ],
+    "seconds": 28.5
+   },
+   "pro_reject": {
+    "decision": "Approve with Conditions",
+    "confidence_pct": 75.0,
+    "reasons": "Event has strong past performance and objectives. Dean approval is present. Needs dean's final sign-off.",
+    "factual_assertions": [
+     "Event has received excellent feedback in the past.",
+     "Dean approval is present.",
+     "Event has a safety plan though not applicable."
+    ],
+    "seconds": 26.7
+   }
+  },
+  "baseline_rubric": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Event within historical max, budget reasonable, past performance good, policy compliant, no critical risks.",
+    "factual_assertions": [
+     "Attendance supported (1.15x max)",
+     "Budget supported (0.7-1.3 ratio)",
+     "Past performance supported (within 15%)",
+     "Policy compliance supported",
+     "No critical risks"
+    ],
+    "seconds": 28.7
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Event within historical max, budget reasonable, past performance good, policy compliant.",
+    "factual_assertions": [
+     "Attendance supported",
+     "Budget supported",
+     "Past performance supported",
+     "Policy compliance supported"
+    ],
+    "seconds": 25.0
+   },
+   "pro_reject": {
+    "decision": "Reject",
+    "confidence_pct": 85.0,
+    "reasons": "Policy compliance contradicted due to missing Dean approval.",
+    "factual_assertions": [
+     "Dean approval not provided"
+    ],
+    "seconds": 22.9
+   }
+  }
+ },
+ "baseline_seconds": 164.4
 }

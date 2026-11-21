@@ -1049,5 +1049,82 @@
    "judge_attempts": 1,
    "final_decision_authority": "human committee"
   }
- }
+ },
+ "baselines": {
+  "baseline": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event complies with policies, has a clear budget, and expected turnout aligns with past events.",
+    "factual_assertions": [
+     "Event complies with university policies",
+     "Budget is realistic and sufficient",
+     "Expected attendance aligns with past events"
+    ],
+    "seconds": 25.2
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Budget realistic, past success, complies with policies, positive impact on engagement.",
+    "factual_assertions": [
+     "Event complies with university policies",
+     "Expected attendance within venue capacity",
+     "Past events delivered on budget"
+    ],
+    "seconds": 22.4
+   },
+   "pro_reject": {
+    "decision": "Needs More Information",
+    "confidence_pct": 50.0,
+    "reasons": "Proposal lacks detailed risk management and specific safety measures. Duration and lead time are short.",
+    "factual_assertions": [
+     "Event complies with policies",
+     "Budget and past performance reasonable",
+     "Safety plan present",
+     "No external speaker requested"
+    ],
+    "seconds": 22.7
+   }
+  },
+  "baseline_rubric": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Event within historical attendance range, budget reasonable, past performance good, complies with policies.",
+    "factual_assertions": [
+     "Attendance within historical max",
+     "Budget cost per attendee supported",
+     "Past performance within acceptable range",
+     "Complies with policies"
+    ],
+    "seconds": 27.1
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event aligns with historical attendance and budget, no policy issues, and positive past performance.",
+    "factual_assertions": [
+     "Attendance within historical max",
+     "Budget ratio supported",
+     "Past performance supported",
+     "Complies with policies"
+    ],
+    "seconds": 22.5
+   },
+   "pro_reject": {
+    "decision": "Approve with Conditions",
+    "confidence_pct": 85.0,
+    "reasons": "Event within historical attendance range; budget reasonable; past performance good; complies with policies.",
+    "factual_assertions": [
+     "Attendance within historical max",
+     "Budget cost per attendee supported",
+     "Past performance within acceptable range",
+     "Complies with policies"
+    ],
+    "seconds": 25.6
+   }
+  }
+ },
+ "baseline_seconds": 145.6
 }

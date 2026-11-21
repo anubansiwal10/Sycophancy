@@ -4,6 +4,8 @@
   python prerun_demo.py --name badminton --analysis-json spectrum_demo_proposals/01_badminton_capacity_problem.json
   python prerun_demo.py --name reject_pdf --proposal mock_pdfs/mock_proposal_reject.pdf --form mock_pdfs/mock_proposal_reject_form.json
 
+  python prerun_demo.py --name badminton --analysis-json ... --baselines     # also store the baseline answers (or add them later: python baselines.py --all)
+
 Saves demo_runs/<name>.json (loaded instantly by the dashboard). Agents 1-3 never see the stance, so they run once;
 only the Judge is re-run for 'pro_approve' and 'pro_reject' (about a minute each on a CPU)."""
 import argparse
@@ -20,8 +22,10 @@ PROMPTS = {
 }
 
 
-def make_bundle(inputs: dict, name: str, use_cached: bool = False, with_stances: bool = True, log=print, on_step=None) -> dict:
-    """One full run (Agents 1-4, neutral prompt) + optional Judge-only re-runs for the two pressure stances."""
+def make_bundle(inputs: dict, name: str, use_cached: bool = False, with_stances: bool = True, log=print, on_step=None,
+                with_baselines: bool = False) -> dict:
+    """One full run (Agents 1-4, neutral prompt) + optional Judge-only re-runs for the two pressure stances
+    + optional baseline and baseline + rubric answers (plain Qwen calls) for the same three user messages."""
     S.use_cached_analysis = use_cached
     from eia.graph import agent_timings, run_pipeline
     t0 = time.perf_counter()
@@ -34,8 +38,15 @@ def make_bundle(inputs: dict, name: str, use_cached: bool = False, with_stances:
         s2 = run_pipeline({**upstream, "user_prompt": PROMPTS[stance], "user_stance": stance}, entry="judge")
         judgments[stance], seconds[stance] = s2["judgment"], s2["total_seconds"]
         log(f"  judge re-run [{stance}] -> {s2['judgment']['recommendation']} ({s2['judgment']['confidence_pct']}%) in {s2['total_seconds']}s")
+    wall = round(time.perf_counter() - t0, 1)  # Spectrum's own time; the baselines are timed separately
+    extra = {}
+    if with_baselines:
+        from baselines import compute_baselines
+        tb = time.perf_counter()
+        extra = {"baselines": compute_baselines(upstream["structured_proposal"], PROMPTS, log=log)}
+        extra["baseline_seconds"] = round(time.perf_counter() - tb, 1)
     return {"name": name, "model": S.llm_model, "agent_timings": agent_timings(st["trace"]), "seconds": seconds,
-            "total_wall_seconds": round(time.perf_counter() - t0, 1), "prompts": PROMPTS, **upstream, "judgments": judgments}
+            "total_wall_seconds": wall, "prompts": PROMPTS, **upstream, "judgments": judgments, **extra}
 
 
 def main():
@@ -43,6 +54,7 @@ def main():
     ap.add_argument("--name", required=True)
     ap.add_argument("--analysis-json"); ap.add_argument("--proposal"); ap.add_argument("--form")
     ap.add_argument("--out", default="demo_runs")
+    ap.add_argument("--baselines", action="store_true", help="also run the baseline and baseline + rubric for the dashboard comparison")
     a = ap.parse_args()
     inputs = {}
     if a.analysis_json:
@@ -54,7 +66,7 @@ def main():
     if a.form:
         inputs["proposal_form"] = json.loads(Path(a.form).read_text(encoding="utf8"))
     try:
-        bundle = make_bundle(inputs, a.name, use_cached=bool(a.analysis_json), log=lambda m: print(m, flush=True))
+        bundle = make_bundle(inputs, a.name, use_cached=bool(a.analysis_json), log=lambda m: print(m, flush=True), with_baselines=a.baselines)
     except RuntimeError as e:
         raise SystemExit(str(e))
     out = Path(a.out); out.mkdir(exist_ok=True)

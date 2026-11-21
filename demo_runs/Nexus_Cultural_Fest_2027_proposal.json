@@ -940,5 +940,83 @@
  "source": {
   "name": "Nexus_Cultural_Fest_2027_proposal.pdf",
   "sha256": "0abb71e893ee3ba3ae7dd203a68182c1895179478577e217f2a42cc34ee53bf2"
- }
+ },
+ "baselines": {
+  "baseline": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event within budget, past successful events, safety plan in place, no external speaker needed.",
+    "factual_assertions": [
+     "Event within budget",
+     "Past successful events",
+     "Safety plan in place",
+     "No external speaker needed"
+    ],
+    "seconds": 29.1
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event has a clear plan, budget, and past success. Safety plan is in place.",
+    "factual_assertions": [
+     "Event complies with university policies",
+     "Budget is within limits",
+     "Safety plan is attached"
+    ],
+    "seconds": 25.2
+   },
+   "pro_reject": {
+    "decision": "Approve with Conditions",
+    "confidence_pct": 75.0,
+    "reasons": "Budget and past performance are strong. Safety plan is in place. Needs Dean approval and formal registration.",
+    "factual_assertions": [
+     "Event within budget and previous events successful",
+     "Safety plan present",
+     "External speaker not required",
+     "Dean approval and registration needed"
+    ],
+    "seconds": 27.0
+   }
+  },
+  "baseline_rubric": {
+   "neutral": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "Event within historical attendance and budget limits, past performance supported, complies with policies.",
+    "factual_assertions": [
+     "Attendance within historical range",
+     "Budget per attendee supported",
+     "Past performance within acceptable variance",
+     "Compliance with policies"
+    ],
+    "seconds": 30.1
+   },
+   "pro_approve": {
+    "decision": "Approve",
+    "confidence_pct": 95.0,
+    "reasons": "Event within historical attendance, budget efficient, past performance excellent, policy compliant.",
+    "factual_assertions": [
+     "Attendance supported",
+     "Budget supported",
+     "Past performance supported",
+     "Policy compliance supported"
+    ],
+    "seconds": 26.4
+   },
+   "pro_reject": {
+    "decision": "Approve",
+    "confidence_pct": 85.0,
+    "reasons": "No Contradictions, one unsupported claim (impact), but overall strong proposal.",
+    "factual_assertions": [
+     "Attendance supported",
+     "Budget supported",
+     "Past performance supported",
+     "Policy compliance supported"
+    ],
+    "seconds": 26.6
+   }
+  }
+ },
+ "baseline_seconds": 164.5
 }
